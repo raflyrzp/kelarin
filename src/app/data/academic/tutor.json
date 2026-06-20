@@ -1,0 +1,43 @@
+{
+  "category": "Academic Tutor",
+  "sectionTitle": "Kelas Privat & Pendampingan Pemrograman",
+  "disclaimer": "*Sesi bimbingan dilakukan secara tatap muka online (1-on-1) via Google Meet atau Zoom dengan waktu yang fleksibel.",
+  "services": [
+    {
+      "id": "tutor-fundamental",
+      "name": "Belajar Koding Dasar & Logika Pemrograman",
+      "startingPrice": 75000,
+      "priceUnit": "sesi (45 Menit)",
+      "description": "Kelas privat untuk Anda yang bingung dengan materi kuliah pemrograman dasar, ingin belajar koding dari nol, atau kesulitan memahami logika algoritma (seperti bahasa C++, Python, Java, Javascript, atau HTML/CSS).",
+      "points": [
+        "Penjelasan materi menggunakan bahasa santai dan contoh nyata, tanpa istilah IT yang rumit",
+        "Praktik langsung (Live Coding) bersama dibimbing pelan-pelan langkah demi langkah",
+        "Bebas berkonsultasi mengenai materi dasar kampus yang belum Anda pahami di kelas"
+      ]
+    },
+    {
+      "id": "tutor-assignment",
+      "name": "Pendampingan Koding Tugas Kuliah & Projek",
+      "startingPrice": 100000,
+      "priceUnit": "sesi (60 Menit)",
+      "description": "Sesi fokus untuk membantu Anda memecahkan logika pengerjaan tugas pemrograman atau projek aplikasi dari kampus. Tujuannya agar Anda paham cara kodenya bekerja dan bisa membuatnya sendiri.",
+      "points": [
+        "Bimbingan menyusun alur logika program yang benar sesuai dengan instruksi soal tugas",
+        "Edukasi cara membaca error secara mandiri dan cara memperbaikinya",
+        "Konsultasi cara merapikan struktur kode agar terlihat profesional dan mendapat nilai maksimal"
+      ]
+    },
+    {
+      "id": "tutor-thesis-code",
+      "name": "Bedah Kode & Persiapan Demo Program Tugas Akhir",
+      "startingPrice": 150000,
+      "priceUnit": "sesi (60 Menit)",
+      "description": "Khusus untuk mahasiswa IT/Sistem Informasi yang program Skripsi atau Tugas Akhirnya sudah jadi, tetapi bingung bagaimana cara menjelaskan alur kodingannya saat demo di depan dosen penguji.",
+      "points": [
+        "Penjelasan menyeluruh mengenai fungsi dan logika dari setiap baris kode penting di program Anda",
+        "Simulasi jalannya demo aplikasi dan pelatihan cara menjawab pertanyaan teknis dari dosen",
+        "Pelatihan mental agar Anda tenang, lancar berbicara, dan percaya diri saat sidang"
+      ]
+    }
+  ]
+}
