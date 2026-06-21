@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Accordion } from "@/components/Accordion";
 import {
   ArrowRight,
@@ -220,6 +221,59 @@ export default function Home() {
               </div>
             );
           })}
+        </div>
+      </section>
+
+      {/* 2.5 SERVICES TEASER SECTION */}
+      <section className="relative z-10 py-20 px-6 max-w-7xl mx-auto border-t border-border-color">
+        <div className="text-center mb-16">
+          <span className="font-mono text-xs font-bold text-brand-red tracking-wider uppercase">Layanan Kami</span>
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-foreground font-mono">PILIH LAYANAN UTAMA</h2>
+          <p className="mt-4 text-text-muted max-w-xl mx-auto text-sm md:text-base">
+            Pilih layanan yang cocok dengan kebutuhan kamu. Kita siap bantu sampai kelar!
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Card 1: Web Development */}
+          <div className="border border-border-color bg-card-bg p-8 flex flex-col justify-between hover:border-brand-red/50 transition-colors duration-300">
+            <div>
+              <div className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-brand-red tracking-wider uppercase mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-red shadow-[0_0_8px_#ef4444]"></span>
+                Commercial & Personal
+              </div>
+              <h3 className="text-2xl font-bold text-foreground font-mono mb-4">WEB DEVELOPMENT</h3>
+              <p className="text-text-muted text-sm leading-relaxed font-sans mb-8">
+                Bikin website portofolio kece, landing page bisnis, toko online katalog WhatsApp, atau sistem custom e-learning. Desain estetik modern, responsive, dan loading super enteng.
+              </p>
+            </div>
+            <Link
+              href="/web-development"
+              className="inline-flex items-center justify-center py-3.5 bg-background border border-border-color hover:border-brand-red text-foreground font-mono text-xs font-bold tracking-wider uppercase transition-colors gap-2"
+            >
+              Lihat Detail Layanan Web <ArrowRight className="w-4 h-4 text-brand-red" />
+            </Link>
+          </div>
+
+          {/* Card 2: Academic Support */}
+          <div className="border border-border-color bg-card-bg p-8 flex flex-col justify-between hover:border-brand-red/50 transition-colors duration-300">
+            <div>
+              <div className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-brand-red tracking-wider uppercase mb-4">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-red shadow-[0_0_8px_#ef4444]"></span>
+                Students & Education
+              </div>
+              <h3 className="text-2xl font-bold text-foreground font-mono mb-4">ACADEMIC SUPPORT</h3>
+              <p className="text-text-muted text-sm leading-relaxed font-sans mb-8">
+                Bantu beresin layout laporan makalah/skripsi, parafrase Turnitin biar lolos anti-plagiat, bimbingan koding privat, sampai bedah kode kodingan persiapan simulasi sidang.
+              </p>
+            </div>
+            <Link
+              href="/academic"
+              className="inline-flex items-center justify-center py-3.5 bg-background border border-border-color hover:border-brand-red text-foreground font-mono text-xs font-bold tracking-wider uppercase transition-colors gap-2"
+            >
+              Lihat Detail Layanan Akademik <ArrowRight className="w-4 h-4 text-brand-red" />
+            </Link>
+          </div>
         </div>
       </section>
 
