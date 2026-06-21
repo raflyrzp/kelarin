@@ -1,42 +1,42 @@
 {
   "category": "Academic Formatting",
-  "sectionTitle": "Jasa Kerapihan Dokumen & Karya Tulis",
-  "disclaimer": "*Harga tertera adalah harga dasar (starting price). Biaya akhir dihitung per halaman atau tingkat kerumitan dokumen Anda.",
+  "sectionTitle": "Jasa Kerapihan & Beresin Dokumen Tugas",
+  "disclaimer": "*Harga mulai dari ya. Tarif pasnya dihitung per halaman atau tingkat keribetan isi dokumen kamu.",
   "services": [
     {
       "id": "format-standard",
-      "name": "Merapikan Layout Dokumen (Standard Layouting)",
+      "name": "Merapikan Layout & Format Dokumen",
       "startingPrice": 5000,
       "priceUnit": "halaman",
-      "description": "Menata total tampilan laporan, makalah, atau skripsi Anda agar rapi dan presisi sesuai dengan buku panduan resmi kampus atau instansi.",
+      "description": "Nata layout laporan, makalah, atau skripsi kamu biar rapi dan presisi sesuai panduan buku pedoman kampus.",
       "points": [
-        "Pengaturan otomatis batas pinggir (margin), jenis font, ukuran, dan spasi",
-        "Pembuatan Daftar Isi, Daftar Gambar, dan Daftar Tabel otomatis sekali klik",
-        "Perbaikan nomor halaman yang berantakan (Pemisahan format Romawi dan Angka)"
+        "Setel otomatis margin, font, ukuran, spasi biar presisi",
+        "Bikin Daftar Isi, Gambar, & Tabel otomatis sekali klik",
+        "Beresin nomor halaman yang berantakan (Romawi & Angka)"
       ]
     },
     {
       "id": "format-citation",
-      "name": "Merapikan Kutipan & Daftar Pustaka",
+      "name": "Beresin Kutipan & Daftar Pustaka",
       "startingPrice": 50000,
       "priceUnit": "dokumen",
-      "description": "Menghubungkan dan merapikan seluruh sumber kutipan dalam tulisan Anda agar otomatis terdaftar di Daftar Pustaka menggunakan aplikasi standar.",
+      "description": "Hubungin dan rapiin semua sumber kutipan kamu biar otomatis masuk ke Daftar Pustaka pake tool standar.",
       "points": [
-        "Integrasi sistem referensi otomatis (Mendeley atau Zotero)",
-        "Penyelarasan format kutipan (APA Style, IEEE, Harvard, dll.)",
-        "Pengecekan link sumber referensi yang rusak atau tidak valid"
+        "Integrasi reference tool otomatis (Mendeley / Zotero)",
+        "Format kutipan rapi (APA, IEEE, Harvard, dll)",
+        "Cek link referensi yang mati atau salah"
       ]
     },
     {
       "id": "format-paraphrase",
-      "name": "Parafrase & Penyelamatan Plagiarisme (Turnitin)",
+      "name": "Parafrase Lolos Turnitin (Anti-Plagiat)",
       "startingPrice": 150000,
       "priceUnit": "tugas",
-      "description": "Mengubah susunan kalimat dalam draf tulisan Anda tanpa mengubah inti maknanya, khusus untuk menurunkan skor kemiripan agar lolos uji Turnitin.",
+      "description": "Ubah susunan kalimat di draf tugas kamu tanpa ganti inti maknanya, biar lolos uji Turnitin dengan skor aman.",
       "points": [
-        "Penyusunan ulang kalimat secara manual (bukan memakai bot/mesin kaku)",
-        "Bahasa tetap baku, logis, dan mengalir secara akademis",
-        "Garansi skor Turnitin turun sesuai dengan standar aman yang Anda targetkan"
+        "Tulis ulang manual (bukan pake spinner/bot kaku)",
+        "Kalimat tetep logis, enak dibaca, & bernada akademis",
+        "Garansi skor Turnitin turun ke batas aman target kamu"
       ]
     }
   ]

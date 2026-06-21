@@ -1,19 +1,19 @@
 {
-  "sectionTitle": "Layanan Pendukung Lainnya",
+  "sectionTitle": "Jasa Tambahan Lainnya",
   "items": [
     {
       "id": "other-debugging",
-      "name": "Perbaikan Error & Bug Program",
+      "name": "Beresin Error & Bug Kodingan",
       "startingPrice": 100000,
       "priceUnit": "kasus",
-      "description": "Solusi darurat untuk Anda yang kodenya mendadak macet, muncul eror merah, atau tidak jalan menjelang deadline pengumpulan tugas kuliah atau perilisan web. Cukup kirim kodenya, biar saya yang beresin erornya sampai lancar kembali."
+      "description": "Pusing kode kodingan kamu mendadak macet, muncul eror merah, atau nggak jalan pas deket deadline? Santai, kirim aja filenya ke kita, biar kita beresin erornya sampai jalan normal."
     },
     {
       "id": "other-tutor",
-      "name": "Belajar Pemrograman Privat (Tutor 1-on-1)",
+      "name": "Tutor Koding Privat (1-on-1)",
       "startingPrice": 100000,
       "priceUnit": "jam",
-      "description": "Sesi belajar santai secara privat melalui Google Meet atau Zoom. Sangat fleksibel untuk mahasiswa yang bingung materi kuliah, butuh dibimbing pelan-pelan saat bikin tugas kampus, atau masyarakat umum yang ingin belajar pemrograman dari nol."
+      "description": "Belajar koding santai lewat Google Meet atau Zoom. Cocok banget buat mahasiswa yang pusing dengerin dosen, butuh dibimbing ngerjain tugas, atau siapa aja yang mau belajar koding dari nol."
     }
   ]
 }

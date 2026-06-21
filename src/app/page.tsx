@@ -79,72 +79,76 @@ export default function Home() {
 
   const whyChooseUsData = [
     {
-      title: "Berpengalaman dalam Pengembangan Website",
-      desc: "Menyelesaikan berbagai proyek web komersial dan sistem akademik dengan standar tinggi.",
+      title: "Udah Berpengalaman Bikin Web",
+      desc: "Udah banyak ngerjain project web komersial maupun tugas kuliah koding dengan hasil rapi.",
       icon: Laptop,
     },
     {
-      title: "Pendekatan Sesuai Kebutuhan",
-      desc: "Menganalisis kebutuhan bisnis atau modul akademik Anda secara personal tanpa fitur berlebih.",
+      title: "Custom Sesuai Kebutuhan Kamu",
+      desc: "Kita dengerin apa yang kamu butuhin, nggak bakal dikasih fitur nggak penting biar hemat budget.",
       icon: Sliders,
     },
     {
-      title: "Teknologi Modern",
-      desc: "Menggunakan tech stack termutakhir seperti Next.js, Tailwind v4, Laravel, dan Django.",
+      title: "Tech Stack Kekinian",
+      desc: "Pakai framework modern yang cepet banget kayak Next.js, React, Tailwind, Laravel, dll.",
       icon: Cpu,
     },
     {
-      title: "Dokumentasi dan Komunikasi yang Jelas",
-      desc: "Penjelasan alur program tanpa jargon IT rumit, transparan, dan terarah sejak awal.",
+      title: "Komunikasi Santai & Jelas",
+      desc: "Nggak bakal bikin pusing pakai istilah IT yang aneh-aneh. Kita jelasin santai gampang dipahami.",
       icon: FileText,
     },
     {
-      title: "Dukungan Setelah Proyek Selesai",
-      desc: "Jaminan perbaikan bug, panduan hosting, hingga mentoring persiapan sidang tugas akhir.",
+      title: "Support Pasca Project Selesai",
+      desc: "Ada garansi bebas bug, dibantu hosting, sampai diajarin cara jelasin kodingan buat sidang.",
       icon: HeartHandshake,
     },
   ];
 
   const workflowSteps = [
-    { number: "01", title: "Konsultasi", desc: "Diskusi kebutuhan sistem, draf soal kuliah, atau fitur bisnis." },
-    { number: "02", title: "Analisis Kebutuhan", desc: "Menganalisis spesifikasi teknis dan estimasi kompleksitas proyek." },
-    { number: "03", title: "Penawaran & Kesepakatan", desc: "Penetapan biaya standar transparan dan durasi pengerjaan." },
-    { number: "04", title: "Pengembangan", desc: "Proses pembuatan program menggunakan arsitektur bersih dan teratur." },
-    { number: "05", title: "Testing", desc: "Pengujian fungsionalitas fitur untuk memastikan bebas dari bug." },
-    { number: "06", title: "Deployment", desc: "Instalasi dan peluncuran produk secara online agar bisa langsung diakses." },
-    { number: "07", title: "Maintenance", desc: "Dukungan berkelanjutan pasca proyek selesai secara penuh." },
+    { number: "01", title: "Ngobrol Santai", desc: "Ceritain ide web kamu atau tugas kuliah koding apa yang lagi bikin pusing." },
+    { number: "02", title: "Bedah Konsep", desc: "Kita rinci fitur-fiturnya dan teknologi apa yang paling cocok biar pas." },
+    { number: "03", title: "Deal Harga", desc: "Harga transparan dan jujur, pas di kantong mahasiswa maupun bisnis baru." },
+    { number: "04", title: "Proses Koding", desc: "Kita mulai bikin web kamu dengan kode yang rapi dan performa ngebut." },
+    { number: "05", title: "Uji Coba", desc: "Uji coba semua fitur biar dipastikan aman, lancar, dan bebas error." },
+    { number: "06", title: "Rilis Online", desc: "Website kamu resmi online dan siap dikunjungi siapa aja." },
+    { number: "07", title: "Pendampingan", desc: "Kita tetep bantu kalau ada pertanyaan atau kendala setelah rilis." },
   ];
 
   const faqItems = [
     {
       value: "faq-1",
-      trigger: "Apakah saya harus menyiapkan dokumen/berkas tertentu sebelum berkonsultasi?",
+      trigger: "Mesti siapin dokumen/berkas apa aja sebelum konsultasi?",
       content:
-        "Tidak wajib. Anda bisa berkonsultasi mulai dari tahap ide dasar, draf tugas kuliah, outline modul, atau kebutuhan awal bisnis Anda. Tim kami akan membantu memformulasikan spesifikasi teknisnya secara bertahap.",
+        "Nggak wajib kok! Punya ide kasar atau coretan di kertas aja juga boleh. Langsung chat aja, nanti kita bantu susun konsepnya bareng-bareng dari nol.",
     },
     {
       value: "faq-2",
-      trigger: "Bagaimana dengan kebijakan revisi dan perbaikan program?",
+      trigger: "Bisa minta revisi atau perbaikan kalau ada yang kurang?",
       content:
-        "Kami menyediakan jaminan revisi minor dan perbaikan bug/error secara gratis pasca serah terima file untuk memastikan program berjalan lancar sesuai dengan kesepakatan awal.",
+        "Pasti bisa! Kita kasih garansi revisi minor dan perbaikan error/bug gratis setelah web diserahin biar kamu tenang kodingannya jalan mulus.",
     },
     {
       value: "faq-3",
-      trigger: "Berapa lama waktu yang dibutuhkan untuk menyelesaikan satu proyek?",
+      trigger: "Berapa lama pengerjaannya biasanya?",
       content:
-        "Durasi pengerjaan bervariasi bergantung pada kompleksitas sistem. Kami menggunakan formula estimasi transparan berdasarkan total modul dan fitur yang disepakati bersama sebelum pengerjaan dimulai.",
+        "Tergantung tingkat kerumitan web atau tugasnya ya. Tapi tenang, kita selalu kasih estimasi waktu yang transparan dan realistis sebelum deal.",
     },
     {
       value: "faq-4",
-      trigger: "Apakah seluruh proses komunikasi dan pengerjaan dilakukan secara online?",
+      trigger: "Semua proses ngobrolnya online atau gimana?",
       content:
-        "Ya, Kelar.in beroperasi penuh secara online (100% remote). Diskusi, demo aplikasi, hingga mentoring program dilakukan melalui WhatsApp dan video conference (Google Meet / Zoom) demi efisiensi waktu Anda.",
+        "Yap, 100% online biar sat-set. Kita bisa diskusi via WhatsApp atau share screen lewat Google Meet/Zoom biar gampang dipahami.",
     },
   ];
 
   return (
-    <div className="relative min-h-screen">
+    <div className="relative min-h-screen overflow-hidden">
       <div className="absolute inset-0 cyber-grid pointer-events-none z-0"></div>
+
+      {/* Background ambient glowing blobs */}
+      <div className="absolute top-[10%] left-[-15%] w-[350px] h-[350px] md:w-[700px] md:h-[700px] rounded-full bg-brand-red/5 dark:bg-brand-red/10 blur-[100px] md:blur-[160px] pointer-events-none z-0"></div>
+      <div className="absolute top-[50%] right-[-15%] w-[300px] h-[300px] md:w-[600px] md:h-[600px] rounded-full bg-brand-red/5 dark:bg-brand-red/10 blur-[100px] md:blur-[140px] pointer-events-none z-0"></div>
 
       <div className="absolute top-1/4 left-1/4 w-1.5 h-1.5 rounded-full bg-brand-red glow-dot"></div>
       <div className="absolute top-2/3 right-1/4 w-1.5 h-1.5 rounded-full bg-brand-red glow-dot"></div>
@@ -154,20 +158,20 @@ export default function Home() {
         <div className="inline-flex items-center gap-2 border border-brand-red/25 bg-brand-red/5 px-3.5 py-1.5 rounded-none mb-6">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>
           <span className="font-mono text-xs font-semibold tracking-widest text-brand-red uppercase">
-            Jasa Web Development & Support Akademik
+            Solusi Bikin Web & Tugas Koding Sat-Set
           </span>
         </div>
 
         <h1 className="text-3xl md:text-6xl lg:text-7xl font-black tracking-tighter text-foreground max-w-5xl leading-tight font-mono uppercase">
-          Solusi Web Development &<br />
-          Academic Mentoring untuk<br />
+          Bikin Website Impian &<br />
+          Kelarin Tugas Koding Kamu,<br />
           <span className="text-brand-red">
-            Mahasiswa, Organisasi, & UMKM
+            Nggak Pake Ribet!
           </span>
         </h1>
 
         <p className="mt-8 text-base md:text-lg text-text-muted max-w-3xl leading-relaxed">
-          Membantu pengembangan website, sistem informasi, API, serta pendampingan akademik di bidang teknologi dengan pendekatan profesional dan berorientasi pada kebutuhan pengguna.
+          Butuh website buat bisnis, portofolio kece, atau pusing sama tugas kuliah koding? Tenang, kita bantu selesaikan semuanya dengan teknologi terbaru, harga bersahabat, dan pastinya anti-ribet.
         </p>
 
         <div className="mt-12 flex flex-col sm:flex-row gap-4 w-full justify-center px-4 max-w-md">
@@ -176,7 +180,7 @@ export default function Home() {
             onClick={handleScrollToContact}
             className="group px-8 py-3.5 bg-brand-red hover:bg-red-700 text-white font-mono text-sm font-bold tracking-wider transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer"
           >
-            Konsultasi Gratis <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            Tanya-Tanya Dulu (Gratis!) <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="https://raflyrzp.vercel.app"
@@ -184,7 +188,7 @@ export default function Home() {
             rel="noopener noreferrer"
             className="group px-8 py-3.5 border border-border-color hover:border-brand-red text-foreground hover:text-brand-red font-mono text-sm font-bold tracking-wider transition-colors duration-200 flex items-center justify-center gap-2"
           >
-            Lihat Portofolio <ExternalLink className="w-4 h-4 text-brand-red" />
+            Cek Karya Kita <ExternalLink className="w-4 h-4 text-brand-red" />
           </a>
         </div>
       </section>
@@ -193,9 +197,9 @@ export default function Home() {
       <section id="why-choose-us" className="relative z-10 py-20 px-6 max-w-7xl mx-auto border-t border-border-color">
         <div className="mb-16">
           <span className="font-mono text-xs font-bold text-brand-red tracking-wider uppercase">01 / VALUES</span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-foreground font-mono">WHY CHOOSE US</h2>
+          <h2 className="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-foreground font-mono">KENAPA HARUS KELAR.IN?</h2>
           <p className="mt-4 text-text-muted max-w-xl text-sm md:text-base">
-            Kami menghadirkan nilai kolaborasi terbaik dengan memadukan keahlian teknis tingkat tinggi serta pelayanan yang berorientasi pada hasil.
+            Bukan sekadar koding, kita kasih solusi terbaik biar urusan kamu langsung kelar tanpa drama.
           </p>
         </div>
 
@@ -220,36 +224,38 @@ export default function Home() {
       </section>
 
       {/* 3. WORKFLOW SECTION */}
-      <section id="workflow" className="relative z-10 py-20 px-6 max-w-7xl mx-auto border-t border-border-color">
-        <div className="text-center mb-16">
-          <span className="font-mono text-xs font-bold text-brand-red tracking-wider uppercase">02 / PROCESS</span>
-          <h2 className="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-foreground font-mono">WORKFLOW STAGES</h2>
-          <p className="mt-4 text-text-muted max-w-xl mx-auto text-sm md:text-base">
-            Langkah sistematis pengerjaan proyek dari tahap perencanaan awal hingga dukungan peluncuran sistem.
-          </p>
-        </div>
+      <section id="workflow" className="relative z-10 py-20 border-y border-border-color bg-section-muted-bg">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <span className="font-mono text-xs font-bold text-brand-red tracking-wider uppercase">02 / PROCESS</span>
+            <h2 className="mt-2 text-3xl md:text-4xl font-bold tracking-tight text-foreground font-mono">CARA KERJA KITA (SAT-SET!)</h2>
+            <p className="mt-4 text-text-muted max-w-xl mx-auto text-sm md:text-base">
+              Langkah gampang pengerjaan proyek dari tahap ngobrol awal sampai web kamu siap rilis online.
+            </p>
+          </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4">
-          {workflowSteps.map((item, idx) => (
-            <div key={idx} className="border border-border-color bg-card-bg p-6 flex flex-col justify-between h-48 relative hover:border-brand-red/30 transition-colors">
-              <div>
-                <span className="font-mono text-2xl font-black text-brand-red/20">{item.number}</span>
-                <h3 className="font-mono font-bold text-sm text-foreground mt-2 leading-tight">{item.title}</h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4">
+            {workflowSteps.map((item, idx) => (
+              <div key={idx} className="border border-border-color bg-background p-6 flex flex-col justify-between h-48 relative hover:border-brand-red/30 transition-colors">
+                <div>
+                  <span className="font-mono text-2xl font-black text-brand-red/20">{item.number}</span>
+                  <h3 className="font-mono font-bold text-sm text-foreground mt-2 leading-tight">{item.title}</h3>
+                </div>
+                <p className="text-text-muted text-[11px] leading-relaxed mt-4 font-sans">{item.desc}</p>
               </div>
-              <p className="text-text-muted text-[11px] leading-relaxed mt-4 font-sans">{item.desc}</p>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
       {/* 5. FAQ SECTION */}
-      <section id="faq" className="relative z-10 py-20 px-6 max-w-4xl mx-auto border-t border-border-color">
+      <section id="faq" className="relative z-10 py-20 px-6 max-w-4xl mx-auto">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 text-brand-red mb-2">
             <HelpCircle className="w-4 h-4" />
             <span className="font-mono text-xs font-bold tracking-wider uppercase">03 / FAQ</span>
           </div>
-          <h2 className="text-3xl font-bold tracking-tight text-foreground font-mono">PERTANYAAN UMUM</h2>
+          <h2 className="text-3xl font-bold tracking-tight text-foreground font-mono">FAQ (YANG SERING DITANYAIN)</h2>
         </div>
 
         <Accordion items={faqItems} />
@@ -259,9 +265,9 @@ export default function Home() {
       <section id="contact" className="relative z-10 py-20 px-6 max-w-6xl mx-auto border-t border-border-color">
         <div className="text-center mb-16">
           <span className="font-mono text-xs font-bold text-brand-red tracking-wider uppercase">04 / CONTACT</span>
-          <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground font-mono">KONSULTASIKAN KEBUTUHAN ANDA</h2>
+          <h2 className="mt-2 text-3xl font-bold tracking-tight text-foreground font-mono">YUK, KELARIN SEKARANG JUGA!</h2>
           <p className="mt-4 text-text-muted text-sm md:text-base max-w-xl mx-auto">
-            Kirim pesan secara langsung melalui form di bawah untuk merancang konsultasi terstruktur instan.
+            Isi form di bawah buat langsung tersambung dan chat konsultasi sama kita.
           </p>
         </div>
 
@@ -270,7 +276,7 @@ export default function Home() {
             <form onSubmit={handleFormSubmit} className="border border-border-color bg-card-bg p-8 space-y-6">
               <div className="space-y-2">
                 <label htmlFor="name" className="block font-mono text-xs font-bold text-text-muted tracking-wide uppercase">
-                  Nama Lengkap
+                  Nama Kamu
                 </label>
                 <input
                   type="text"
@@ -286,7 +292,7 @@ export default function Home() {
 
               <div className="space-y-2">
                 <label htmlFor="serviceType" className="block font-mono text-xs font-bold text-text-muted tracking-wide uppercase">
-                  Kategori Layanan
+                  Kebutuhan Jasa
                 </label>
                 <select
                   id="serviceType"
@@ -303,7 +309,7 @@ export default function Home() {
 
               <div className="space-y-2">
                 <label htmlFor="message" className="block font-mono text-xs font-bold text-text-muted tracking-wide uppercase">
-                  Detail Kebutuhan / Request
+                  Ceritain Kebutuhan Kamu
                 </label>
                 <textarea
                   id="message"
@@ -321,16 +327,16 @@ export default function Home() {
                 type="submit"
                 className="w-full py-4 bg-brand-red hover:bg-red-700 text-white font-mono text-sm font-bold tracking-wider transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer"
               >
-                Konsultasi Gratis Sekarang <Send className="w-4 h-4" />
+                Hubungi Lewat WhatsApp <Send className="w-4 h-4" />
               </button>
             </form>
           </div>
 
           <div className="lg:col-span-5 flex flex-col gap-6">
             <div className="border border-border-color bg-card-bg p-6 flex flex-col gap-4">
-              <h3 className="font-mono font-bold text-sm text-foreground uppercase tracking-wider">Fast Response Support</h3>
+              <h3 className="font-mono font-bold text-sm text-foreground uppercase tracking-wider">Butuh Respon Cepat?</h3>
               <p className="text-xs text-text-muted leading-relaxed font-sans">
-                Butuh tanggapan cepat? Hubungi atau kunjungi profil kami secara langsung melalui tautan komunikasi terpadu di bawah ini.
+                Langsung klik tombol di bawah buat ngobrol langsung lewat sosmed/chat kita ya!
               </p>
             </div>
 

@@ -1,58 +1,58 @@
 {
-  "sectionTitle": "Paket Pembuatan Website Siap Pakai",
-  "disclaimer": "*Harga tertera adalah harga pasti untuk fitur standar paket. Biaya akhir bisa berubah tergantung jika Anda meminta request fitur tambahan di luar paket.",
+  "sectionTitle": "Pilihan Paket Web Sat-Set",
+  "disclaimer": "*Harga di bawah udah pas buat fitur standar. Kalau mau request fitur aneh-aneh di luar paket, kita bisa obrolin lagi harganya santai.",
   "items": [
     {
       "id": "pkg-portfolio",
-      "name": "Website Profil Pribadi / CV Online",
+      "name": "Web CV & Portofolio Keren",
       "fixedPrice": 450000,
-      "badge": "Rekomendasi Mahasiswa",
-      "description": "Website personal untuk memamerkan biodata, keahlian, pengalaman organisasi, dan hasil karya. Sangat bagus untuk menaikkan nilai jual di mata HRD atau dosen.",
+      "badge": "Pas Buat Mahasiswa",
+      "description": "Biar CV kamu nggak cuma PDF biasa. Pamerin biodata, skill, pengalaman organisasi, dan karya kamu lewat web interaktif biar HRD atau dosen pembimbing auto-terpukau.",
       "points": [
-        "1 Halaman Utama dengan desain premium & elegan",
-        "Galeri portofolio proyek yang bisa diklik",
-        "Tombol download berkas CV langsung",
-        "Tampilan otomatis rapi saat dibuka di HP/Laptop",
-        "Dibantu upload ke internet sampai website live"
+        "1 Halaman Utama dengan desain custom estetik",
+        "Galeri project yang interaktif & bisa diklik",
+        "Tombol download CV PDF langsung sekali klik",
+        "Tampilan responsive & rapi di HP/Laptop/Tablet",
+        "Dibantu hosting gratisan sampai web kamu online"
       ]
     },
     {
       "id": "pkg-landing",
-      "name": "Halaman Promosi Digital (Landing Page)",
+      "name": "Landing Page Promosi Kece",
       "fixedPrice": 750000,
-      "badge": "Fokus Bisnis",
-      "description": "Satu halaman website terfokus untuk mengenalkan produk, jasa, acara kampus, atau branding organisasi agar pengunjung langsung tertarik menghubungi WhatsApp Anda.",
+      "badge": "Cocok Buat Bisnis",
+      "description": "Satu halaman website fokus promosiin produk, jasa, event kampus, atau organisasi kamu biar audiens langsung kepincut hubungi WA kamu.",
       "points": [
-        "Desain bagian atas yang memikat & profesional",
-        "Menu tanya-jawab (FAQ) lipat yang rapi",
-        "Tombol order khusus langsung terhubung ke WhatsApp",
-        "Website super ringan & cepat dibuka di HP"
+        "Desain bagian atas yang eye-catching & estetik",
+        "Tanya-Jawab (FAQ) lipat biar rapi",
+        "Tombol order instan langsung nyambung ke WhatsApp",
+        "Website super enteng & loading cepet banget di HP"
       ]
     },
     {
       "id": "pkg-ecommerce",
-      "name": "Website Toko Online (Katalog WhatsApp)",
+      "name": "Toko Online Katalog WhatsApp",
       "fixedPrice": 1850000,
-      "badge": "Paling Laris",
-      "description": "Website toko online tanpa ribet database untuk memajang produk dagangan. Pembeli bisa pilih barang, masuk keranjang, dan saat checkout nota otomatis terkirim rapi ke WhatsApp Anda.",
+      "badge": "Paling Populer",
+      "description": "Mau jualan tapi males ribet kelola database? Di sini pembeli bisa pilih barang, masukin keranjang, dan pas checkout detail belanjaan otomatis ke-WA ke nomor kamu.",
       "points": [
-        "Halaman galeri katalog produk & detail produk",
-        "Sistem keranjang belanja (Bisa beli banyak barang sekaligus)",
-        "Formulir data pengiriman pembeli (Nama, Alamat, No HP)",
-        "Checkout otomatis menyusun nota rapi langsung ke WA Anda"
+        "Galeri katalog barang yang rapi dan detail",
+        "Keranjang belanja keren (Bisa checkout banyak barang)",
+        "Isian data kirim pembeli (Nama, Alamat, dll)",
+        "Format nota belanja rapi langsung masuk ke WhatsApp kamu"
       ]
     },
     {
       "id": "pkg-lms",
-      "name": "Website Kelas & Pembelajaran Online (LMS)",
+      "name": "Web Kelas & Belajar Online (LMS)",
       "fixedPrice": 2450000,
-      "badge": "Sistem Lengkap",
-      "description": "Website sistem sekolah atau tempat les digital. Sangat pas untuk demo tugas besar kuliah atau instansi yang ingin membagikan materi, kuis, dan pengumpulan tugas secara terpusat.",
+      "badge": "Fitur Lengkap",
+      "description": "Sistem e-learning lengkap buat tugas kuliah atau bisnis les digital kamu. Bisa share materi, kuis seru, dan kumpulin tugas dalam satu tempat.",
       "points": [
-        "Pemisahan hak akses (Halaman Pengajar vs Halaman Murid)",
-        "Menu pengisian materi belajar per bab (Teks/Video)",
-        "Fitur ujian/kuis online pilihan ganda dengan skor otomatis",
-        "Formulir aman untuk murid mengunggah file tugas"
+        "Akses khusus (Halaman Tentor vs Halaman Siswa)",
+        "Input materi belajar per bab (Teks, PDF, Video)",
+        "Kuis pilihan ganda dengan hitung nilai otomatis",
+        "Upload file tugas siswa aman anti-nyasar"
       ]
     }
   ]

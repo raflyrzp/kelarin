@@ -1,42 +1,42 @@
 {
   "category": "Academic Tutor",
-  "sectionTitle": "Kelas Privat & Pendampingan Pemrograman",
-  "disclaimer": "*Sesi bimbingan dilakukan secara tatap muka online (1-on-1) via Google Meet atau Zoom dengan waktu yang fleksibel.",
+  "sectionTitle": "Tutor Privat Koding & Pendampingan Sidang",
+  "disclaimer": "*Sesi tatap muka online 1-on-1 via Meet/Zoom. Waktunya fleksibel ngikutin jadwal kosong kamu.",
   "services": [
     {
       "id": "tutor-fundamental",
-      "name": "Belajar Koding Dasar & Logika Pemrograman",
+      "name": "Belajar Koding Dasar & Logika Basic",
       "startingPrice": 75000,
       "priceUnit": "sesi (45 Menit)",
-      "description": "Kelas privat untuk Anda yang bingung dengan materi kuliah pemrograman dasar, ingin belajar koding dari nol, atau kesulitan memahami logika algoritma (seperti bahasa C++, Python, Java, Javascript, atau HTML/CSS).",
+      "description": "Buat kamu yang pusing denger dosen jelasin koding dasar, mau belajar dari nol, atau kesulitan paham logika algoritma (C++, Python, Java, JS, atau HTML/CSS).",
       "points": [
-        "Penjelasan materi menggunakan bahasa santai dan contoh nyata, tanpa istilah IT yang rumit",
-        "Praktik langsung (Live Coding) bersama dibimbing pelan-pelan langkah demi langkah",
-        "Bebas berkonsultasi mengenai materi dasar kampus yang belum Anda pahami di kelas"
+        "Jelasin pake bahasa santai sehari-hari tanpa istilah IT aneh-aneh",
+        "Praktek bareng (Live Coding) dibimbing pelan-pelan step-by-step",
+        "Bebas nanya apa aja soal materi kampus yang belum kamu pahami"
       ]
     },
     {
       "id": "tutor-assignment",
-      "name": "Pendampingan Koding Tugas Kuliah & Projek",
+      "name": "Bantu Koding Tugas & Projek Kampus",
       "startingPrice": 100000,
       "priceUnit": "sesi (60 Menit)",
-      "description": "Sesi fokus untuk membantu Anda memecahkan logika pengerjaan tugas pemrograman atau projek aplikasi dari kampus. Tujuannya agar Anda paham cara kodenya bekerja dan bisa membuatnya sendiri.",
+      "description": "Sesi fokus buat mecahin logika tugas koding atau projek aplikasi dari kampus, biar kamu beneran paham cara kerjanya pas dikumpulin.",
       "points": [
-        "Bimbingan menyusun alur logika program yang benar sesuai dengan instruksi soal tugas",
-        "Edukasi cara membaca error secara mandiri dan cara memperbaikinya",
-        "Konsultasi cara merapikan struktur kode agar terlihat profesional dan mendapat nilai maksimal"
+        "Bimbingan nyusun alur logika program yang bener sesuai soal tugas",
+        "Belajar cara baca error kodingan sendiri dan cara benerinnya",
+        "Tips nulis kode yang rapi biar dapet nilai A+ dari dosen"
       ]
     },
     {
       "id": "tutor-thesis-code",
-      "name": "Bedah Kode & Persiapan Demo Program Tugas Akhir",
+      "name": "Bedah Kode & Simulasi Sidang Skripsi",
       "startingPrice": 150000,
       "priceUnit": "sesi (60 Menit)",
-      "description": "Khusus untuk mahasiswa IT/Sistem Informasi yang program Skripsi atau Tugas Akhirnya sudah jadi, tetapi bingung bagaimana cara menjelaskan alur kodingannya saat demo di depan dosen penguji.",
+      "description": "Khusus buat anak IT/SI yang program Skripsinya udah jadi, tapi bingung gimana cara jelasin alur kodingannya pas demo di depan dosen penguji.",
       "points": [
-        "Penjelasan menyeluruh mengenai fungsi dan logika dari setiap baris kode penting di program Anda",
-        "Simulasi jalannya demo aplikasi dan pelatihan cara menjawab pertanyaan teknis dari dosen",
-        "Pelatihan mental agar Anda tenang, lancar berbicara, dan percaya diri saat sidang"
+        "Jelasin fungsi & logika baris-baris kode penting di program kamu",
+        "Simulasi demo aplikasi & latihan jawab pertanyaan jebakan dari dosen",
+        "Latihan mental biar kamu tenang, lancar ngomong, & pede pas sidang"
       ]
     }
   ]

@@ -36,9 +36,6 @@ export default function Navbar() {
   };
 
   const menuItems = [
-    { label: "Why Choose Us", id: "why-choose-us" },
-    { label: "Workflow", id: "workflow" },
-    { label: "FAQ", id: "faq" },
     { label: "Contact", id: "contact" },
   ];
 

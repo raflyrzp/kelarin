@@ -26,7 +26,7 @@ Ketika me-render komponen tabel komparasi di `/coding` dari file `coding-matrix.
 Implementasikan fungsi utilitas di `src/utils/whatsapp.ts` secara presisi menggunakan format text encoder:
 ```typescript
 export const getWhatsAppLink = (type: 'bundle' | 'tier' | 'service', name: string, price?: string | number) => {
-  const phone = "628xxxxxxxxxx"; // Target operational phone number
+  const phone = "6281517983828"; // Target operational phone number
   const formattedPrice = price ? `Rp ${price.toLocaleString('id-ID')}` : '';
   let text = '';
 

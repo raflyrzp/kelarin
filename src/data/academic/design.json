@@ -1,43 +1,43 @@
 {
   "category": "Academic Design",
-  "sectionTitle": "Desain Visual Akademik & Sidang",
-  "disclaimer": "*Harga tertera adalah harga dasar untuk desain standar. Sudah termasuk file mentah yang bisa Anda edit kembali.",
+  "sectionTitle": "Desain Slide & Poster Sidang Estetik",
+  "disclaimer": "*Harga dasar ya. Kamu bakal dapet file mentahan biar bisa diedit lagi kalau ada tambahan dari dosen.",
   "services": [
     {
       "id": "design-slides",
-      "name": "Desain Slide Presentasi Sidang Premium",
+      "name": "Slide Presentasi Sidang Estetik",
       "startingPrice": 15000,
       "priceUnit": "slide",
-      "description": "Mengubah rangkuman laporan atau materi kasar Skripsi Anda menjadi slide presentasi yang estetik, minimalis, dan sangat profesional di mata penguji.",
+      "description": "Ubah draf skripsi atau materi kasar kamu jadi slide presentasi yang kece, minimalis, dan profesional biar penguji langsung terpukau.",
       "points": [
-        "Desain kustom eksklusif (bukan template pasaran yang membosankan)",
-        "Penyederhanaan poin teks agar padat, jelas, dan berbobot saat dibaca",
-        "Pemberian transisi halus dan visualisasi data dalam bentuk grafik simpel",
-        "File akhir diberikan dalam format PowerPoint (PPTX) dan PDF"
+        "Desain custom (bukan template gratisan pasaran)",
+        "Teks diringkas padat-jelas biar gampang dibaca & nggak bosenin",
+        "Transisi smooth & visualisasi data pakai grafik kece",
+        "Format PPTX & PDF siap presentasi"
       ]
     },
     {
       "id": "design-poster",
-      "name": "Desain Poster Penelitian & Banner Seminar",
+      "name": "Poster Penelitian & Banner Seminar",
       "startingPrice": 150000,
       "priceUnit": "projek",
-      "description": "Pembuatan poster ilmiah yang merangkum keseluruhan isi penelitian Anda untuk keperluan pameran tugas akhir, seminar nasional, atau expo kampus.",
+      "description": "Bikin poster ilmiah keren yang merangkum riset kamu buat pameran tugas akhir, seminar nasional, atau expo kampus.",
       "points": [
-        "Penyusunan tata letak (layout) abstrak, metode, dan hasil riset secara proporsional",
-        "Penggunaan aset ikon premium dan pemilihan warna yang memanjakan mata",
-        "File diberikan dalam resolusi cetak super tinggi (siap bawa ke percetakan tanpa pecah)"
+        "Layout rapi & proporsional untuk abstrak, metode, dan hasil riset",
+        "Aset ikon premium & warna estetik kekinian",
+        "Resolusi cetak HD (siap print tanpa pecah/blur)"
       ]
     },
     {
       "id": "design-infographic",
-      "name": "Infografis Ringkasan Data Riset",
+      "name": "Infografis Data Riset Keren",
       "startingPrice": 100000,
       "priceUnit": "halaman",
-      "description": "Mengubah data mentah atau penjelasan teks yang panjang lebar menjadi ilustrasi visual infografis yang menarik dan mudah dipahami dalam sekali lihat.",
+      "description": "Ubah data mentah atau teks panjang lebar jadi ilustrasi visual infografis yang gampang dipahami dalam sekali lirik.",
       "points": [
-        "Sangat cocok untuk lampiran Bab 4 Skripsi atau infografis bisnis umum",
-        "Visualisasi alur metodologi penelitian yang rumit menjadi bagan yang simpel",
-        "Desain responsif yang rapi jika ingin dipajang di media sosial"
+        "Pas buat lampiran Bab 4 Skripsi biar auto-nilai plus",
+        "Bikin alur metodologi riset rumit jadi bagan yang simpel",
+        "Bisa dipajang di sosmed dengan rasio pas"
       ]
     }
   ]

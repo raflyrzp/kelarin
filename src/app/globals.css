@@ -5,20 +5,22 @@
 :root {
   --background: #ffffff;
   --foreground: #000000;
-  --card-bg: #f9f9f9;
-  --border-color: #e5e5e5;
-  --text-muted: #737373;
+  --card-bg: #ffffff;
+  --border-color: #e5e7eb;
+  --text-muted: #6b7280;
   --grid-color: rgba(0, 0, 0, 0.04);
   --color-brand-red: #ef4444;
+  --section-muted-bg: #f3f4f6;
 }
 
 .dark {
   --background: #000000;
   --foreground: #ffffff;
-  --card-bg: #0a0a0a;
-  --border-color: #171717;
-  --text-muted: #a3a3a3;
+  --card-bg: #16161a;
+  --border-color: #27272a;
+  --text-muted: #a1a1aa;
   --grid-color: rgba(255, 255, 255, 0.03);
+  --section-muted-bg: #0d0d0f;
 }
 
 @theme inline {
@@ -30,6 +32,7 @@
   --color-card-bg: var(--card-bg);
   --color-border-color: var(--border-color);
   --color-text-muted: var(--text-muted);
+  --color-section-muted-bg: var(--section-muted-bg);
 }
 
 * {
