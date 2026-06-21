@@ -1,0 +1,44 @@
+{
+  "category": "Academic Design",
+  "sectionTitle": "Desain Visual Akademik & Sidang",
+  "disclaimer": "*Harga tertera adalah harga dasar untuk desain standar. Sudah termasuk file mentah yang bisa Anda edit kembali.",
+  "services": [
+    {
+      "id": "design-slides",
+      "name": "Desain Slide Presentasi Sidang Premium",
+      "startingPrice": 15000,
+      "priceUnit": "slide",
+      "description": "Mengubah rangkuman laporan atau materi kasar Skripsi Anda menjadi slide presentasi yang estetik, minimalis, dan sangat profesional di mata penguji.",
+      "points": [
+        "Desain kustom eksklusif (bukan template pasaran yang membosankan)",
+        "Penyederhanaan poin teks agar padat, jelas, dan berbobot saat dibaca",
+        "Pemberian transisi halus dan visualisasi data dalam bentuk grafik simpel",
+        "File akhir diberikan dalam format PowerPoint (PPTX) dan PDF"
+      ]
+    },
+    {
+      "id": "design-poster",
+      "name": "Desain Poster Penelitian & Banner Seminar",
+      "startingPrice": 150000,
+      "priceUnit": "projek",
+      "description": "Pembuatan poster ilmiah yang merangkum keseluruhan isi penelitian Anda untuk keperluan pameran tugas akhir, seminar nasional, atau expo kampus.",
+      "points": [
+        "Penyusunan tata letak (layout) abstrak, metode, dan hasil riset secara proporsional",
+        "Penggunaan aset ikon premium dan pemilihan warna yang memanjakan mata",
+        "File diberikan dalam resolusi cetak super tinggi (siap bawa ke percetakan tanpa pecah)"
+      ]
+    },
+    {
+      "id": "design-infographic",
+      "name": "Infografis Ringkasan Data Riset",
+      "startingPrice": 100000,
+      "priceUnit": "halaman",
+      "description": "Mengubah data mentah atau penjelasan teks yang panjang lebar menjadi ilustrasi visual infografis yang menarik dan mudah dipahami dalam sekali lihat.",
+      "points": [
+        "Sangat cocok untuk lampiran Bab 4 Skripsi atau infografis bisnis umum",
+        "Visualisasi alur metodologi penelitian yang rumit menjadi bagan yang simpel",
+        "Desain responsif yang rapi jika ingin dipajang di media sosial"
+      ]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 # Product Requirements Document (PRD) - Kelar.in
 
 ## 1. Product Vision & Overview
-Kelar.in adalah platform akuisisi klien (lead generation funnel) modern yang menyediakan jasa Web Development komersial/akademik dan Academic Mentoring di bidang teknologi. Website ini bertindak sebagai jembatan bisnis tingkat agensi, sementara pembuktian rekam jejak mendalam, sertifikasi, dan riwayat detail dialihkan langsung ke portofolio utama di https://raflyzp.vercel.app.
+Kelar.in adalah platform akuisisi klien (lead generation funnel) modern yang menyediakan jasa Web Development komersial/akademik dan Academic Mentoring di bidang teknologi. Website ini bertindak sebagai jembatan bisnis tingkat agensi, sementara pembuktian rekam jejak mendalam, sertifikasi, dan riwayat detail dialihkan langsung ke portofolio utama di https://raflyrzp.vercel.app.
 
 ## 2. Target Audience
 - **Mahasiswa Lintas Jurusan:** Membutuhkan bantuan kerapihan laporan, desain slide sidang, bimbingan koding praktikum, atau persiapan demo aplikasi Skripsi/Tugas Akhir.
