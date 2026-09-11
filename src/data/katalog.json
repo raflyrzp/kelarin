@@ -1,0 +1,528 @@
+{
+  "catalogTitle": "Katalog Layanan Digital Kelar.in",
+  "catalogSubtitle": "Solusi Lengkap Jasa Pembuatan Website, Penataan Dokumen & Akademik, serta Desain Grafis Visual",
+  "disclaimer": "*Tarif dan skema harga belum ditentukan (diisi 0 / TBA). Biaya akhir dapat disesuaikan secara fleksibel sesuai tingkat kerumitan, deadline, dan spesifikasi pesanan Anda.",
+  "pillars": [
+    {
+      "id": "website",
+      "code": "A",
+      "name": "Layanan Website",
+      "tagline": "Pengembangan sistem dan antarmuka web modern, responsif, rapi, dan siap didemokan.",
+      "services": [
+        {
+          "id": "web-landing-page",
+          "code": "A1",
+          "pillarId": "website",
+          "name": "Landing Page & Promo",
+          "shortDescription": "Web 1 halaman interaktif fokus konversi atau promo produk tugas.",
+          "deliverable": "File source code (HTML/CSS/JS/framework), aset gambar, full responsive.",
+          "deliverableItems": [
+            "File source code lengkap (HTML/CSS/JS/framework)",
+            "Aset gambar teroptimasi & terintegrasi",
+            "Tampilan 100% responsif (Desktop, Tablet, Mobile)",
+            "Integrasi tombol kontak WhatsApp / Call to Action (CTA)"
+          ],
+          "targetProblem": "Klien butuh halaman promosi produk, pameran virtual, tugas pemasaran.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "projek",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Sat-Set & Efektif",
+          "popular": true
+        },
+        {
+          "id": "web-company-profile",
+          "code": "A2",
+          "pillarId": "website",
+          "name": "Website Company Profile",
+          "shortDescription": "Web profil bisnis/UMKM (3–5 halaman: Home, About, Services, Contact).",
+          "deliverable": "Multi-halaman terstruktur, navigasi interaktif, formulir kontak terintegrasi.",
+          "deliverableItems": [
+            "Struktur multi-halaman rapi (3–5 halaman standar)",
+            "Navigasi interaktif & responsif",
+            "Formulir kontak & tautan media sosial terintegrasi",
+            "Optimasi dasar SEO & loading super cepat"
+          ],
+          "targetProblem": "Klien butuh web resmi organisasi, bisnis lokal, atau tugas perancangan web bisnis.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "projek",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Resmi & Kredibel",
+          "popular": false
+        },
+        {
+          "id": "web-portfolio-cv",
+          "code": "A3",
+          "pillarId": "website",
+          "name": "Portofolio / CV Online",
+          "shortDescription": "Halaman web personal pamer karya, rekam jejak, sertifikasi, personal branding.",
+          "deliverable": "Tampilan modern, interaktif, link media sosial & proyek aktif terhubung.",
+          "deliverableItems": [
+            "Tampilan modern & personal branding memukau",
+            "Galeri showcase proyek interaktif yang dapat diklik",
+            "Tautan profil LinkedIn, GitHub, & media sosial aktif",
+            "Tombol unduh CV format PDF sekali klik"
+          ],
+          "targetProblem": "Klien ingin personal branding profesional atau tugas portofolio digital.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "projek",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Wajib Pencaker",
+          "popular": false
+        },
+        {
+          "id": "web-crud-system",
+          "code": "A4",
+          "pillarId": "website",
+          "name": "Sistem Informasi (CRUD Dasar)",
+          "shortDescription": "Web fungsional olah data (Create, Read, Update, Delete) seperti kasir, inventaris, perpustakaan.",
+          "deliverable": "Source code lengkap, dump basis data (.sql), panduan instalasi localhost.",
+          "deliverableItems": [
+            "Source code lengkap (Frontend & Backend terstruktur)",
+            "Dump berkas basis data (.sql) siap impor",
+            "Fitur olah data lengkap (Create, Read, Update, Delete)",
+            "Dokumentasi & panduan langkah instalasi di localhost"
+          ],
+          "targetProblem": "Mahasiswa tugas matkul pemrograman/basis data yang butuh aplikasi siap demo.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "projek",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Siap Demo Dosen",
+          "popular": true
+        },
+        {
+          "id": "web-slicing-figma",
+          "code": "A5",
+          "pillarId": "website",
+          "name": "Slicing Desain (Figma ke Web)",
+          "shortDescription": "Konversi desain Figma/Adobe XD menjadi kode web presisi (pixel-perfect).",
+          "deliverable": "Kode bersih HTML/CSS, Tailwind CSS, atau Bootstrap ramah layar seluler.",
+          "deliverableItems": [
+            "Konversi pixel-perfect dari draf Figma / Adobe XD",
+            "Kode bersih semantik (HTML/CSS murni, Tailwind, atau Next.js)",
+            "Responsif sempurna di berbagai resolusi layar",
+            "Struktur komponen modular mudah dikembangkan lanjut"
+          ],
+          "targetProblem": "Klien sudah punya desain di Figma tapi tidak bisa/tidak sempat ngoding.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "halaman",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Pixel-Perfect",
+          "popular": false
+        }
+      ]
+    },
+    {
+      "id": "document-academic",
+      "code": "B",
+      "name": "Layanan Dokumen & Akademik",
+      "tagline": "Penataan, standarisasi pedoman kampus, dan penyuntingan naskah ilmiah/tugas tertulis.",
+      "services": [
+        {
+          "id": "doc-proofreading-typo",
+          "code": "B1",
+          "pillarId": "document-academic",
+          "name": "Proofreading & Cek Typo",
+          "shortDescription": "Koreksi salah ketik, ejaan, tanda baca (PUEBI/KBBI) & struktur kalimat janggal (+ opsi English basic).",
+          "deliverable": "File .docx mode Track Changes & salinan dokumen bersih siap cetak.",
+          "deliverableItems": [
+            "File .docx dengan mode Track Changes transparan",
+            "File dokumen bersih siap cetak/kumpul (.docx & .pdf)",
+            "Koreksi ejaan, tanda baca, huruf kapital, & PUEBI/KBBI",
+            "Penyempurnaan alur kalimat agar enak dibaca dan ilmiah"
+          ],
+          "targetProblem": "Klien cemas dokumen banyak typo, rancu, atau persiapan sebelum submit jurnal/tugas.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "halaman",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Bebas Typo",
+          "popular": true
+        },
+        {
+          "id": "doc-reformat-structure",
+          "code": "B2",
+          "pillarId": "document-academic",
+          "name": "Reformat Struktur Dokumen",
+          "shortDescription": "Penyesuaian margin, font, spasi, heading multilevel (Bab/Sub-bab) sesuai pedoman kampus/instansi.",
+          "deliverable": "Dokumen rapi format .docx sesuai template/buku panduan target.",
+          "deliverableItems": [
+            "Penyesuaian margin presisi (misal: 4-4-3-3 atau sesuai pedoman)",
+            "Setting jenis font, ukuran, & spasi konsisten dari awal sampai akhir",
+            "Penyusunan heading bertingkat (Heading 1, 2, 3 multilevel)",
+            "Penyelarasan layout tabel dan gambar agar tidak terpotong"
+          ],
+          "targetProblem": "Dokumen berantakan, heading tidak beraturan, template kampus tidak sesuai.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "dokumen",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Sesuai Pedoman",
+          "popular": false
+        },
+        {
+          "id": "doc-citation-bibliography",
+          "code": "B3",
+          "pillarId": "document-academic",
+          "name": "Daftar Pustaka & Sitasi",
+          "shortDescription": "Penyusunan sitasi dan bibliografi standar (APA, Harvard, IEEE, Chicago) via Mendeley/Zotero atau manual.",
+          "deliverable": "Daftar pustaka terstandarisasi dengan tautan sitasi aktif di naskah.",
+          "deliverableItems": [
+            "Integrasi aplikasi reference manager (Mendeley / Zotero)",
+            "Standarisasi format sitasi (APA, IEEE, Harvard, Vancouver, dll.)",
+            "Sinkronisasi otomatis antara sitasi dalam naskah dengan Daftar Pustaka",
+            "Pengecekan kelengkapan metadata sumber referensi (DOI, Penulis, Tahun)"
+          ],
+          "targetProblem": "Sitasi tercecer, format daftar pustaka campur aduk, diminta dosen pakai Mendeley.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "dokumen",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Standar Ilmiah",
+          "popular": false
+        },
+        {
+          "id": "doc-page-numbering-toc",
+          "code": "B4",
+          "pillarId": "document-academic",
+          "name": "Penomoran Halaman & Daftar Isi Otomatis",
+          "shortDescription": "Nomor majemuk (Romawi awal, Angka Arab isi bab, beda posisi awal bab) + Daftar Isi, Tabel, Gambar otomatis.",
+          "deliverable": "File dokumen dengan navigasi panel rapi, nomor tidak rusak/geser saat jadi PDF.",
+          "deliverableItems": [
+            "Penomoran majemuk (Romawi di halaman awal, Arab di isi bab)",
+            "Aturan beda posisi nomor (tengah bawah di halaman judul bab, kanan atas di isi)",
+            "Daftar Isi otomatis yang sinkron dengan panel navigasi",
+            "Daftar Tabel & Daftar Gambar otomatis sekali klik",
+            "Jaminan nomor halaman anti-geser saat dikonversi ke PDF"
+          ],
+          "targetProblem": "Pusing memisahkan halaman Romawi dan angka Arab, daftar isi masih manual titik-titik.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "dokumen",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Anti Geser",
+          "popular": true
+        }
+      ]
+    },
+    {
+      "id": "design-visual",
+      "code": "C",
+      "name": "Layanan Desain Grafis & Visual",
+      "tagline": "Visualisasi materi, promosi event/bisnis, dan antarmuka interaktif.",
+      "services": [
+        {
+          "id": "design-poster-pamflet",
+          "code": "C1",
+          "pillarId": "design-visual",
+          "name": "Poster & Pamflet",
+          "shortDescription": "Poster Ilmiah/Penelitian (LKTI/PIMNAS/seminar) atau Poster Promosi (acara kampus/bazar/webinar).",
+          "deliverable": "PDF siap cetak (CMYK high-res) + file gambar digital (PNG/JPG RGB).",
+          "deliverableItems": [
+            "Berkas PDF High-Resolution Siap Cetak (format warna CMYK 300 DPI)",
+            "Berkas gambar digital tajam (PNG/JPG RGB untuk sosmed/web)",
+            "Tata letak hierarki visual jelas, estetis, dan mudah dibaca",
+            "Ukuran proporsional sesuai standar cetak (A0, A1, A2, A3, A4, atau custom)"
+          ],
+          "targetProblem": "Klien butuh poster sidang, poster lomba ilmiah, pamflet publikasi event.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "desain",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Siap Cetak HD",
+          "popular": true
+        },
+        {
+          "id": "design-slide-presentation",
+          "code": "C2",
+          "pillarId": "design-visual",
+          "name": "Slide Presentasi (PPT)",
+          "shortDescription": "Desain ulang tampilan slide agar visual, ringkas, elegan, dan menarik perhatian penguji/audiens.",
+          "deliverable": "File PowerPoint (.pptx), Google Slides, atau link template Canva editable.",
+          "deliverableItems": [
+            "File master PowerPoint (.pptx) yang dapat diedit bebas",
+            "Tautan Canva / Google Slides (opsional sesuai permintaan)",
+            "Penyusunan visual ringkas & infografis poin inti (bukan copy-paste paragraf)",
+            "Transisi mulus & animasi elegan tanpa kesan norak"
+          ],
+          "targetProblem": "Slide presentasi terlalu banyak teks, membosankan, atau persiapan sidang skripsi.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "slide",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Pikat Penguji",
+          "popular": true
+        },
+        {
+          "id": "design-ui-ux-mockup",
+          "code": "C3",
+          "pillarId": "design-visual",
+          "name": "UI/UX & Mockup Desain",
+          "shortDescription": "Purwarupa (prototype) aplikasi web/mobile interaktif untuk tugas RPL / IMK.",
+          "deliverable": "Tautan Figma interaktif lengkap dengan komponen dan design guidelines.",
+          "deliverableItems": [
+            "Tautan proyek Figma interaktif (dapat diklik dan didemokan)",
+            "Design system dasar (komponen reusable, palette warna, typography)",
+            "Desain antarmuka High-Fidelity (Hi-Fi) modern & estetik",
+            "Alur interaksi pengguna (user flow) jelas dan terstruktur"
+          ],
+          "targetProblem": "Tugas rekayasa perangkat lunak, perancangan antarmuka, belum butuh coding.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "layar",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Figma Prototype",
+          "popular": false
+        },
+        {
+          "id": "design-branding-kit",
+          "code": "C4",
+          "pillarId": "design-visual",
+          "name": "Branding & Social Media Kit",
+          "shortDescription": "Identitas visual tugas wirausaha: logo simpel, panduan warna/font, 3–6 template Instagram.",
+          "deliverable": "File logo transparan (.png), guideline warna/font, template post/story feed.",
+          "deliverableItems": [
+            "Logo simpel & modern dengan file PNG transparan resolusi tinggi",
+            "Panduan identitas mini (kode warna hex, rekomendasi font)",
+            "3–6 template feed & story Instagram yang mudah diedit di Canva",
+            "Aset grafis siap posting untuk pemasaran produk/jasa"
+          ],
+          "targetProblem": "Mahasiswa matkul kewirausahaan yang butuh aset branding feed Instagram & logo.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "paket",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Paket Wirausaha",
+          "popular": false
+        },
+        {
+          "id": "design-infographic-data",
+          "code": "C5",
+          "pillarId": "design-visual",
+          "name": "Infografis & Visual Data",
+          "shortDescription": "Pengubahan data tabel statistik, alur proses (flowchart), atau konsep rumit jadi grafis informatif.",
+          "deliverable": "File visual resolusi tinggi (PDF & PNG).",
+          "deliverableItems": [
+            "Visualisasi data tabel mentah, diagram alir, atau alur metodologi riset",
+            "File visual beresolusi tinggi (PDF dan PNG)",
+            "Gaya desain rapi, modern, dan memudahkan pemahaman konsep rumit",
+            "Sangat pas untuk lampiran Bab 4 Skripsi / presentasi laporan"
+          ],
+          "targetProblem": "Klien ingin merangkum data penelitian atau alur bisnis agar mudah dipahami dosen.",
+          "basePrice": 0,
+          "startingPrice": 0,
+          "priceUnit": "desain",
+          "priceFormatted": "Rp 0 (TBA)",
+          "badge": "Paham Sekali Lirik",
+          "popular": false
+        }
+      ]
+    }
+  ],
+  "bundles": [
+    {
+      "id": "bundle-dokumen-tuntas",
+      "name": "Paket Dokumen Tuntas",
+      "badge": "Hemat Dokumen",
+      "highlighted": false,
+      "targetAudience": "Mahasiswa penyusun makalah, proposal, dan skripsi yang ingin naskahnya tuntas 100% rapi.",
+      "triggerCondition": "Klien bertanya lebih dari 1 masalah dokumen (misal: 'bisa betulin daftar isi sama cek margin?').",
+      "packageItems": [
+        "Reformat Dokumen Lengkap (Margin, Font, Spasi, Heading Multilevel)",
+        "Penomoran Halaman Majemuk & Daftar Isi Otomatis",
+        "Pengecekan Typo, Tanda Baca, & PUEBI/KBBI Menyeluruh",
+        "Sinkronisasi Sitasi & Daftar Pustaka (Mendeley/Zotero)"
+      ],
+      "basePrice": 0,
+      "priceFormatted": "Rp 0 (TBA)",
+      "ctaType": "bundle"
+    },
+    {
+      "id": "bundle-siap-sidang",
+      "name": "Paket Siap Sidang Presentasi",
+      "badge": "Best Seller Wisuda",
+      "highlighted": true,
+      "targetAudience": "Mahasiswa tingkat akhir yang sedang mempersiapkan sidang skripsi / lomba karya ilmiah.",
+      "triggerCondition": "Klien menyebutkan kata 'sidang', 'skripsi akhir', atau 'ujian kompre'.",
+      "packageItems": [
+        "Seluruh cakupan Paket Dokumen Tuntas (naskah 100% siap cetak)",
+        "Redesain Slide Presentasi Estetik & Minimalis (Maks. 15 Slide)",
+        "1 Desain Poster Ringkasan Riset Siap Cetak (A0/A1/A2)"
+      ],
+      "basePrice": 0,
+      "priceFormatted": "Rp 0 (TBA)",
+      "ctaType": "bundle"
+    },
+    {
+      "id": "bundle-tugas-kewirausahaan",
+      "name": "Paket Tugas Kewirausahaan (Digital Bisnis)",
+      "badge": "Solusi Komersil",
+      "highlighted": false,
+      "targetAudience": "Mahasiswa matkul Kewirausahaan, Bisnis Digital, atau rintisan UMKM.",
+      "triggerCondition": "Klien butuh web jualan sekaligus logo dan feeds Instagram untuk tugas bisnis.",
+      "packageItems": [
+        "Website Landing Page / Company Profile Interaktif",
+        "Desain Logo Simpel & Panduan Warna Brand Identity",
+        "3 Template Feed Promosi Produk Instagram Editable di Canva"
+      ],
+      "basePrice": 0,
+      "priceFormatted": "Rp 0 (TBA)",
+      "ctaType": "bundle"
+    },
+    {
+      "id": "bundle-proyek-it-lengkap",
+      "name": "Paket Proyek IT Lengkap",
+      "badge": "End-to-End Dev",
+      "highlighted": false,
+      "targetAudience": "Mahasiswa Informatika/Sistem Informasi tingkat awal–menengah.",
+      "triggerCondition": "Klien butuh dari tahap perancangan tampilan sampai web bisa diakses online via tautan.",
+      "packageItems": [
+        "Desain Antarmuka UI/UX di Figma (5–8 Layar Interaktif)",
+        "Slicing / Pembuatan Web Fungsional (Responsif & Modern)",
+        "Bantuan Setup Hosting / Deploy Gratis (Vercel / Netlify) Siap Akses Online"
+      ],
+      "basePrice": 0,
+      "priceFormatted": "Rp 0 (TBA)",
+      "ctaType": "bundle"
+    },
+    {
+      "id": "bundle-launching-web-mandiri",
+      "name": "Paket Launching Web Mandiri",
+      "badge": "Anti Panik Dosen",
+      "highlighted": false,
+      "targetAudience": "Mahasiswa pemula atau non-IT yang cemas ditanya alur logika koding oleh dosen penguji.",
+      "triggerCondition": "Klien mengatakan 'saya gak terlalu paham kodingan, takut ditanya dosen'.",
+      "packageItems": [
+        "Pembuatan Website Pilihan Sesuai Kebutuhan",
+        "Dokumen Panduan Alur Logika Kode Dasar Bahasa Santai",
+        "Panduan & Simulasi Demo Web Menghadapi Dosen Penguji"
+      ],
+      "basePrice": 0,
+      "priceFormatted": "Rp 0 (TBA)",
+      "ctaType": "bundle"
+    }
+  ],
+  "policies": {
+    "revision": {
+      "title": "Ketentuan Revisi",
+      "quota": "2x Revisi Minor",
+      "summary": "Termasuk 2x revisi minor (perbaikan teks, penyesuaian warna minor, pergeseran tata letak elemen).",
+      "detail": "Revisi di luar brief awal atau penambahan fitur/halaman baru di tengah jalan dikenakan biaya tambahan secara proporsional."
+    },
+    "payment": {
+      "title": "Skema Pembayaran",
+      "dpPercentage": 50,
+      "summary": "DP 50% di awal, Pelunasan 50% setelah cek preview.",
+      "detail": "Sistem bertahap: DP 50% di awal untuk mengunci jadwal dan memulai pengerjaan. Sisa pelunasan 50% dibayarkan setelah klien memeriksa preview (tampilan bertanda air / link demo publik). Berkas final (tanpa watermark / source code penuh) diserahkan segera setelah pelunasan terkonfirmasi."
+    },
+    "confidentiality": {
+      "title": "Kerahasiaan Data (NDA 100%)",
+      "summary": "Kerahasiaan data pribadi, naskah, dan materi dijamin 100%.",
+      "detail": "Data pribadi, berkas naskah, dan topik riset dijamin kerahasiaannya 100%. Tidak akan dipublikasikan sebagai portofolio publik tanpa persetujuan tertulis dari klien."
+    },
+    "academicDisclaimer": {
+      "title": "Disclaimer Akademik",
+      "summary": "Layanan bertindak sebagai mitra teknis dan tata format visual.",
+      "detail": "Penyedia jasa bertindak sebagai konsultan teknis, perancang visual, dan editor tata format. Tanggung jawab substansi keilmuan naskah dan hasil evaluasi nilai akademik sepenuhnya berada di pihak klien."
+    }
+  },
+  "briefTemplates": {
+    "website": {
+      "categoryName": "Website",
+      "title": "Template Brief Website",
+      "fields": [
+        {
+          "key": "website_type",
+          "label": "Jenis Web",
+          "placeholder": "Landing Page / Compro / Portofolio / CRUD / Slicing Figma"
+        },
+        {
+          "key": "design_reference",
+          "label": "Referensi / Contoh Desain",
+          "placeholder": "Tautan web contoh atau lampiran file referensi"
+        },
+        {
+          "key": "core_features",
+          "label": "Fitur Utama yang Diinginkan",
+          "placeholder": "Formulir kontak, galeri karya, login admin, keranjang, dll."
+        },
+        {
+          "key": "existing_assets",
+          "label": "Bahan yang Sudah Ada",
+          "placeholder": "Logo, draf teks/konten, foto produk, aset grafis"
+        },
+        {
+          "key": "deadline",
+          "label": "Deadline Pengerjaan",
+          "placeholder": "Hari, Tanggal, & Jam target selesai"
+        }
+      ]
+    },
+    "document": {
+      "categoryName": "Dokumen & Akademik",
+      "title": "Template Brief Dokumen & Akademik",
+      "fields": [
+        {
+          "key": "document_type",
+          "label": "Jenis Naskah",
+          "placeholder": "Makalah / Skripsi / Proposal / Artikel Jurnal / Laporan Magang"
+        },
+        {
+          "key": "page_count",
+          "label": "Jumlah Halaman / Kata",
+          "placeholder": "Estimasi jumlah halaman atau total kata"
+        },
+        {
+          "key": "service_needed",
+          "label": "Layanan yang Dibutuhkan",
+          "placeholder": "Reformat / Cek Typo / Daftar Pustaka / Nomor & Daftar Isi / Paket Tuntas"
+        },
+        {
+          "key": "format_guideline",
+          "label": "Pedoman Format",
+          "placeholder": "Lampirkan file PDF Pedoman Kampus atau template .docx resmi"
+        },
+        {
+          "key": "deadline",
+          "label": "Deadline Pengerjaan",
+          "placeholder": "Hari, Tanggal, & Jam target selesai"
+        }
+      ]
+    },
+    "design": {
+      "categoryName": "Desain Grafis & Visual",
+      "title": "Template Brief Desain Grafis",
+      "fields": [
+        {
+          "key": "design_type",
+          "label": "Jenis Desain",
+          "placeholder": "Poster Ilmiah / Slide PPT / UI-UX Figma / Branding Kit / Infografis"
+        },
+        {
+          "key": "content_material",
+          "label": "Konten / Isi Materi",
+          "placeholder": "Teks naskah materi, ringkasan riset, data mentah/tabel"
+        },
+        {
+          "key": "visual_preference",
+          "label": "Preferensi Visual & Warna",
+          "placeholder": "Warna khas kampus/brand, tema formal/modern/minimalis"
+        },
+        {
+          "key": "output_format",
+          "label": "Format File Output",
+          "placeholder": "PPTX / Canva Link / Figma Link / PDF Siap Cetak / PNG HD"
+        },
+        {
+          "key": "deadline",
+          "label": "Deadline Pengerjaan",
+          "placeholder": "Hari, Tanggal, & Jam target selesai"
+        }
+      ]
+    }
+  }
+}
