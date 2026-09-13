@@ -18,7 +18,19 @@ export default function Footer() {
           </p>
         </div>
 
-        <div className="flex items-center gap-8 font-mono text-xs">
+        <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 font-mono text-xs">
+          <Link href="/#paket-hemat" className="text-text-muted hover:text-brand-red transition-colors">
+            Paket Hemat
+          </Link>
+          <Link href="/web-development" className="text-text-muted hover:text-foreground transition-colors">
+            Web Dev
+          </Link>
+          <Link href="/academic" className="text-text-muted hover:text-foreground transition-colors">
+            Akademik
+          </Link>
+          <Link href="/portfolio" className="text-text-muted hover:text-brand-red transition-colors">
+            Portfolio
+          </Link>
           <a
             href="https://raflyrzp.vercel.app"
             target="_blank"
@@ -27,12 +39,6 @@ export default function Footer() {
           >
             Owner Portfolio <ArrowUpRight className="w-3 h-3 text-brand-red" />
           </a>
-          <Link href="/web-development" className="text-text-muted hover:text-foreground transition-colors">
-            Jasa Web Development
-          </Link>
-          <Link href="/academic" className="text-text-muted hover:text-foreground transition-colors">
-            Jasa Akademik
-          </Link>
         </div>
       </div>
     </footer>

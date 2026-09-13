@@ -1,0 +1,265 @@
+"use client";
+
+import React, { useState } from "react";
+import Link from "next/link";
+import {
+  ArrowRight,
+  AlertTriangle,
+  CheckCircle2,
+  Sparkles,
+  SlidersHorizontal,
+  FileText,
+  Laptop,
+  Palette,
+} from "lucide-react";
+
+type CategoryType = "document" | "website" | "design";
+
+interface CategoryData {
+  id: CategoryType;
+  label: string;
+  icon: React.ComponentType<{ className?: string }>;
+  beforeTag: string;
+  beforeTitle: string;
+  beforeDesc: string;
+  beforePoints: string[];
+  beforeNote: string;
+  afterTag: string;
+  afterTitle: string;
+  afterDesc: string;
+  afterPoints: string[];
+  afterNote: string;
+}
+
+const transformationData: Record<CategoryType, CategoryData> = {
+  document: {
+    id: "document",
+    label: "Dokumen & Skripsi",
+    icon: FileText,
+    beforeTag: "Format Rusak • Margin Asimetris",
+    beforeTitle: "Naskah Format Berantakan (Sebelum)",
+    beforeDesc:
+      "Margin tidak simetris (2-1-2-1), font campur aduk, spasi tidak konsisten, dan penomoran halaman rusak.",
+    beforePoints: [
+      "✕ Margin tidak beraturan & tidak sesuai pedoman kampus",
+      "✕ Daftar isi dan nomor halaman dibuat manual",
+      "✕ Sitasi tanpa metadata (rentan salah di daftar pustaka)",
+    ],
+    beforeNote: "Rentan Ditolak Dosen Pembimbing",
+    afterTag: "Standar 4-4-3-3 • Sitasi Mendeley",
+    afterTitle: "Format Baku Pedoman Kampus (Sesudah)",
+    afterDesc:
+      "Tata letak presisi sesuai panduan resmi kampus, hierarki heading rapi, dan sitasi tersinkronisasi otomatis.",
+    afterPoints: [
+      "✓ Margin simetris standar baku (4-4-3-3 cm)",
+      "✓ Penomoran Romawi & Arab otomatis (Multi-Section)",
+      "✓ Sitasi APA/IEEE & daftar pustaka Mendeley/Zotero presisi",
+    ],
+    afterNote: "Garansi Lolos Format Pedoman Kampus",
+  },
+  website: {
+    id: "website",
+    label: "Web Development",
+    icon: Laptop,
+    beforeTag: "Tampilan Kaku • Tidak Responsif",
+    beforeTitle: "Website Jadul & Sering Error (Sebelum)",
+    beforeDesc:
+      "Tampilan berantakan saat dibuka di layar HP, kode semrawut sulit dijelaskan saat demo, dan loading lambat.",
+    beforePoints: [
+      "✕ Tampilan rusak di smartphone (tidak mobile-friendly)",
+      "✕ Kode tidak rapi & belum teruji (rentan bug saat demo)",
+      "✕ Tidak ada tombol pemesanan atau kontak WhatsApp interaktif",
+    ],
+    beforeNote: "Demo Gagal & Pembeli Bingung",
+    afterTag: "Modern Next.js • 100% Responsif",
+    afterTitle: "Web Modern, Sat-Set, & Siap Demo (Sesudah)",
+    afterDesc:
+      "Antarmuka elegan, performa tinggi, responsive di semua gadget, dan terintegrasi langsung ke WhatsApp.",
+    afterPoints: [
+      "✓ Tampilan rapi, estetik & fleksibel di HP maupun laptop",
+      "✓ Clean code modular, enteng, & mudah dipresentasikan",
+      "✓ Tombol chat WhatsApp & formulir konversi terintegrasi",
+    ],
+    afterNote: "Siap Online & Sukses Presentasi",
+  },
+  design: {
+    id: "design",
+    label: "Desain & Slide PPT",
+    icon: Palette,
+    beforeTag: "Teks Padat • Membosankan",
+    beforeTitle: "Slide Berjejal Penuh Teks (Sebelum)",
+    beforeDesc:
+      "Materi disalin mentah-mentah ke slide, tata letak monoton tanpa hierarki visual, dewan penguji/audiens cepat bosan.",
+    beforePoints: [
+      "✕ Teks panjang menumpuk ('wall of text') tanpa ringkasan",
+      "✕ Pemilihan warna & font tabrakan tidak profesional",
+      "✕ Tidak ada visualisasi diagram atau infografis data pendukung",
+    ],
+    beforeNote: "Audiens Jenuh & Nilai Kurang Maksimal",
+    afterTag: "Estetik Minimalis • Visual Infografis",
+    afterTitle: "Slide Estetik, Ringkas & Berbobot (Sesudah)",
+    afterDesc:
+      "Penyampaian poin inti riset dengan visual modern, grafik komunikatif, dan transisi elegan memikat penguji.",
+    afterPoints: [
+      "✓ Ringkasan materi tajam & mudah dicerna dalam sekali lirik",
+      "✓ Tata letak proporsional dengan palet warna harmonis",
+      "✓ Diagram alur metodologi & infografis data siap presentasi",
+    ],
+    afterNote: "Percaya Diri Tampil di Depan Penguji",
+  },
+};
+
+export function BeforeAfterSlider() {
+  const [activeCategory, setActiveCategory] = useState<CategoryType>("document");
+  const [sliderPos, setSliderPos] = useState<number>(50);
+
+  const current = transformationData[activeCategory];
+
+  return (
+    <div className="w-full space-y-6">
+      {/* Category Switcher Tabs */}
+      <div className="flex flex-wrap justify-center gap-2">
+        {(Object.keys(transformationData) as CategoryType[]).map((catKey) => {
+          const item = transformationData[catKey];
+          const Icon = item.icon;
+          const isActive = activeCategory === catKey;
+
+          return (
+            <button
+              key={catKey}
+              onClick={() => {
+                setActiveCategory(catKey);
+                setSliderPos(50);
+              }}
+              className={`px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer ${
+                isActive
+                  ? "bg-brand-red text-white shadow-[0_0_15px_rgba(239,68,68,0.3)]"
+                  : "border border-border-color bg-card-bg text-text-muted hover:text-foreground hover:border-brand-red/50"
+              }`}
+            >
+              <Icon className="w-3.5 h-3.5" />
+              <span>{item.label}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      {/* Slider Control Container */}
+      <div className="relative border border-border-color bg-black overflow-hidden select-none min-h-[460px] md:min-h-[400px]">
+        
+        {/* Top bar indicators */}
+        <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 py-2.5 bg-neutral-950/90 border-b border-neutral-800 text-[11px] font-mono">
+          <span className="text-red-400 font-bold flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-red-500"></span>
+            SEBELUM (BERANTAKAN)
+          </span>
+          <span className="text-neutral-500 hidden sm:inline-flex items-center gap-1">
+            <SlidersHorizontal className="w-3.5 h-3.5 text-brand-red" />
+            Geser Slider Untuk Bandingkan
+          </span>
+          <span className="text-emerald-400 font-bold flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
+            SESUDAH (HASIL KELAR.IN)
+          </span>
+        </div>
+
+        {/* AFTER CONTENT (Base Layer - 100% width) */}
+        <div className="absolute inset-0 pt-14 p-6 md:p-8 flex flex-col justify-between bg-neutral-950 text-neutral-100">
+          <div className="space-y-4 max-w-xl ml-auto text-right">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-emerald-950/60 border border-emerald-500/40 text-emerald-400 text-[10px] font-mono font-bold uppercase">
+              <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+              <span>{current.afterTag}</span>
+            </div>
+
+            <div className="border border-emerald-500/25 bg-neutral-900/60 p-5 text-left font-sans space-y-3">
+              <div className="text-sm font-bold font-mono text-white border-b border-neutral-800 pb-2 flex items-center justify-between">
+                <span>{current.afterTitle}</span>
+                <span className="text-[10px] text-emerald-400 font-sans">✓ Terstandar</span>
+              </div>
+              <p className="text-xs text-neutral-300 leading-relaxed">
+                {current.afterDesc}
+              </p>
+              <div className="pt-2 border-t border-neutral-800/80 text-[11px] font-mono text-emerald-400 space-y-1">
+                {current.afterPoints.map((pt, i) => (
+                  <div key={i}>{pt}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center justify-end gap-2 text-[10px] font-mono text-emerald-400 font-semibold">
+            <Sparkles className="w-3 h-3 text-emerald-400" />
+            <span>{current.afterNote}</span>
+          </div>
+        </div>
+
+        {/* BEFORE CONTENT (Clipped Layer - width governed by sliderPos) */}
+        <div
+          className="absolute inset-0 pt-14 p-6 md:p-8 flex flex-col justify-between bg-neutral-900 text-neutral-300 border-r-2 border-brand-red overflow-hidden z-10"
+          style={{ width: `${sliderPos}%` }}
+        >
+          <div className="space-y-4 max-w-xl min-w-[320px] md:min-w-[440px]">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-red-950/60 border border-red-500/40 text-red-400 text-[10px] font-mono font-bold uppercase">
+              <AlertTriangle className="w-3 h-3 text-red-400" />
+              <span>{current.beforeTag}</span>
+            </div>
+
+            <div className="border border-red-500/30 bg-black/60 p-5 text-left font-sans space-y-3 relative">
+              <div className="text-sm font-semibold font-mono text-red-300 opacity-90 border-b border-red-900/40 pb-2 flex items-center justify-between">
+                <span>{current.beforeTitle}</span>
+                <span className="text-[10px] text-red-400 font-sans">✕ Masalah</span>
+              </div>
+              <p className="text-xs text-neutral-400 leading-relaxed line-clamp-3">
+                {current.beforeDesc}
+              </p>
+              <div className="pt-2 border-t border-red-900/40 text-[11px] font-mono text-red-400 space-y-1">
+                {current.beforePoints.map((pt, i) => (
+                  <div key={i}>{pt}</div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 text-[10px] font-mono text-red-400 min-w-[280px]">
+            <AlertTriangle className="w-3 h-3 text-red-400" />
+            <span>{current.beforeNote}</span>
+          </div>
+        </div>
+
+        {/* DRAGGABLE SLIDER INPUT */}
+        <input
+          type="range"
+          min="5"
+          max="95"
+          value={sliderPos}
+          onChange={(e) => setSliderPos(Number(e.target.value))}
+          className="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-30"
+          aria-label="Bandingkan hasil sebelum dan sesudah"
+        />
+
+        {/* CUSTOM SLIDER THUMB LINE & BUTTON */}
+        <div
+          className="absolute top-0 bottom-0 z-20 pointer-events-none flex items-center justify-center -ml-[1px]"
+          style={{ left: `${sliderPos}%` }}
+        >
+          <div className="w-0.5 h-full bg-brand-red shadow-[0_0_12px_#ef4444]"></div>
+          <div className="absolute w-8 h-8 rounded-full bg-brand-red border-2 border-white shadow-[0_0_15px_rgba(239,68,68,0.8)] flex items-center justify-center text-white text-xs font-mono font-bold">
+            ↔
+          </div>
+        </div>
+      </div>
+
+      {/* Action Footer */}
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs text-text-muted">
+        <span>Geser garis pembanding untuk melihat standar kualitas di setiap kategori.</span>
+        <Link
+          href="/portfolio"
+          className="inline-flex items-center gap-1.5 text-brand-red hover:underline font-bold"
+        >
+          <span>Lihat Sampel Portofolio Lengkap</span>
+          <ArrowRight className="w-3.5 h-3.5" />
+        </Link>
+      </div>
+    </div>
+  );
+}
