@@ -1,5 +1,15 @@
+export interface CatalogAddon {
+  id: string;
+  name: string;
+  price: number;
+  priceFormatted: string;
+  unit?: string;
+  description?: string;
+}
+
 export interface CatalogServiceItem {
   id: string;
+  sku: string;
   code: string;
   pillarId: string;
   name: string;
@@ -7,10 +17,18 @@ export interface CatalogServiceItem {
   deliverable: string;
   deliverableItems: string[];
   targetProblem: string;
+  calculationBasis?: string;
+  priceUnit: string;
+  priceMin: number;
+  priceMax: number;
   basePrice: number;
   startingPrice: number;
-  priceUnit: string;
   priceFormatted: string;
+  expressPriceFormatted?: string;
+  estimatedDuration?: string;
+  maxRevision?: string;
+  techStackOrNotes?: string;
+  rawFileAccess?: string;
   badge?: string;
   popular?: boolean;
 }
@@ -20,17 +38,27 @@ export interface CatalogPillar {
   code: string;
   name: string;
   tagline: string;
+  calculationBasis?: string;
+  notes?: string[];
+  addOns?: CatalogAddon[];
   services: CatalogServiceItem[];
 }
 
 export interface CatalogBundleItem {
   id: string;
+  sku: string;
   name: string;
   badge?: string;
   highlighted?: boolean;
   targetAudience: string;
   triggerCondition: string;
   packageItems: string[];
+  normalPrice: number;
+  normalPriceFormatted: string;
+  specialPrice: number;
+  specialPriceFormatted: string;
+  savings: number;
+  savingsFormatted: string;
   basePrice: number;
   priceFormatted: string;
   ctaType: 'bundle';
