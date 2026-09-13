@@ -211,7 +211,7 @@ export default function PortfolioPage() {
   }, [selectedCategory, searchQuery]);
 
   return (
-    <div className="min-h-screen pt-28 pb-24 relative overflow-hidden">
+    <div className="min-h-screen pt-6 sm:pt-8 pb-24 relative overflow-hidden">
       <div className="absolute inset-0 cyber-grid pointer-events-none z-0"></div>
 
       {/* Ambient background glows */}
@@ -308,7 +308,7 @@ export default function PortfolioPage() {
               return (
                 <div
                   key={project.id}
-                  className="border border-border-color bg-card-bg flex flex-col justify-between group hover:border-brand-red/60 transition-all duration-300"
+                  className="border border-border-color bg-card-bg shadow-sm flex flex-col justify-between group hover:border-brand-red/60 transition-all duration-300"
                 >
                   <div>
                     {/* Placeholder Preview Screen (Cyber High-Tech Canvas/Terminal) */}

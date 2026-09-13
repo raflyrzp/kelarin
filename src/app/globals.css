@@ -3,14 +3,14 @@
 @variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #000000;
-  --card-bg: #ffffff;
-  --border-color: #e5e7eb;
-  --text-muted: #6b7280;
-  --grid-color: rgba(0, 0, 0, 0.04);
-  --color-brand-red: #ef4444;
-  --section-muted-bg: #f3f4f6;
+  --background: #f4f4f0;
+  --foreground: #18181b;
+  --card-bg: #faf9f6;
+  --border-color: #e5e4de;
+  --text-muted: #52525b;
+  --grid-color: rgba(0, 0, 0, 0.02);
+  --color-brand-red: #dc2626;
+  --section-muted-bg: #eae9e4;
 }
 
 .dark {
@@ -20,6 +20,7 @@
   --border-color: #27272a;
   --text-muted: #a1a1aa;
   --grid-color: rgba(255, 255, 255, 0.03);
+  --color-brand-red: #ef4444;
   --section-muted-bg: #0d0d0f;
 }
 
@@ -35,9 +36,37 @@
   --color-section-muted-bg: var(--section-muted-bg);
 }
 
-* {
+/* Circular View Transitions API reset & layering */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
+}
+
+/* Tone down Next.js dev indicator in light mode */
+:root:not(.dark) [data-nextjs-dev-indicator],
+:root:not(.dark) [data-next-badge],
+:root:not(.dark) nextjs-portal {
+  opacity: 0.6;
+  filter: invert(0.85) hue-rotate(180deg);
+}
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   scroll-behavior: smooth;
+  transition-property: background-color, border-color, color, fill, stroke;
+  transition-duration: 280ms;
+  transition-timing-function: ease;
 }
 
 body {
@@ -73,7 +102,7 @@ body {
 
 /* Brutalist cyberpunk styles */
 .cyber-grid {
-  background-image: 
+  background-image:
     linear-gradient(to right, var(--grid-color) 1px, transparent 1px),
     linear-gradient(to bottom, var(--grid-color) 1px, transparent 1px);
   background-size: 40px 40px;

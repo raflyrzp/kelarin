@@ -65,20 +65,20 @@ export default function Navbar() {
   const whatsappDirectUrl = getWhatsAppLink("general", "Konsultasi Layanan Kelar.in");
 
   return (
-    <header className="sticky top-0 z-50 w-full transition-all duration-300">
+    <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
       {/* 1. TOP ANNOUNCEMENT / SOCIAL PROOF TICKER */}
-      <div className="w-full bg-black text-neutral-300 border-b border-neutral-800/80 py-1.5 px-4 text-[11px] font-mono tracking-wider overflow-hidden">
+      <div className="w-full bg-[#E8E7E1] dark:bg-neutral-950 text-neutral-800 dark:text-neutral-300 border-b border-[#D8D7D0] dark:border-neutral-800 py-1.5 px-4 text-[11px] font-mono tracking-wider overflow-hidden">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4 md:gap-6 truncate">
-            <span className="inline-flex items-center gap-1.5 text-emerald-400 font-semibold shrink-0">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
+            <span className="inline-flex items-center gap-1.5 text-emerald-700 dark:text-emerald-400 font-semibold shrink-0">
+              <span className="w-2 h-2 rounded-full bg-emerald-600 dark:bg-emerald-500 animate-ping"></span>
               SLOT DIBUKA
             </span>
-            <span className="hidden sm:inline-flex items-center gap-1 text-neutral-400 truncate">
+            <span className="hidden sm:inline-flex items-center gap-1 text-neutral-600 dark:text-neutral-400 truncate">
               <Zap className="w-3 h-3 text-brand-red shrink-0" />
               Siaga Pengerjaan Kilat &lt;24 Jam
             </span>
-            <span className="hidden md:inline-flex items-center gap-1 text-neutral-400 truncate">
+            <span className="hidden md:inline-flex items-center gap-1 text-neutral-600 dark:text-neutral-400 truncate">
               <ShieldCheck className="w-3 h-3 text-brand-red shrink-0" />
               Garansi 2x Revisi Minor & Kerahasiaan 100%
             </span>
@@ -88,7 +88,7 @@ export default function Navbar() {
             href={whatsappDirectUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-brand-red hover:text-white transition-colors ml-auto shrink-0 font-bold"
+            className="inline-flex items-center gap-1 text-brand-red hover:text-neutral-950 dark:hover:text-white transition-colors ml-auto shrink-0 font-bold"
           >
             <span>Konsultasi Cepat WA</span>
             <ArrowRight className="w-3 h-3" />
@@ -98,7 +98,7 @@ export default function Navbar() {
 
       {/* 2. MAIN NAVBAR BAR */}
       <div
-        className={`backdrop-blur-md transition-colors duration-300 border-b border-border-color/70 ${scrolled ? "bg-background/90 shadow-sm" : "bg-background/70"
+        className={`backdrop-blur-md transition-colors duration-300 border-b border-border-color ${scrolled ? "bg-background/95 shadow-sm" : "bg-background/85"
           }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
@@ -132,7 +132,7 @@ export default function Navbar() {
             </Link>
 
             {/* Core Offer Anchor: Paket Hemat with Flame */}
-            <a
+            <Link
               href="/#paket-hemat"
               onClick={(e) => handleNavClick(e, "paket-hemat")}
               className="group relative inline-flex items-center gap-1.5 text-sm font-medium tracking-wide text-text-muted hover:text-foreground transition-colors duration-200"
@@ -142,7 +142,7 @@ export default function Navbar() {
               <span className="px-1.5 py-0.2 bg-brand-red text-white text-[9px] font-mono font-bold tracking-tight uppercase">
                 HEMAT
               </span>
-            </a>
+            </Link>
 
             {/* Rich Services Dropdown (Mega Menu Style) */}
             <DropdownMenu.Root>
@@ -269,22 +269,22 @@ export default function Navbar() {
             </Link>
 
             {/* Cara Order */}
-            <a
+            <Link
               href="/#cara-order"
               onClick={(e) => handleNavClick(e, "cara-order")}
               className="text-sm font-medium tracking-wide text-text-muted hover:text-foreground transition-colors duration-200"
             >
               Cara Order
-            </a>
+            </Link>
 
             {/* FAQ */}
-            <a
+            <Link
               href="/#faq"
               onClick={(e) => handleNavClick(e, "faq")}
               className="text-sm font-medium tracking-wide text-text-muted hover:text-foreground transition-colors duration-200"
             >
               FAQ
-            </a>
+            </Link>
           </nav>
 
           {/* Right Section CTA & Theme Controls */}
@@ -374,7 +374,7 @@ export default function Navbar() {
               01. Home
             </Link>
 
-            <a
+            <Link
               href="/#paket-hemat"
               onClick={(e) => handleNavClick(e, "paket-hemat")}
               className="flex items-center justify-between px-3 py-2 border border-brand-red/50 bg-brand-red/5 text-foreground hover:bg-brand-red/10 transition-colors font-bold"
@@ -386,7 +386,7 @@ export default function Navbar() {
               <span className="px-1.5 py-0.5 bg-brand-red text-white text-[9px] font-mono">
                 VALUE
               </span>
-            </a>
+            </Link>
 
             {/* Service Subsections */}
             <div className="pt-2">
@@ -443,29 +443,29 @@ export default function Navbar() {
               <span className="text-[10px] font-mono text-brand-red font-bold">KARYA</span>
             </Link>
 
-            <a
+            <Link
               href="/#cara-order"
               onClick={(e) => handleNavClick(e, "cara-order")}
               className="px-3 py-2 border border-border-color text-foreground hover:border-brand-red/50 transition-colors"
             >
               04. Cara Order
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/#faq"
               onClick={(e) => handleNavClick(e, "faq")}
               className="px-3 py-2 border border-border-color text-foreground hover:border-brand-red/50 transition-colors"
             >
               05. FAQ & Garansi
-            </a>
+            </Link>
 
-            <a
+            <Link
               href="/#contact"
               onClick={(e) => handleNavClick(e, "contact")}
               className="px-3 py-2 border border-border-color text-foreground hover:border-brand-red/50 transition-colors"
             >
               06. Hubungi Kami
-            </a>
+            </Link>
           </div>
         </div>
 

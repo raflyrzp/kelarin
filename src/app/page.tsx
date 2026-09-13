@@ -64,7 +64,7 @@ export default function Home() {
       <div className="absolute top-[40%] right-[-15%] w-[280px] h-[280px] md:w-[500px] md:h-[500px] rounded-full bg-brand-red/5 blur-[120px] pointer-events-none z-0"></div>
 
       {/* 1. HERO SECTION (COMPACT & OVERLAP FIXED) */}
-      <section className="relative z-10 pt-10 pb-8 md:pt-16 md:pb-12 px-4 sm:px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
+      <section className="relative z-10 pt-8 pb-8 md:pt-12 md:pb-12 px-4 sm:px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
 
         {/* Urgent Live Badge */}
         <div className="inline-flex items-center gap-2 border border-brand-red/30 bg-brand-red/10 px-3 py-1 mb-4">
@@ -117,13 +117,13 @@ export default function Home() {
 
         {/* Main CTA Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row gap-3.5 w-full justify-center px-4 max-w-lg">
-          <a
+          <Link
             href="#paket-hemat"
             className="group px-7 py-3.5 bg-brand-red hover:bg-red-700 text-white font-mono text-xs sm:text-sm font-bold tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(239,68,68,0.25)] sm:flex-1"
           >
             <span>Pilih Paket Hemat</span>
             <Flame className="w-4 h-4 text-white animate-bounce" />
-          </a>
+          </Link>
           <a
             href={getWhatsAppLink("general", "Konsultasi Cepat Hero")}
             target="_blank"
@@ -177,7 +177,7 @@ export default function Home() {
                 key={bundle.id}
                 className={`relative flex flex-col justify-between p-5 transition-all duration-300 ${isHighlight
                   ? "border-2 border-red-500 bg-card-bg shadow-[0_0_25px_rgba(239,68,68,0.2)] ring-1 ring-red-500/50 lg:-translate-y-1"
-                  : "border border-border-color bg-card-bg hover:border-brand-red/50"
+                  : "border border-border-color bg-card-bg hover:border-brand-red/50 shadow-sm"
                   }`}
               >
                 {isHighlight && (
@@ -203,9 +203,9 @@ export default function Home() {
                   </p>
 
                   {/* Integrated Pricing Section */}
-                  <div className="-mx-5 md:-mx-6 px-5 md:px-6 py-3.5 mb-5 border-y border-border-color/60 bg-white/[0.015] flex flex-col justify-center min-h-[80px]">
+                  <div className="-mx-5 md:-mx-6 px-5 md:px-6 py-3.5 mb-5 border-y border-border-color/60 bg-foreground/[0.02] flex flex-col justify-center min-h-[80px]">
                     <div className="flex items-baseline justify-between gap-2">
-                      <span className="text-2xl sm:text-[26px] font-black font-mono tracking-tight text-white tabular-nums">
+                      <span className="text-2xl sm:text-[26px] font-black font-mono tracking-tight text-foreground tabular-nums">
                         {bundle.specialPriceFormatted}
                       </span>
                       <span className="text-xs text-text-muted/60 line-through font-mono tabular-nums">
@@ -247,7 +247,7 @@ export default function Home() {
         </div>
 
         {/* CTA BANNER: LINK TO DAFTAR HARGA SATUAN LENGKAP */}
-        <div className="mt-8 p-4 md:p-5 border border-border-color bg-card-bg flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-8 p-4 md:p-5 border border-border-color bg-card-bg shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-center sm:text-left">
             <span className="w-2 h-2 rounded-full bg-brand-red shrink-0 hidden sm:block"></span>
             <p className="text-xs sm:text-sm font-sans text-foreground">
@@ -277,7 +277,7 @@ export default function Home() {
           </div>
 
           {/* Thin Horizontal Stepper */}
-          <div className="border border-border-color bg-background p-4 md:p-6">
+          <div className="border border-border-color bg-card-bg shadow-sm p-4 md:p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative">
 
               {/* Step 1 */}
@@ -366,7 +366,7 @@ export default function Home() {
           </div>
 
           {/* Kolom Kanan: Kotak Konversi Cepat WhatsApp */}
-          <div id="contact" className="lg:col-span-5 lg:sticky lg:top-24 border-2 border-brand-red bg-card-bg p-6 shadow-[0_0_25px_rgba(239,68,68,0.15)] flex flex-col justify-between scroll-mt-24">
+          <div id="contact" className="lg:col-span-5 lg:sticky lg:top-28 border-2 border-brand-red bg-card-bg p-6 shadow-sm lg:shadow-[0_0_25px_rgba(239,68,68,0.15)] flex flex-col justify-between scroll-mt-28">
             <div>
               <div className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-brand-red/10 border border-brand-red/30 text-brand-red font-mono text-[10px] font-bold uppercase mb-3">
                 <Zap className="w-3 h-3" />

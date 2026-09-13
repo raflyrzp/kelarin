@@ -44,7 +44,7 @@ function KatalogContent() {
   const activePillar = pillars.find((p) => p.id === activeTab) || pillars[0];
 
   return (
-    <div className="min-h-screen pt-24 pb-20 relative overflow-hidden">
+    <div className="min-h-screen pt-6 sm:pt-8 pb-20 relative overflow-hidden">
       <div className="absolute inset-0 cyber-grid pointer-events-none z-0"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
@@ -97,7 +97,7 @@ function KatalogContent() {
         </div>
 
         {/* Tab Tagline Header */}
-        <div className="mb-8 p-4 border border-border-color bg-card-bg flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mb-8 p-4 border border-border-color bg-card-bg shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <span className="w-2 h-2 rounded-full bg-brand-red"></span>
             <span className="font-mono text-xs text-text-muted">{activePillar.tagline}</span>
@@ -112,7 +112,7 @@ function KatalogContent() {
           {activePillar.services.map((service) => (
             <div
               key={service.id}
-              className="border border-border-color bg-card-bg p-6 flex flex-col justify-between hover:border-brand-red/50 transition-all duration-200 group"
+              className="border border-border-color bg-card-bg shadow-sm p-6 flex flex-col justify-between hover:border-brand-red/50 transition-all duration-200 group"
             >
               <div>
                 {service.badge && (
