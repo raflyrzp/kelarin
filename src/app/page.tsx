@@ -19,6 +19,7 @@ import {
 } from "lucide-react";
 import { getWhatsAppLink } from "@/utils/whatsapp";
 import katalogData from "@/data/katalog.json";
+import faqData from "@/data/faq.json";
 
 interface BundleItem {
   id: string;
@@ -36,35 +37,23 @@ interface BundleItem {
   savingsFormatted: string;
 }
 
+interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+}
+
 export default function Home() {
   const bundles = katalogData.bundles as BundleItem[];
+  const faqs = faqData as FaqItem[];
+  const [showAllFaq, setShowAllFaq] = React.useState(false);
 
-  const faqItems = [
-    {
-      value: "faq-1",
-      trigger: "Apakah kerahasiaan dokumen, skripsi, dan kode saya aman?",
-      content:
-        "Dijamin 100% aman dan rahasia. Seluruh naskah tugas akhir, jurnal, dan source code tidak pernah dipublikasikan atau dibagikan ke pihak lain, serta dihapus pasca proyek tuntas.",
-    },
-    {
-      value: "faq-2",
-      trigger: "Bagaimana jika hasil pengerjaan ada yang perlu diperbaiki?",
-      content:
-        "Seluruh layanan kami sudah termasuk fasilitas garansi 2x revisi minor gratis (perbaikan teks, penyesuaian tata letak, atau perbaikan bug) agar hasil akhir sesuai ekspektasi Anda.",
-    },
-    {
-      value: "faq-3",
-      trigger: "Bisa selesai kilat dalam waktu kurang dari 24 jam?",
-      content:
-        "Bisa! Kami memiliki antrean prioritas Express/Kilat (<24 jam) untuk naskah skripsi mendesak, slide PPT darurat, maupun perbaikan kode web.",
-    },
-    {
-      value: "faq-4",
-      trigger: "Bagaimana alur pembayaran jasanya?",
-      content:
-        "Sistem bertahap dan transparan: DP 50% di awal untuk mengunci slot pengerjaan, dan sisa pelunasan 50% dibayarkan setelah Anda memeriksa hasil preview yang kami kirimkan.",
-    },
-  ];
+  const visibleFaqs = showAllFaq ? faqs : faqs.slice(0, 5);
+  const formattedFaqItems = visibleFaqs.map((faq) => ({
+    value: faq.id,
+    trigger: faq.question,
+    content: faq.answer,
+  }));
 
   return (
     <div className="relative min-h-screen overflow-hidden">
@@ -76,24 +65,24 @@ export default function Home() {
 
       {/* 1. HERO SECTION (COMPACT & OVERLAP FIXED) */}
       <section className="relative z-10 pt-10 pb-8 md:pt-16 md:pb-12 px-4 sm:px-6 max-w-6xl mx-auto flex flex-col items-center text-center">
-        
+
         {/* Urgent Live Badge */}
         <div className="inline-flex items-center gap-2 border border-brand-red/30 bg-brand-red/10 px-3 py-1 mb-4">
           <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-ping"></span>
           <span className="font-mono text-[11px] font-semibold tracking-widest text-brand-red uppercase">
-            ⚡ Layanan Terpadu Mahasiswa &amp; Bisnis Sat-Set
+            ⚡ Deadline Mepet? Tugas &amp; Skripsi Beres Tanpa Panik
           </span>
         </div>
 
         {/* Synced Headline */}
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-foreground max-w-4xl leading-tight font-mono uppercase">
-          Tugas Koding, Desain, &amp; Dokumen Skripsi Kelar,{" "}
-          <span className="text-brand-red">Nggak Pake Ribet!</span>
+          Kodingan Masih Error, Format Skripsi Berantakan?{" "}
+          <span className="text-brand-red">Biar Kami yang Beresin!</span>
         </h1>
 
         {/* Clean Sub-headline with safe margin and z-index */}
         <p className="relative z-20 mt-4 text-xs sm:text-sm md:text-base text-text-muted max-w-2xl leading-relaxed font-sans">
-          Bantu selesaikan website kustom, perapian naskah skripsi/makalah, hingga slide presentasi estetik dengan pengerjaan cepat dan bergaransi.
+          Bantu perapian naskah skripsi standar pedoman kampus, pembuatan website tugas siap demo, hingga slide presentasi estetik. Pengerjaan cepat, sat-set, dan bergaransi revisi.
         </p>
 
         {/* 3 Visual Interactive Pills/Chips */}
@@ -103,7 +92,7 @@ export default function Home() {
             className="group px-3.5 py-1.5 border border-border-color bg-card-bg hover:border-brand-red font-mono text-xs font-bold text-foreground hover:text-brand-red transition-all flex items-center gap-1.5 shadow-sm"
           >
             <Laptop className="w-3.5 h-3.5 text-brand-red" />
-            <span>💻 Web Dev</span>
+            <span>💻 Web Dev Siap Demo</span>
             <ChevronRight className="w-3 h-3 text-text-muted group-hover:translate-x-0.5 transition-transform" />
           </Link>
 
@@ -112,7 +101,7 @@ export default function Home() {
             className="group px-3.5 py-1.5 border border-border-color bg-card-bg hover:border-brand-red font-mono text-xs font-bold text-foreground hover:text-brand-red transition-all flex items-center gap-1.5 shadow-sm"
           >
             <FileText className="w-3.5 h-3.5 text-brand-red" />
-            <span>📄 Dokumen &amp; Skripsi</span>
+            <span>📄 Dokumen &amp; Skripsi Rapi</span>
             <ChevronRight className="w-3 h-3 text-text-muted group-hover:translate-x-0.5 transition-transform" />
           </Link>
 
@@ -121,27 +110,27 @@ export default function Home() {
             className="group px-3.5 py-1.5 border border-border-color bg-card-bg hover:border-brand-red font-mono text-xs font-bold text-foreground hover:text-brand-red transition-all flex items-center gap-1.5 shadow-sm"
           >
             <Palette className="w-3.5 h-3.5 text-brand-red" />
-            <span>🎨 Desain &amp; PPT</span>
+            <span>🎨 Slide PPT Estetik</span>
             <ChevronRight className="w-3 h-3 text-text-muted group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>
 
         {/* Main CTA Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-3 w-full justify-center px-4 max-w-sm">
+        <div className="mt-8 flex flex-col sm:flex-row gap-3.5 w-full justify-center px-4 max-w-lg">
           <a
             href="#paket-hemat"
-            className="group px-6 py-3 bg-brand-red hover:bg-red-700 text-white font-mono text-xs sm:text-sm font-bold tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(239,68,68,0.25)]"
+            className="group px-7 py-3.5 bg-brand-red hover:bg-red-700 text-white font-mono text-xs sm:text-sm font-bold tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(239,68,68,0.25)] sm:flex-1"
           >
-            <span>Lihat Paket Hemat</span>
+            <span>Pilih Paket Hemat</span>
             <Flame className="w-4 h-4 text-white animate-bounce" />
           </a>
           <a
             href={getWhatsAppLink("general", "Konsultasi Cepat Hero")}
             target="_blank"
             rel="noopener noreferrer"
-            className="group px-6 py-3 border border-border-color hover:border-brand-red text-foreground hover:text-brand-red font-mono text-xs sm:text-sm font-bold tracking-wider transition-colors flex items-center justify-center gap-2"
+            className="group px-7 py-3.5 border border-border-color hover:border-brand-red text-foreground hover:text-brand-red font-mono text-xs sm:text-sm font-bold tracking-wider transition-colors flex items-center justify-center gap-2 sm:flex-1"
           >
-            <span>Konsultasi WA</span>
+            <span>Konsultasi WA Santai</span>
             <ArrowRight className="w-4 h-4 text-brand-red group-hover:translate-x-1 transition-transform" />
           </a>
         </div>
@@ -152,13 +141,13 @@ export default function Home() {
         <div className="text-center mb-6">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-brand-red/10 border border-brand-red/30 text-brand-red font-mono text-[10px] font-bold uppercase mb-2">
             <Sparkles className="w-3 h-3" />
-            <span>Standarisasi Kualitas</span>
+            <span>Bukti Nyata Kualitas</span>
           </div>
           <h2 className="text-xl sm:text-3xl font-black tracking-tight text-foreground font-mono uppercase">
-            LIHAT TRANSFORMASI SEBELUM &amp; SESUDAH
+            BEDANYA SEBELUM VS SESUDAH DISENTUH KELAR.IN
           </h2>
           <p className="mt-2 text-text-muted max-w-xl mx-auto text-xs font-sans">
-            Bandingkan hasil sebelum dan sesudah untuk perapian dokumen skripsi, performa web koding, hingga estetika slide PPT.
+            Nggak ada lagi drama dicoret dosen gara-gara margin acak-acakan, kodingan nge-bug pas demo, atau slide presentasi bikin ngantuk.
           </p>
         </div>
 
@@ -170,13 +159,13 @@ export default function Home() {
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-brand-red/10 border border-brand-red/30 text-brand-red text-[10px] font-mono font-bold uppercase mb-2">
             <Flame className="w-3 h-3" />
-            <span>Value Pack Hemat 15% - 25%</span>
+            <span>Lebih Hemat, Sekali Pesan Langsung Beres</span>
           </div>
           <h2 className="text-2xl md:text-4xl font-black tracking-tight text-foreground font-mono uppercase">
-            PAKET BUNDLING HEMAT
+            PAKET BUNDLING HEMAT TUGAS &amp; SIDANG
           </h2>
           <p className="mt-2 text-text-muted max-w-xl mx-auto text-xs sm:text-sm font-sans">
-            Solusi borongan all-in-one tanpa pusing mikirin biaya printilan. Hemat biaya, bergaransi revisi, dan siap sidang.
+            Nggak usah pusing ngurus printilan satu-satu. Ambil paket borongan, biaya jauh lebih murah, dan naskah atau kodemu ditangani sampai tuntas.
           </p>
         </div>
 
@@ -186,16 +175,15 @@ export default function Home() {
             return (
               <div
                 key={bundle.id}
-                className={`relative flex flex-col justify-between p-5 transition-all duration-300 ${
-                  isHighlight
-                    ? "border-2 border-red-500 bg-card-bg shadow-[0_0_25px_rgba(239,68,68,0.2)] ring-1 ring-red-500/50 lg:-translate-y-1"
-                    : "border border-border-color bg-card-bg hover:border-brand-red/50"
-                }`}
+                className={`relative flex flex-col justify-between p-5 transition-all duration-300 ${isHighlight
+                  ? "border-2 border-red-500 bg-card-bg shadow-[0_0_25px_rgba(239,68,68,0.2)] ring-1 ring-red-500/50 lg:-translate-y-1"
+                  : "border border-border-color bg-card-bg hover:border-brand-red/50"
+                  }`}
               >
                 {isHighlight && (
                   <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-red text-white text-[9px] font-mono font-black uppercase tracking-wider px-3 py-0.5 shadow-md flex items-center gap-1 whitespace-nowrap">
                     <Sparkles className="w-3 h-3" />
-                    <span>Paling Diminati Sidang</span>
+                    <span>Paling Laris Menjelang Sidang</span>
                   </div>
                 )}
 
@@ -206,26 +194,27 @@ export default function Home() {
                     </span>
                   </div>
 
-                  <h3 className="text-lg font-bold font-mono text-foreground leading-tight mb-2">
+                  <h3 className="text-lg font-bold font-mono text-foreground leading-tight mb-2 min-h-[48px] flex items-center">
                     {bundle.name}
                   </h3>
 
-                  <p className="text-text-muted text-xs leading-relaxed font-sans mb-4 min-h-[34px]">
+                  <p className="text-text-muted text-xs leading-relaxed font-sans mb-4 min-h-[60px] line-clamp-3">
                     {bundle.targetAudience}
                   </p>
 
-                  {/* Pricing Box */}
-                  <div className="p-3 bg-background border border-border-color mb-5">
+                  {/* Integrated Pricing Section */}
+                  <div className="-mx-5 md:-mx-6 px-5 md:px-6 py-3.5 mb-5 border-y border-border-color/60 bg-white/[0.015] flex flex-col justify-center min-h-[80px]">
                     <div className="flex items-baseline justify-between gap-2">
-                      <span className="text-[11px] text-text-muted line-through font-mono">
+                      <span className="text-2xl sm:text-[26px] font-black font-mono tracking-tight text-white tabular-nums">
+                        {bundle.specialPriceFormatted}
+                      </span>
+                      <span className="text-xs text-text-muted/60 line-through font-mono tabular-nums">
                         {bundle.normalPriceFormatted}
                       </span>
-                      <span className="text-[10px] font-mono text-emerald-500 font-bold">
-                        {bundle.savingsFormatted}
-                      </span>
                     </div>
-                    <div className="text-xl font-black font-mono text-brand-red tracking-tight mt-0.5">
-                      {bundle.specialPriceFormatted}
+                    <div className="mt-2 flex items-center gap-1.5 text-[11px] font-mono text-emerald-400/90 leading-tight">
+                      <span className="w-1.5 h-1.5 bg-emerald-400 shadow-[0_0_6px_rgba(52,211,153,0.8)] shrink-0" />
+                      <span className="truncate">{bundle.savingsFormatted}</span>
                     </div>
                   </div>
 
@@ -244,13 +233,12 @@ export default function Home() {
                   href={getWhatsAppLink("bundle", bundle.name, bundle.specialPrice)}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-full py-2.5 font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer ${
-                    isHighlight
-                      ? "bg-brand-red hover:bg-red-600 text-white shadow-[0_0_12px_rgba(239,68,68,0.3)]"
-                      : "border border-border-color bg-background hover:border-brand-red text-foreground hover:text-brand-red"
-                  }`}
+                  className={`w-full py-2.5 font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all cursor-pointer ${isHighlight
+                    ? "bg-brand-red hover:bg-red-600 text-white shadow-[0_0_12px_rgba(239,68,68,0.3)]"
+                    : "border border-border-color bg-background hover:border-brand-red text-foreground hover:text-brand-red"
+                    }`}
                 >
-                  <span>Ambil Paket Ini</span>
+                  <span>Pilih Paket Ini</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -263,14 +251,14 @@ export default function Home() {
           <div className="flex items-center gap-3 text-center sm:text-left">
             <span className="w-2 h-2 rounded-full bg-brand-red shrink-0 hidden sm:block"></span>
             <p className="text-xs sm:text-sm font-sans text-foreground">
-              Hanya butuh layanan eceran satuan (seperti cek typo per lembar, perbaikan slide PPT, atau slicing web)?
+              Cuma butuh beresin satu hal kecil (misal: cek typo per lembar, benerin slide PPT, atau slicing web)?
             </p>
           </div>
           <Link
             href="/katalog"
             className="group inline-flex items-center gap-2 px-5 py-2.5 bg-background border border-brand-red/60 hover:border-brand-red hover:bg-brand-red hover:text-white text-brand-red font-mono text-xs font-bold uppercase tracking-wider transition-all shrink-0"
           >
-            <span>Lihat Daftar Harga Satuan Lengkap</span>
+            <span>Cek Katalog Harga Eceran Satuan</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
           </Link>
         </div>
@@ -281,17 +269,17 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-6">
             <span className="font-mono text-[10px] font-bold text-brand-red tracking-wider uppercase">
-              02 / Alur Sat-Set
+              02 / Alur Sat-Set Tanpa Ribet
             </span>
             <h2 className="text-xl md:text-3xl font-black tracking-tight text-foreground font-mono uppercase">
-              CARA KERJA KITA
+              CARA PESAN: 3 LANGKAH TINGGAL TERIMA BERES
             </h2>
           </div>
 
           {/* Thin Horizontal Stepper */}
           <div className="border border-border-color bg-background p-4 md:p-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 relative">
-              
+
               {/* Step 1 */}
               <div className="flex items-start gap-3">
                 <div className="w-7 h-7 rounded-none bg-brand-red/10 border border-brand-red/30 flex items-center justify-center font-mono text-xs font-bold text-brand-red shrink-0 mt-0.5">
@@ -299,10 +287,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-mono font-bold text-xs sm:text-sm text-foreground">
-                    Kirim Bahan via WA
+                    1. Chat WA &amp; Kirim Bahan
                   </h3>
                   <p className="text-text-muted text-[11px] font-sans mt-0.5">
-                    Kirim draf naskah, materi PPT, atau spek koding lewat chat WhatsApp.
+                    Kirim draf skripsi, materi slide, atau brief kodinganmu. Nggak perlu registrasi atau formulir rumit.
                   </p>
                 </div>
               </div>
@@ -314,10 +302,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-mono font-bold text-xs sm:text-sm text-foreground">
-                    Pengerjaan Sat-Set
+                    2. Langsung Dikerjakan Sat-Set
                   </h3>
                   <p className="text-text-muted text-[11px] font-sans mt-0.5">
-                    Dikerjakan transparan &amp; teliti. Tersedia opsi kilat prioritas &lt;24 jam.
+                    Dikerjakan teliti sesuai pedoman kampus. Butuh darurat? Ada opsi kilat &lt;24 jam.
                   </p>
                 </div>
               </div>
@@ -329,10 +317,10 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-mono font-bold text-xs sm:text-sm text-foreground">
-                    Cek Hasil &amp; Garansi 2x
+                    3. Cek Preview &amp; Garansi Revisi
                   </h3>
                   <p className="text-text-muted text-[11px] font-sans mt-0.5">
-                    Periksa pratinjau; nikmati fasilitas revisi minor gratis sampai beres.
+                    Periksa pratinjau hasilnya. Masih kurang pas? Nikmati fasilitas garansi 2x revisi minor gratis.
                   </p>
                 </div>
               </div>
@@ -345,7 +333,7 @@ export default function Home() {
       {/* 5. GABUNGAN FAQ & KONTAK WHATSAPP (SPLIT GRID 2 KOLOM) */}
       <section id="faq" className="relative z-10 py-10 md:py-14 px-4 sm:px-6 max-w-7xl mx-auto scroll-mt-20">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          
+
           {/* Kolom Kiri: Accordion FAQ */}
           <div className="lg:col-span-7 space-y-4">
             <div>
@@ -356,27 +344,41 @@ export default function Home() {
                 PERTANYAAN YANG SERING DITANYAKAN
               </h2>
               <p className="text-xs text-text-muted font-sans mt-1">
-                Jawaban ringkas seputar kerahasiaan, garansi revisi, dan proses order.
+                Hal penting seputar kerahasiaan dokumen, garansi revisi, dan opsi pengerjaan kilat.
               </p>
             </div>
 
-            <Accordion items={faqItems} />
+            <Accordion items={formattedFaqItems} />
+
+            {faqs.length > 5 && (
+              <button
+                type="button"
+                onClick={() => setShowAllFaq((prev) => !prev)}
+                className="w-full py-2.5 px-4 border border-dashed border-border-color hover:border-brand-red text-text-muted hover:text-foreground font-mono text-xs font-semibold flex items-center justify-center gap-2 transition-colors cursor-pointer bg-card-bg/40 mt-3"
+              >
+                <span>
+                  {showAllFaq
+                    ? "[-] Tampilkan Lebih Ringkas (5 Teratas)"
+                    : `[+] Tampilkan Semua Pertanyaan (${faqs.length})`}
+                </span>
+              </button>
+            )}
           </div>
 
           {/* Kolom Kanan: Kotak Konversi Cepat WhatsApp */}
-          <div id="contact" className="lg:col-span-5 border-2 border-brand-red bg-card-bg p-6 shadow-[0_0_25px_rgba(239,68,68,0.15)] flex flex-col justify-between scroll-mt-24">
+          <div id="contact" className="lg:col-span-5 lg:sticky lg:top-24 border-2 border-brand-red bg-card-bg p-6 shadow-[0_0_25px_rgba(239,68,68,0.15)] flex flex-col justify-between scroll-mt-24">
             <div>
               <div className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-brand-red/10 border border-brand-red/30 text-brand-red font-mono text-[10px] font-bold uppercase mb-3">
                 <Zap className="w-3 h-3" />
-                <span>Konsultasi Instan</span>
+                <span>Konsultasi Bebas Biaya</span>
               </div>
 
               <h3 className="text-xl font-bold font-mono text-foreground uppercase leading-tight">
-                SIAP BERESKAN TUGAS ATAU PROYEK ANDA?
+                DEADLINE SUDAH DEKAT? YUK DIOBROLIN SEKARANG!
               </h3>
 
               <p className="text-xs text-text-muted font-sans mt-2 leading-relaxed">
-                Tanpa perlu isi formulir panjang. Hubungi admin kami langsung untuk respon instan dan estimasi biaya gratis.
+                Nggak perlu ragu atau sungkan. Ceritakan saja kendala tugasmu, kami bantu cek estimasi biaya dan waktu pengerjaannya secara gratis.
               </p>
 
               {/* Primary High-Impact WhatsApp Button */}
@@ -388,7 +390,7 @@ export default function Home() {
                   className="w-full py-3.5 bg-brand-red hover:bg-red-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(239,68,68,0.3)] transition-all cursor-pointer"
                 >
                   <Zap className="w-4 h-4" />
-                  <span>Chat WhatsApp Sekarang (Fast Response)</span>
+                  <span>Chat WhatsApp Sekarang (Respon Cepat)</span>
                 </a>
               </div>
 
@@ -404,7 +406,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="p-2.5 border border-border-color bg-background hover:border-brand-red hover:text-brand-red font-mono text-xs font-semibold flex items-center justify-between transition-colors"
                   >
-                    <span>⚡ Tanya Dokumen Kilat</span>
+                    <span>⚡ Butuh Beresin Skripsi / Naskah Kilat</span>
                     <ArrowRight className="w-3 h-3 text-brand-red" />
                   </a>
 
@@ -414,7 +416,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="p-2.5 border border-border-color bg-background hover:border-brand-red hover:text-brand-red font-mono text-xs font-semibold flex items-center justify-between transition-colors"
                   >
-                    <span>💻 Konsultasi Jasa Web</span>
+                    <span>💻 Mau Tanya Jasa Bikin Web / Koding</span>
                     <ArrowRight className="w-3 h-3 text-brand-red" />
                   </a>
 
@@ -424,7 +426,7 @@ export default function Home() {
                     rel="noopener noreferrer"
                     className="p-2.5 border border-border-color bg-background hover:border-brand-red hover:text-brand-red font-mono text-xs font-semibold flex items-center justify-between transition-colors"
                   >
-                    <span>🎨 Bikin PPT Sidang</span>
+                    <span>🎨 Mau Desain Slide PPT Sidang Estetik</span>
                     <ArrowRight className="w-3 h-3 text-brand-red" />
                   </a>
                 </div>
@@ -435,15 +437,15 @@ export default function Home() {
             <div className="mt-6 pt-3 border-t border-border-color/80 flex items-center justify-between text-[10px] font-mono text-text-muted">
               <span className="flex items-center gap-1">
                 <Lock className="w-3 h-3 text-emerald-400" />
-                Privasi 100%
+                Privasi 100% Aman
               </span>
               <span className="flex items-center gap-1">
                 <ShieldCheck className="w-3 h-3 text-brand-red" />
-                Garansi Revisi
+                Garansi 2x Revisi
               </span>
               <span className="flex items-center gap-1">
                 <Zap className="w-3 h-3 text-amber-400" />
-                Siap &lt;24 Jam
+                Bisa Kilat &lt;24 Jam
               </span>
             </div>
           </div>

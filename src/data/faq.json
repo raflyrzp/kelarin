@@ -1,0 +1,37 @@
+[
+  {
+    "id": "faq-1",
+    "question": "File skripsi, naskah, dan source code saya dijamin aman nggak?",
+    "answer": "Dijamin 100% aman dan rahasia. Naskah skripsi, jurnal, data riset, dan kodinganmu murni milikmu sendiri, tidak akan pernah dipublikasikan atau dibagikan ke orang lain, serta langsung dihapus setelah proyek tuntas."
+  },
+  {
+    "id": "faq-2",
+    "question": "Kalau hasilnya masih ada yang kurang pas, ada garansi revisi?",
+    "answer": "Pasti ada. Setiap pesanan sudah termasuk fasilitas garansi 2x revisi minor gratis (benerin typo susulan, penyesuaian tata letak/margin, atau perbaikan bug kodingan) biar kamu benar-benar puas dan pede saat maju sidang."
+  },
+  {
+    "id": "faq-3",
+    "question": "Deadline saya mepet banget, bisa beres kilat kurang dari 24 jam?",
+    "answer": "Bisa banget! Kami punya antrean prioritas Express Kilat (<24 jam) untuk naskah skripsi darurat, slide presentasi mepet, maupun perbaikan bug website. Langsung chat WA dan infokan deadline-mu sekarang."
+  },
+  {
+    "id": "faq-4",
+    "question": "Gimana alur pembayarannya? Aman dan transparan nggak?",
+    "answer": "Sistemnya transparan dan aman buat kantong mahasiswa: DP 50% di awal untuk mengunci slot pengerjaan, dan sisa pelunasan 50% baru dibayar setelah kamu mengecek hasil pratinjau yang kami kirim."
+  },
+  {
+    "id": "faq-5",
+    "question": "Apakah bisa request sesi penjelasan kodingan untuk persiapan sidang?",
+    "answer": "Sangat bisa. Kami menyediakan add-on bimbingan 1-on-1 (via Zoom/GMeet) untuk membedah logika kode, struktur database, serta alur sistem agar kamu siap menjawab pertanyaan dosen penguji."
+  },
+  {
+    "id": "faq-6",
+    "question": "Format deliverable apa saja yang akan saya terima?",
+    "answer": "Lengkap sesuai kebutuhan: file naskah mentah (.docx), dokumen siap cetak (.pdf), tautan Canva/Figma dapat diedit langsung, hingga source code web (.zip atau repository GitHub private)."
+  },
+  {
+    "id": "faq-7",
+    "question": "Apakah melayani pengerjaan sebagian saja (misal hanya bab 4 atau bug fixing)?",
+    "answer": "Bisa banget. Kami sangat fleksibel—kamu bisa pesan layanan satuan seperti penataan daftar pustaka saja, perapian margin dan nomor romawi, atau slicing 1 halaman web saja."
+  }
+]

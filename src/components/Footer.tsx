@@ -22,11 +22,14 @@ export default function Footer() {
           <Link href="/#paket-hemat" className="text-text-muted hover:text-brand-red transition-colors">
             Paket Hemat
           </Link>
-          <Link href="/web-development" className="text-text-muted hover:text-foreground transition-colors">
+          <Link href="/katalog?tab=website" className="text-text-muted hover:text-foreground transition-colors">
             Web Dev
           </Link>
-          <Link href="/academic" className="text-text-muted hover:text-foreground transition-colors">
+          <Link href="/katalog?tab=document-academic" className="text-text-muted hover:text-foreground transition-colors">
             Akademik
+          </Link>
+          <Link href="/katalog?tab=design-visual" className="text-text-muted hover:text-foreground transition-colors">
+            Desain
           </Link>
           <Link href="/portfolio" className="text-text-muted hover:text-brand-red transition-colors">
             Portfolio

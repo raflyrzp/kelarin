@@ -98,12 +98,11 @@ export default function Navbar() {
 
       {/* 2. MAIN NAVBAR BAR */}
       <div
-        className={`backdrop-blur-md transition-colors duration-300 border-b border-border-color/70 ${
-          scrolled ? "bg-background/90 shadow-sm" : "bg-background/70"
-        }`}
+        className={`backdrop-blur-md transition-colors duration-300 border-b border-border-color/70 ${scrolled ? "bg-background/90 shadow-sm" : "bg-background/70"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-          
+
           {/* Brand Logo with Live Status Radar */}
           <div className="flex items-center gap-3">
             <Link href="/" className="group flex items-center gap-2">
@@ -124,11 +123,10 @@ export default function Navbar() {
           <nav className="hidden lg:flex items-center gap-7">
             <Link
               href="/"
-              className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
-                pathname === "/" && !isOpen
+              className={`text-sm font-medium tracking-wide transition-colors duration-200 ${pathname === "/" && !isOpen
                   ? "text-brand-red font-semibold"
                   : "text-text-muted hover:text-foreground"
-              }`}
+                }`}
             >
               Home
             </Link>
@@ -168,7 +166,7 @@ export default function Navbar() {
                   {/* Service 1: Web Dev */}
                   <DropdownMenu.Item asChild>
                     <Link
-                      href="/web-development"
+                      href="/katalog?tab=website"
                       className="group flex items-start gap-3 p-2.5 border border-transparent hover:border-brand-red/30 hover:bg-brand-red/5 transition-all cursor-pointer"
                     >
                       <div className="p-2 bg-brand-red/10 border border-brand-red/30 text-brand-red shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
@@ -193,7 +191,7 @@ export default function Navbar() {
                   {/* Service 2: Academic Document */}
                   <DropdownMenu.Item asChild>
                     <Link
-                      href="/academic"
+                      href="/katalog?tab=document-academic"
                       className="group flex items-start gap-3 p-2.5 border border-transparent hover:border-brand-red/30 hover:bg-brand-red/5 transition-all cursor-pointer mt-1"
                     >
                       <div className="p-2 bg-brand-red/10 border border-brand-red/30 text-brand-red shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
@@ -218,7 +216,7 @@ export default function Navbar() {
                   {/* Service 3: Graphic Design */}
                   <DropdownMenu.Item asChild>
                     <Link
-                      href="/portfolio?filter=design"
+                      href="/katalog?tab=design-visual"
                       className="group flex items-start gap-3 p-2.5 border border-transparent hover:border-brand-red/30 hover:bg-brand-red/5 transition-all cursor-pointer mt-1"
                     >
                       <div className="p-2 bg-brand-red/10 border border-brand-red/30 text-brand-red shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
@@ -259,11 +257,10 @@ export default function Navbar() {
             {/* Portfolio / Showcase link */}
             <Link
               href="/portfolio"
-              className={`group inline-flex items-center gap-1.5 text-sm font-medium tracking-wide transition-colors duration-200 ${
-                pathname === "/portfolio"
+              className={`group inline-flex items-center gap-1.5 text-sm font-medium tracking-wide transition-colors duration-200 ${pathname === "/portfolio"
                   ? "text-brand-red font-semibold"
                   : "text-text-muted hover:text-foreground"
-              }`}
+                }`}
             >
               <span>Portfolio</span>
               <span className="px-1.5 py-0.2 bg-neutral-800 text-neutral-200 border border-neutral-700 text-[9px] font-mono uppercase">
@@ -336,16 +333,14 @@ export default function Navbar() {
 
       {/* 3. MOBILE MENU SLIDE-OVER DRAWER */}
       <div
-        className={`fixed inset-0 z-40 bg-black/80 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
-          isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`fixed inset-0 z-40 bg-black/80 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
         onClick={() => setIsOpen(false)}
       />
 
       <div
-        className={`fixed top-0 right-0 bottom-0 z-50 w-84 max-w-[85vw] bg-card-bg border-l border-border-color p-6 flex flex-col justify-between transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto ${
-          isOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`fixed top-0 right-0 bottom-0 z-50 w-84 max-w-[85vw] bg-card-bg border-l border-border-color p-6 flex flex-col justify-between transition-transform duration-300 ease-in-out lg:hidden overflow-y-auto ${isOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex flex-col gap-5">
           {/* Mobile Drawer Header */}
@@ -373,9 +368,8 @@ export default function Navbar() {
             <Link
               href="/"
               onClick={() => setIsOpen(false)}
-              className={`px-3 py-2 border border-border-color transition-colors ${
-                pathname === "/" ? "border-brand-red text-brand-red bg-brand-red/5 font-bold" : "text-foreground hover:border-brand-red/50"
-              }`}
+              className={`px-3 py-2 border border-border-color transition-colors ${pathname === "/" ? "border-brand-red text-brand-red bg-brand-red/5 font-bold" : "text-foreground hover:border-brand-red/50"
+                }`}
             >
               01. Home
             </Link>
@@ -401,7 +395,7 @@ export default function Navbar() {
               </span>
               <div className="grid grid-cols-1 gap-2 mt-2">
                 <Link
-                  href="/web-development"
+                  href="/katalog?tab=website"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-between p-2.5 border border-border-color bg-background hover:border-brand-red/50 text-xs"
                 >
@@ -413,7 +407,7 @@ export default function Navbar() {
                 </Link>
 
                 <Link
-                  href="/academic"
+                  href="/katalog?tab=document-academic"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-between p-2.5 border border-border-color bg-background hover:border-brand-red/50 text-xs"
                 >
@@ -425,7 +419,7 @@ export default function Navbar() {
                 </Link>
 
                 <Link
-                  href="/portfolio?filter=design"
+                  href="/katalog?tab=design-visual"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-between p-2.5 border border-border-color bg-background hover:border-brand-red/50 text-xs"
                 >
@@ -442,9 +436,8 @@ export default function Navbar() {
             <Link
               href="/portfolio"
               onClick={() => setIsOpen(false)}
-              className={`flex items-center justify-between px-3 py-2 border border-border-color transition-colors ${
-                pathname === "/portfolio" ? "border-brand-red text-brand-red bg-brand-red/5 font-bold" : "text-foreground hover:border-brand-red/50"
-              }`}
+              className={`flex items-center justify-between px-3 py-2 border border-border-color transition-colors ${pathname === "/portfolio" ? "border-brand-red text-brand-red bg-brand-red/5 font-bold" : "text-foreground hover:border-brand-red/50"
+                }`}
             >
               <span>03. Portfolio & Sampel</span>
               <span className="text-[10px] font-mono text-brand-red font-bold">KARYA</span>

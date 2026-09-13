@@ -36,76 +36,76 @@ const transformationData: Record<CategoryType, CategoryData> = {
     id: "document",
     label: "Dokumen & Skripsi",
     icon: FileText,
-    beforeTag: "Format Rusak • Margin Asimetris",
-    beforeTitle: "Naskah Format Berantakan (Sebelum)",
+    beforeTag: "Margin Belang-Bentong • Format Berantakan",
+    beforeTitle: "Naskah Penuh Coretan Dosen (Sebelum)",
     beforeDesc:
-      "Margin tidak simetris (2-1-2-1), font campur aduk, spasi tidak konsisten, dan penomoran halaman rusak.",
+      "Margin beda tiap bab, spasi renggang-rapat, font campur aduk, daftar isi dan nomor halaman diketik manual sampai pusing.",
     beforePoints: [
-      "✕ Margin tidak beraturan & tidak sesuai pedoman kampus",
-      "✕ Daftar isi dan nomor halaman dibuat manual",
-      "✕ Sitasi tanpa metadata (rentan salah di daftar pustaka)",
+      "✕ Margin acak-acakan & melanggar buku pedoman kampus",
+      "✕ Nomor halaman dan daftar isi manual (tiap diedit geser semua)",
+      "✕ Sitasi kopas tanpa Mendeley/Zotero, rawan kena cek plagiasi",
     ],
-    beforeNote: "Rentan Ditolak Dosen Pembimbing",
-    afterTag: "Standar 4-4-3-3 • Sitasi Mendeley",
-    afterTitle: "Format Baku Pedoman Kampus (Sesudah)",
+    beforeNote: "Dosen Pembimbing Auto Geleng Kepala",
+    afterTag: "Standar Pedoman Kampus • Sitasi Otomatis",
+    afterTitle: "Naskah Rapi Siap ACC & Sidang (Sesudah)",
     afterDesc:
-      "Tata letak presisi sesuai panduan resmi kampus, hierarki heading rapi, dan sitasi tersinkronisasi otomatis.",
+      "Format presisi sesuai buku panduan skripsi kampusmu, heading berjenjang rapi, dan sitasi tersinkron otomatis.",
     afterPoints: [
-      "✓ Margin simetris standar baku (4-4-3-3 cm)",
-      "✓ Penomoran Romawi & Arab otomatis (Multi-Section)",
-      "✓ Sitasi APA/IEEE & daftar pustaka Mendeley/Zotero presisi",
+      "✓ Margin pas sesuai panduan (misal 4-4-3-3 cm) per bab",
+      "✓ Penomoran halaman otomatis (Romawi di awal, Arab di isi)",
+      "✓ Sitasi & daftar pustaka rapi via Mendeley/Zotero (APA/IEEE)",
     ],
-    afterNote: "Garansi Lolos Format Pedoman Kampus",
+    afterNote: "Aman dari Coretan, Siap Maju Sidang",
   },
   website: {
     id: "website",
     label: "Web Development",
     icon: Laptop,
-    beforeTag: "Tampilan Kaku • Tidak Responsif",
-    beforeTitle: "Website Jadul & Sering Error (Sebelum)",
+    beforeTag: "Tampilan Berantakan • Error Pas Demo",
+    beforeTitle: "Web Tugas Kaku & Rawan Bug (Sebelum)",
     beforeDesc:
-      "Tampilan berantakan saat dibuka di layar HP, kode semrawut sulit dijelaskan saat demo, dan loading lambat.",
+      "Tampilan berantakan pas dibuka di HP, alur logika semrawut, dan loading lama sampai bikin keringat dingin di depan dosen.",
     beforePoints: [
-      "✕ Tampilan rusak di smartphone (tidak mobile-friendly)",
-      "✕ Kode tidak rapi & belum teruji (rentan bug saat demo)",
-      "✕ Tidak ada tombol pemesanan atau kontak WhatsApp interaktif",
+      "✕ Rusak di layar HP & tombol nggak bisa diklik",
+      "✕ Kodingan berantakan tanpa struktur, bingung pas ditanya dosen",
+      "✕ Belum online, cuma jalan di localhost laptop sendiri",
     ],
-    beforeNote: "Demo Gagal & Pembeli Bingung",
-    afterTag: "Modern Next.js • 100% Responsif",
-    afterTitle: "Web Modern, Sat-Set, & Siap Demo (Sesudah)",
+    beforeNote: "Panik Pas Dosen Minta Buka dari HP",
+    afterTag: "Modern Responsive • Siap Dipresentasikan",
+    afterTitle: "Web Bersih, Responsif, & Langsung Online (Sesudah)",
     afterDesc:
-      "Antarmuka elegan, performa tinggi, responsive di semua gadget, dan terintegrasi langsung ke WhatsApp.",
+      "Tampilan enak dilihat di HP maupun laptop, kodingan bersih gampang dipelajari alurnya, dan sudah online siap diuji.",
     afterPoints: [
-      "✓ Tampilan rapi, estetik & fleksibel di HP maupun laptop",
-      "✓ Clean code modular, enteng, & mudah dipresentasikan",
-      "✓ Tombol chat WhatsApp & formulir konversi terintegrasi",
+      "✓ 100% responsif & lancar dibuka di gadget apa pun",
+      "✓ Clean code terstruktur, gampang dipahami alur logikanya",
+      "✓ Sudah live di link publik (Vercel/Netlify), siap didemokan",
     ],
-    afterNote: "Siap Online & Sukses Presentasi",
+    afterNote: "Dosen Senang, Presentasi Auto Lancar",
   },
   design: {
     id: "design",
     label: "Desain & Slide PPT",
     icon: Palette,
-    beforeTag: "Teks Padat • Membosankan",
-    beforeTitle: "Slide Berjejal Penuh Teks (Sebelum)",
+    beforeTag: "Teks Menumpuk • Bikin Ngantuk",
+    beforeTitle: "Slide Penuh Teks Copy-Paste (Sebelum)",
     beforeDesc:
-      "Materi disalin mentah-mentah ke slide, tata letak monoton tanpa hierarki visual, dewan penguji/audiens cepat bosan.",
+      "Makalah disalin bulat-bulat ke slide, warna tabrakan, font kecil bikin mata perih, dosen dan audiens langsung hilang fokus.",
     beforePoints: [
-      "✕ Teks panjang menumpuk ('wall of text') tanpa ringkasan",
-      "✕ Pemilihan warna & font tabrakan tidak profesional",
-      "✕ Tidak ada visualisasi diagram atau infografis data pendukung",
+      "✕ Paragraf panjang ditempel mentah-mentah ke slide",
+      "✕ Layout monoton, warna nabrak, dan nggak ada hierarki",
+      "✕ Tanpa diagram atau visual data yang menjelaskan poin inti",
     ],
-    beforeNote: "Audiens Jenuh & Nilai Kurang Maksimal",
-    afterTag: "Estetik Minimalis • Visual Infografis",
-    afterTitle: "Slide Estetik, Ringkas & Berbobot (Sesudah)",
+    beforeNote: "Penguji Bosan Sebelum Bab 1 Selesai",
+    afterTag: "Visual Tajam • Poin-Poin Matang",
+    afterTitle: "Slide Estetik, Padat, & Menjual (Sesudah)",
     afterDesc:
-      "Penyampaian poin inti riset dengan visual modern, grafik komunikatif, dan transisi elegan memikat penguji.",
+      "Inti pembahasan dirombak jadi infografis dan visual ringkas yang gampang dipahami penguji hanya dalam sekali lirik.",
     afterPoints: [
-      "✓ Ringkasan materi tajam & mudah dicerna dalam sekali lirik",
-      "✓ Tata letak proporsional dengan palet warna harmonis",
-      "✓ Diagram alur metodologi & infografis data siap presentasi",
+      "✓ Poin riset tajam, to the point, dan enak dibaca dari jauh",
+      "✓ Palet warna profesional dengan visualisasi data rapi",
+      "✓ Flow presentasi runtut dari latar belakang sampai kesimpulan",
     ],
-    afterNote: "Percaya Diri Tampil di Depan Penguji",
+    afterNote: "Pede Maksimal Pas Tampil di Ruang Ujian",
   },
 };
 
@@ -131,11 +131,10 @@ export function BeforeAfterSlider() {
                 setActiveCategory(catKey);
                 setSliderPos(50);
               }}
-              className={`px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer ${
-                isActive
-                  ? "bg-brand-red text-white shadow-[0_0_15px_rgba(239,68,68,0.3)]"
-                  : "border border-border-color bg-card-bg text-text-muted hover:text-foreground hover:border-brand-red/50"
-              }`}
+              className={`px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer ${isActive
+                ? "bg-brand-red text-white shadow-[0_0_15px_rgba(239,68,68,0.3)]"
+                : "border border-border-color bg-card-bg text-text-muted hover:text-foreground hover:border-brand-red/50"
+                }`}
             >
               <Icon className="w-3.5 h-3.5" />
               <span>{item.label}</span>
@@ -146,20 +145,20 @@ export function BeforeAfterSlider() {
 
       {/* Slider Control Container */}
       <div className="relative border border-border-color bg-black overflow-hidden select-none min-h-[460px] md:min-h-[400px]">
-        
+
         {/* Top bar indicators */}
         <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 py-2.5 bg-neutral-950/90 border-b border-neutral-800 text-[11px] font-mono">
           <span className="text-red-400 font-bold flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-red-500"></span>
-            SEBELUM (BERANTAKAN)
+            SEBELUM (BIKIN STRES)
           </span>
           <span className="text-neutral-500 hidden sm:inline-flex items-center gap-1">
             <SlidersHorizontal className="w-3.5 h-3.5 text-brand-red" />
-            Geser Slider Untuk Bandingkan
+            Geser Slider Buat Bandingkan
           </span>
           <span className="text-emerald-400 font-bold flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-500"></span>
-            SESUDAH (HASIL KELAR.IN)
+            SESUDAH (TINGGAL TERIMA BERES)
           </span>
         </div>
 
@@ -193,12 +192,12 @@ export function BeforeAfterSlider() {
           </div>
         </div>
 
-        {/* BEFORE CONTENT (Clipped Layer - width governed by sliderPos) */}
+        {/* BEFORE CONTENT (Clipped Layer via clip-path) */}
         <div
-          className="absolute inset-0 pt-14 p-6 md:p-8 flex flex-col justify-between bg-neutral-900 text-neutral-300 border-r-2 border-brand-red overflow-hidden z-10"
-          style={{ width: `${sliderPos}%` }}
+          className="absolute inset-0 pt-14 p-6 md:p-8 flex flex-col justify-between bg-neutral-900 text-neutral-300 z-10 pointer-events-none"
+          style={{ clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)` }}
         >
-          <div className="space-y-4 max-w-xl min-w-[320px] md:min-w-[440px]">
+          <div className="space-y-4 max-w-xl">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-red-950/60 border border-red-500/40 text-red-400 text-[10px] font-mono font-bold uppercase">
               <AlertTriangle className="w-3 h-3 text-red-400" />
               <span>{current.beforeTag}</span>
@@ -220,7 +219,7 @@ export function BeforeAfterSlider() {
             </div>
           </div>
 
-          <div className="flex items-center gap-2 text-[10px] font-mono text-red-400 min-w-[280px]">
+          <div className="flex items-center gap-2 text-[10px] font-mono text-red-400">
             <AlertTriangle className="w-3 h-3 text-red-400" />
             <span>{current.beforeNote}</span>
           </div>
@@ -251,7 +250,7 @@ export function BeforeAfterSlider() {
 
       {/* Action Footer */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs text-text-muted">
-        <span>Geser garis pembanding untuk melihat standar kualitas di setiap kategori.</span>
+        <span>Geser garis pembanding buat lihat standar kualitas pengerjaan di setiap kategori.</span>
         <Link
           href="/portfolio"
           className="inline-flex items-center gap-1.5 text-brand-red hover:underline font-bold"
