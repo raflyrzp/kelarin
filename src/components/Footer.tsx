@@ -19,21 +19,36 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 font-mono text-xs">
-          <Link href="/#paket-hemat" className="text-text-muted hover:text-brand-red transition-colors">
+          <Link
+            href="/#paket-hemat"
+            className="text-text-muted hover:text-brand-red transition-colors"
+          >
             Paket Hemat
           </Link>
-          <Link href="/katalog?tab=website" className="text-text-muted hover:text-foreground transition-colors">
+          <Link
+            href="/katalog?tab=website"
+            className="text-text-muted hover:text-foreground transition-colors"
+          >
             Web Dev
           </Link>
-          <Link href="/katalog?tab=document-academic" className="text-text-muted hover:text-foreground transition-colors">
+          <Link
+            href="/katalog?tab=document-academic"
+            className="text-text-muted hover:text-foreground transition-colors"
+          >
             Akademik
           </Link>
-          <Link href="/katalog?tab=design-visual" className="text-text-muted hover:text-foreground transition-colors">
+          <Link
+            href="/katalog?tab=design-visual"
+            className="text-text-muted hover:text-foreground transition-colors"
+          >
             Desain
           </Link>
-          <Link href="/portfolio" className="text-text-muted hover:text-brand-red transition-colors">
+          {/* <Link
+            href="/portfolio"
+            className="text-text-muted hover:text-brand-red transition-colors"
+          >
             Portfolio
-          </Link>
+          </Link> */}
           <a
             href="https://raflyrzp.vercel.app"
             target="_blank"
@@ -47,4 +62,3 @@ export default function Footer() {
     </footer>
   );
 }
-

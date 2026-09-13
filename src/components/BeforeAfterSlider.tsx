@@ -110,7 +110,8 @@ const transformationData: Record<CategoryType, CategoryData> = {
 };
 
 export function BeforeAfterSlider() {
-  const [activeCategory, setActiveCategory] = useState<CategoryType>("document");
+  const [activeCategory, setActiveCategory] =
+    useState<CategoryType>("document");
   const [sliderPos, setSliderPos] = useState<number>(50);
 
   const current = transformationData[activeCategory];
@@ -131,10 +132,11 @@ export function BeforeAfterSlider() {
                 setActiveCategory(catKey);
                 setSliderPos(50);
               }}
-              className={`px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer ${isActive
-                ? "bg-brand-red text-white shadow-[0_0_15px_rgba(239,68,68,0.3)]"
-                : "border border-border-color bg-card-bg text-text-muted hover:text-foreground hover:border-brand-red/50"
-                }`}
+              className={`px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer ${
+                isActive
+                  ? "bg-brand-red text-white shadow-[0_0_15px_rgba(239,68,68,0.3)]"
+                  : "border border-border-color bg-card-bg text-text-muted hover:text-foreground hover:border-brand-red/50"
+              }`}
             >
               <Icon className="w-3.5 h-3.5" />
               <span>{item.label}</span>
@@ -145,7 +147,6 @@ export function BeforeAfterSlider() {
 
       {/* Slider Control Container */}
       <div className="relative border border-border-color bg-card-bg shadow-sm overflow-hidden select-none min-h-[460px] md:min-h-[400px]">
-
         {/* Top bar indicators */}
         <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between px-4 py-2.5 bg-background/90 backdrop-blur-xs border-b border-border-color text-[11px] font-mono">
           <span className="text-red-700 dark:text-red-400 font-bold flex items-center gap-1.5">
@@ -173,7 +174,9 @@ export function BeforeAfterSlider() {
             <div className="border border-emerald-500/30 bg-emerald-50/50 dark:bg-neutral-900/60 p-5 text-left font-sans space-y-3">
               <div className="text-sm font-bold font-mono text-foreground dark:text-white border-b border-emerald-500/20 dark:border-neutral-800 pb-2 flex items-center justify-between">
                 <span>{current.afterTitle}</span>
-                <span className="text-[10px] text-emerald-700 dark:text-emerald-400 font-sans font-semibold">✓ Terstandar</span>
+                <span className="text-[10px] text-emerald-700 dark:text-emerald-400 font-sans font-semibold">
+                  ✓ Terstandar
+                </span>
               </div>
               <p className="text-xs text-text-muted dark:text-neutral-300 leading-relaxed">
                 {current.afterDesc}
@@ -195,7 +198,9 @@ export function BeforeAfterSlider() {
         {/* BEFORE CONTENT (Clipped Layer via clip-path) */}
         <div
           className="absolute inset-0 pt-14 p-6 md:p-8 flex flex-col justify-between bg-section-muted-bg dark:bg-neutral-900 text-foreground dark:text-neutral-300 z-10 pointer-events-none"
-          style={{ clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)` }}
+          style={{
+            clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)`,
+          }}
         >
           <div className="space-y-4 max-w-xl">
             <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-red-500/10 border border-red-500/30 text-red-700 dark:text-red-400 text-[10px] font-mono font-bold uppercase">
@@ -206,7 +211,9 @@ export function BeforeAfterSlider() {
             <div className="border border-red-500/30 bg-red-50/50 dark:bg-black/60 p-5 text-left font-sans space-y-3 relative">
               <div className="text-sm font-semibold font-mono text-red-800 dark:text-red-300 opacity-90 border-b border-red-500/20 dark:border-red-900/40 pb-2 flex items-center justify-between">
                 <span>{current.beforeTitle}</span>
-                <span className="text-[10px] text-red-700 dark:text-red-400 font-sans font-semibold">✕ Masalah</span>
+                <span className="text-[10px] text-red-700 dark:text-red-400 font-sans font-semibold">
+                  ✕ Masalah
+                </span>
               </div>
               <p className="text-xs text-text-muted dark:text-neutral-400 leading-relaxed line-clamp-3">
                 {current.beforeDesc}
@@ -250,14 +257,17 @@ export function BeforeAfterSlider() {
 
       {/* Action Footer */}
       <div className="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs text-text-muted">
-        <span>Geser garis pembanding buat lihat standar kualitas pengerjaan di setiap kategori.</span>
-        <Link
+        <span>
+          Geser garis pembanding buat lihat standar kualitas pengerjaan di
+          setiap kategori.
+        </span>
+        {/* <Link
           href="/portfolio"
           className="inline-flex items-center gap-1.5 text-brand-red hover:underline font-bold"
         >
           <span>Lihat Sampel Portofolio Lengkap</span>
           <ArrowRight className="w-3.5 h-3.5" />
-        </Link>
+        </Link> */}
       </div>
     </div>
   );
