@@ -5,6 +5,8 @@ import { Sun, Moon } from "lucide-react";
 
 export default function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const isTransitioningRef = React.useRef(false);
 
   useEffect(() => {
     // Sync React state directly with the documentElement already initialized by the head script
@@ -12,7 +14,11 @@ export default function ThemeToggle() {
     setTheme(isDark ? "dark" : "light");
   }, []);
 
-  const toggleTheme = (e: React.MouseEvent<HTMLButtonElement>) => {
+  const toggleTheme = () => {
+    if (isTransitioningRef.current) return;
+    isTransitioningRef.current = true;
+    setIsTransitioning(true);
+
     const nextTheme = theme === "dark" ? "light" : "dark";
 
     const updateDOM = () => {
@@ -23,7 +29,9 @@ export default function ThemeToggle() {
         document.documentElement.classList.remove("dark");
         document.documentElement.style.colorScheme = "light";
       }
-      localStorage.setItem("theme", nextTheme);
+      try {
+        localStorage.setItem("theme", nextTheme);
+      } catch { }
       setTheme(nextTheme);
     };
 
@@ -35,47 +43,53 @@ export default function ThemeToggle() {
 
     if (!hasViewTransition) {
       updateDOM();
+      isTransitioningRef.current = false;
+      setIsTransitioning(false);
       return;
     }
 
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX || rect.left + rect.width / 2;
-    const y = e.clientY || rect.top + rect.height / 2;
+    // Directional transition:
+    // Light -> Dark: originates from bottom-left (0, window.innerHeight)
+    // Dark -> Light: originates from top-right (window.innerWidth, 0)
+    const isNextDark = nextTheme === "dark";
+    const x = isNextDark ? 0 : window.innerWidth;
+    const y = isNextDark ? window.innerHeight : 0;
+    const endRadius = Math.ceil(Math.hypot(window.innerWidth, window.innerHeight)) + 25;
 
-    const endRadius = Math.hypot(
-      Math.max(x, window.innerWidth - x),
-      Math.max(y, window.innerHeight - y)
-    );
+    // Set CSS custom properties on documentElement BEFORE starting the transition
+    // so ::view-transition-new(root) has the exact coordinates from frame 0!
+    document.documentElement.style.setProperty("--vt-x", `${x}px`);
+    document.documentElement.style.setProperty("--vt-y", `${y}px`);
+    document.documentElement.style.setProperty("--vt-r", `${endRadius}px`);
 
     const doc = document as Document & {
-      startViewTransition: (callback: () => void) => { ready: Promise<void> };
+      startViewTransition: (callback: () => void) => {
+        finished: Promise<void>;
+      };
     };
 
-    const transition = doc.startViewTransition(() => {
-      updateDOM();
-    });
+    try {
+      const transition = doc.startViewTransition(() => {
+        updateDOM();
+      });
 
-    transition.ready.then(() => {
-      document.documentElement.animate(
-        {
-          clipPath: [
-            `circle(0px at ${x}px ${y}px)`,
-            `circle(${endRadius}px at ${x}px ${y}px)`,
-          ],
-        },
-        {
-          duration: 400,
-          easing: "ease-out",
-          pseudoElement: "::view-transition-new(root)",
-        }
-      );
-    });
+      transition.finished.finally(() => {
+        isTransitioningRef.current = false;
+        setIsTransitioning(false);
+      });
+    } catch {
+      updateDOM();
+      isTransitioningRef.current = false;
+      setIsTransitioning(false);
+    }
   };
 
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 border border-border-color hover:border-brand-red bg-card-bg text-foreground hover:text-brand-red shadow-sm transition-all duration-200 cursor-pointer focus:outline-none flex items-center justify-center"
+      disabled={isTransitioning}
+      className={`p-2 border border-border-color hover:border-brand-red bg-card-bg text-foreground hover:text-brand-red shadow-sm transition-colors duration-200 cursor-pointer focus:outline-none flex items-center justify-center ${isTransitioning ? "pointer-events-none opacity-80" : ""
+        }`}
       aria-label="Toggle Theme"
     >
       {theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}

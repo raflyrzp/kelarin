@@ -3,11 +3,9 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import {
   Menu,
   X,
-  ChevronDown,
   ExternalLink,
   Laptop,
   FileText,
@@ -138,130 +136,33 @@ export default function Navbar() {
               Home
             </Link>
 
+            {/* Standout Primary Nav Link: Layanan & Katalog (Direct Link to /katalog) */}
+            <Link
+              href="/katalog"
+              className={`group relative inline-flex items-center gap-1.5 px-3 py-1.5 border transition-all duration-200 font-mono text-xs font-bold ${
+                pathname === "/katalog"
+                  ? "border-brand-red bg-brand-red text-white shadow-[0_0_15px_rgba(239,68,68,0.35)]"
+                  : "border-brand-red/50 bg-brand-red/10 text-foreground hover:border-brand-red hover:bg-brand-red hover:text-white shadow-[0_0_12px_rgba(239,68,68,0.15)]"
+              }`}
+            >
+              <span>Layanan &amp; Katalog</span>
+              <span className="px-1.5 py-0.2 bg-brand-red text-white text-[9px] font-mono font-black tracking-tight uppercase group-hover:bg-white group-hover:text-brand-red transition-colors">
+                LENGKAP
+              </span>
+            </Link>
+
             {/* Core Offer Anchor: Paket Hemat with Flame */}
             <Link
-              href="/#paket-hemat"
-              onClick={(e) => handleNavClick(e, "paket-hemat")}
+              href="/#paket-bundling"
+              onClick={(e) => handleNavClick(e, "paket-bundling")}
               className="group relative inline-flex items-center gap-1.5 text-sm font-medium tracking-wide text-text-muted hover:text-foreground transition-colors duration-200"
             >
               <Flame className="w-4 h-4 text-brand-red group-hover:animate-bounce" />
               <span>Paket Hemat</span>
-              <span className="px-1.5 py-0.2 bg-brand-red text-white text-[9px] font-mono font-bold tracking-tight uppercase">
+              <span className="px-1.5 py-0.2 bg-brand-red/20 text-brand-red border border-brand-red/30 text-[9px] font-mono font-bold tracking-tight uppercase">
                 HEMAT
               </span>
             </Link>
-
-            {/* Rich Services Dropdown (Mega Menu Style) */}
-            <DropdownMenu.Root>
-              <DropdownMenu.Trigger className="group inline-flex items-center gap-1 text-sm font-medium tracking-wide text-text-muted hover:text-foreground transition-colors duration-200 focus:outline-none cursor-pointer">
-                <span>Layanan & Katalog</span>
-                <ChevronDown className="w-3.5 h-3.5 text-text-muted group-hover:text-foreground transition-transform duration-200" />
-              </DropdownMenu.Trigger>
-
-              <DropdownMenu.Portal>
-                <DropdownMenu.Content
-                  className="w-96 bg-card-bg border border-border-color p-3 shadow-2xl animate-in fade-in slide-in-from-top-2 duration-200 z-50 rounded-none"
-                  align="start"
-                  sideOffset={10}
-                >
-                  <div className="px-2 py-1.5 border-b border-border-color mb-2">
-                    <span className="font-mono text-[10px] uppercase tracking-wider text-brand-red font-bold">
-                      Katalog Layanan Digital
-                    </span>
-                  </div>
-
-                  {/* Service 1: Web Dev */}
-                  <DropdownMenu.Item asChild>
-                    <Link
-                      href="/katalog?tab=website"
-                      className="group flex items-start gap-3 p-2.5 border border-transparent hover:border-brand-red/30 hover:bg-brand-red/5 transition-all cursor-pointer"
-                    >
-                      <div className="p-2 bg-brand-red/10 border border-brand-red/30 text-brand-red shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                        <Laptop className="w-4 h-4" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center justify-between">
-                          <span className="font-mono text-xs font-bold text-foreground group-hover:text-brand-red">
-                            Web Development
-                          </span>
-                          <span className="text-[10px] font-mono text-emerald-500 font-semibold">
-                            Mulai Rp 150rb
-                          </span>
-                        </div>
-                        <p className="text-text-muted text-[11px] leading-tight mt-1 line-clamp-1">
-                          Landing Page, Company Profile, CRUD System, Slicing
-                          Figma
-                        </p>
-                      </div>
-                    </Link>
-                  </DropdownMenu.Item>
-
-                  {/* Service 2: Academic Document */}
-                  <DropdownMenu.Item asChild>
-                    <Link
-                      href="/katalog?tab=document-academic"
-                      className="group flex items-start gap-3 p-2.5 border border-transparent hover:border-brand-red/30 hover:bg-brand-red/5 transition-all cursor-pointer mt-1"
-                    >
-                      <div className="p-2 bg-brand-red/10 border border-brand-red/30 text-brand-red shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                        <FileText className="w-4 h-4" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center justify-between">
-                          <span className="font-mono text-xs font-bold text-foreground group-hover:text-brand-red">
-                            Dokumen & Akademik
-                          </span>
-                          <span className="text-[10px] font-mono text-emerald-500 font-semibold">
-                            Mulai Rp 3rb/hal
-                          </span>
-                        </div>
-                        <p className="text-text-muted text-[11px] leading-tight mt-1 line-clamp-1">
-                          Reformat Margin Pedoman, Typo & PUEBI, Sitasi Mendeley
-                        </p>
-                      </div>
-                    </Link>
-                  </DropdownMenu.Item>
-
-                  {/* Service 3: Graphic Design */}
-                  <DropdownMenu.Item asChild>
-                    <Link
-                      href="/katalog?tab=design-visual"
-                      className="group flex items-start gap-3 p-2.5 border border-transparent hover:border-brand-red/30 hover:bg-brand-red/5 transition-all cursor-pointer mt-1"
-                    >
-                      <div className="p-2 bg-brand-red/10 border border-brand-red/30 text-brand-red shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
-                        <Palette className="w-4 h-4" />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="flex items-center justify-between">
-                          <span className="font-mono text-xs font-bold text-foreground group-hover:text-brand-red">
-                            Desain Grafis & Visual
-                          </span>
-                          <span className="text-[10px] font-mono text-emerald-500 font-semibold">
-                            Mulai Rp 40rb
-                          </span>
-                        </div>
-                        <p className="text-text-muted text-[11px] leading-tight mt-1 line-clamp-1">
-                          Poster Ilmiah LKTI, Slide PPT Estetik, UI/UX Mockup
-                          Figma
-                        </p>
-                      </div>
-                    </Link>
-                  </DropdownMenu.Item>
-
-                  <DropdownMenu.Separator className="h-px bg-border-color my-2" />
-
-                  {/* Quick link to catalog overview */}
-                  <div className="px-2 py-1 flex items-center justify-between text-[11px] font-mono">
-                    <Link
-                      href="/katalog"
-                      className="text-brand-red hover:underline inline-flex items-center gap-1 font-semibold"
-                    >
-                      <span>Lihat Rincian Katalog Satuan</span>
-                      <ArrowRight className="w-3 h-3" />
-                    </Link>
-                  </div>
-                </DropdownMenu.Content>
-              </DropdownMenu.Portal>
-            </DropdownMenu.Root>
 
             {/* Portfolio / Showcase link (Temporarily disabled) */}
             {/* 
@@ -397,17 +298,35 @@ export default function Navbar() {
               01. Home
             </Link>
 
+            {/* Standout Mobile Link: Layanan & Katalog */}
             <Link
-              href="/#paket-hemat"
-              onClick={(e) => handleNavClick(e, "paket-hemat")}
-              className="flex items-center justify-between px-3 py-2 border border-brand-red/50 bg-brand-red/5 text-foreground hover:bg-brand-red/10 transition-colors font-bold"
+              href="/katalog"
+              onClick={() => setIsOpen(false)}
+              className={`flex items-center justify-between px-3 py-2.5 border transition-all font-mono text-xs font-bold ${
+                pathname === "/katalog"
+                  ? "border-brand-red bg-brand-red text-white shadow-[0_0_12px_rgba(239,68,68,0.3)]"
+                  : "border-brand-red/60 bg-brand-red/10 text-foreground hover:bg-brand-red hover:text-white"
+              }`}
+            >
+              <span className="flex items-center gap-2">
+                <span>02. Layanan &amp; Katalog Lengkap</span>
+              </span>
+              <span className="px-1.5 py-0.5 bg-brand-red text-white text-[9px] font-mono uppercase">
+                SEMUA HARGA
+              </span>
+            </Link>
+
+            <Link
+              href="/#paket-bundling"
+              onClick={(e) => handleNavClick(e, "paket-bundling")}
+              className="flex items-center justify-between px-3 py-2 border border-border-color text-foreground hover:border-brand-red/50 transition-colors font-bold"
             >
               <span className="flex items-center gap-2">
                 <Flame className="w-4 h-4 text-brand-red" />
-                <span>02. Paket Hemat</span>
+                <span>03. Paket Hemat</span>
               </span>
               <span className="px-1.5 py-0.5 bg-brand-red text-white text-[9px] font-mono">
-                VALUE
+                HEMAT
               </span>
             </Link>
 

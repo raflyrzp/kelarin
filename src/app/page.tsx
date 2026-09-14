@@ -116,29 +116,41 @@ export default function Home() {
         </div>
 
         {/* Main CTA Buttons */}
-        <div className="mt-8 flex flex-col sm:flex-row gap-3.5 w-full justify-center px-4 max-w-lg">
+        <div className="mt-8 flex flex-col sm:flex-row gap-3.5 w-full justify-center px-4 max-w-xl">
           <Link
-            href="#paket-hemat"
-            className="group px-7 py-3.5 bg-brand-red hover:bg-red-700 text-white font-mono text-xs sm:text-sm font-bold tracking-wider transition-colors flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(239,68,68,0.25)] sm:flex-1"
+            href="/katalog"
+            className="group px-7 py-3.5 bg-brand-red hover:bg-red-600 text-white font-mono text-xs sm:text-sm font-bold tracking-wider transition-all flex items-center justify-center gap-2 shadow-[0_0_20px_rgba(239,68,68,0.35)] hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] sm:flex-1 text-center"
           >
-            <span>Pilih Paket Hemat</span>
-            <Flame className="w-4 h-4 text-white animate-bounce" />
+            <span>📋 Lihat Semua Layanan &amp; Harga</span>
+            <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
           </Link>
           <a
             href={getWhatsAppLink("general", "Konsultasi Cepat Hero")}
             target="_blank"
             rel="noopener noreferrer"
-            className="group px-7 py-3.5 border border-border-color hover:border-brand-red text-foreground hover:text-brand-red font-mono text-xs sm:text-sm font-bold tracking-wider transition-colors flex items-center justify-center gap-2 sm:flex-1"
+            className="group px-7 py-3.5 border border-border-color hover:border-brand-red text-foreground hover:text-brand-red font-mono text-xs sm:text-sm font-bold tracking-wider transition-colors flex items-center justify-center gap-2 sm:flex-1 text-center bg-card-bg/60 shadow-sm"
           >
-            <span>Konsultasi WA Santai</span>
+            <span>💬 Konsultasi via WhatsApp</span>
             <ArrowRight className="w-4 h-4 text-brand-red group-hover:translate-x-1 transition-transform" />
           </a>
+        </div>
+
+        {/* Quick Anchor Link to Paket Bundling */}
+        <div className="mt-3 flex items-center justify-center gap-2 text-[11px] font-mono text-text-muted">
+          <span>Mau paket hemat borongan?</span>
+          <Link
+            href="#paket-bundling"
+            className="text-brand-red hover:underline font-bold inline-flex items-center gap-1"
+          >
+            <Flame className="w-3 h-3 text-brand-red" />
+            <span>Cek Paket Hemat Sidang ↓</span>
+          </Link>
         </div>
       </section>
 
       {/* 2. TEASER SHOWCASE INTERAKTIF (BEFORE / AFTER SLIDER) */}
-      <section id="showcase-teaser" className="relative z-10 py-8 md:py-10 px-4 sm:px-6 max-w-5xl mx-auto border-t border-border-color scroll-mt-20">
-        <div className="text-center mb-6">
+      <section id="showcase-teaser" className="relative z-10 py-12 md:py-16 px-4 sm:px-6 max-w-5xl mx-auto border-t border-border-color scroll-mt-24">
+        <div className="text-center mb-8">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-brand-red/10 border border-brand-red/30 text-brand-red font-mono text-[10px] font-bold uppercase mb-2">
             <Sparkles className="w-3 h-3" />
             <span>Bukti Nyata Kualitas</span>
@@ -155,7 +167,8 @@ export default function Home() {
       </section>
 
       {/* 3. PAKET BUNDLING HEMAT & LINK KATALOG SATUAN */}
-      <section id="paket-hemat" className="relative z-10 py-10 md:py-12 px-4 sm:px-6 max-w-7xl mx-auto border-t border-border-color scroll-mt-20">
+      <section id="paket-bundling" className="relative z-10 py-10 md:py-12 px-4 sm:px-6 max-w-7xl mx-auto border-t border-border-color scroll-mt-20">
+        <div id="paket-hemat" className="scroll-mt-20"></div>
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-brand-red/10 border border-brand-red/30 text-brand-red text-[10px] font-mono font-bold uppercase mb-2">
             <Flame className="w-3 h-3" />
@@ -246,21 +259,35 @@ export default function Home() {
           })}
         </div>
 
-        {/* CTA BANNER: LINK TO DAFTAR HARGA SATUAN LENGKAP */}
-        <div className="mt-8 p-4 md:p-5 border border-border-color bg-card-bg shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="flex items-center gap-3 text-center sm:text-left">
-            <span className="w-2 h-2 rounded-full bg-brand-red shrink-0 hidden sm:block"></span>
-            <p className="text-xs sm:text-sm font-sans text-foreground">
-              Cuma butuh beresin satu hal kecil (misal: cek typo per lembar, benerin slide PPT, atau slicing web)?
-            </p>
+        {/* CALLOUT BANNER: KATALOG SATUAN / ECERAN */}
+        <div className="mt-10 p-6 md:p-8 border-2 border-brand-red/40 bg-card-bg shadow-[0_0_30px_rgba(239,68,68,0.12)] relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-24 h-24 bg-brand-red/5 border-l border-b border-brand-red/20 pointer-events-none hidden md:block"></div>
+          <div className="absolute top-2.5 right-3 flex items-center gap-1.5 font-mono text-[9px] text-brand-red/70 uppercase tracking-widest hidden md:flex">
+            <span className="w-1.5 h-1.5 bg-brand-red"></span>
+            <span>LAYANAN_SATUAN</span>
           </div>
-          <Link
-            href="/katalog"
-            className="group inline-flex items-center gap-2 px-5 py-2.5 bg-background border border-brand-red/60 hover:border-brand-red hover:bg-brand-red hover:text-white text-brand-red font-mono text-xs font-bold uppercase tracking-wider transition-all shrink-0"
-          >
-            <span>Cek Katalog Harga Eceran Satuan</span>
-            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
-          </Link>
+
+          <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+            <div className="max-w-2xl">
+              <div className="inline-flex items-center gap-2 px-2.5 py-0.5 bg-brand-red/10 border border-brand-red/30 text-brand-red text-[10px] font-mono font-bold uppercase mb-2">
+                <span>PILIHAN FLEKSIBEL</span>
+              </div>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-black tracking-tight text-foreground font-mono uppercase">
+                Hanya Butuh Layanan Satuan atau Eceran?
+              </h3>
+              <p className="mt-2 text-xs sm:text-sm text-text-muted font-sans leading-relaxed">
+                Tersedia pengerjaan per lembar: cek typo naskah, perbaikan margin, desain slide presentasi, hingga slicing web per halaman.
+              </p>
+            </div>
+
+            <Link
+              href="/katalog"
+              className="group inline-flex items-center justify-center gap-2.5 px-6 py-3.5 bg-brand-red hover:bg-red-600 text-white font-mono text-xs sm:text-sm font-bold uppercase tracking-wider transition-all duration-200 shadow-[0_0_20px_rgba(239,68,68,0.35)] hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] shrink-0 w-full sm:w-auto"
+            >
+              <span>Buka Katalog Harga Lengkap</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 
