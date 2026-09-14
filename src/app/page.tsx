@@ -287,7 +287,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-mono font-bold text-xs sm:text-sm text-foreground">
-                    1. Chat WA &amp; Kirim Bahan
+                    Chat WA &amp; Kirim Bahan
                   </h3>
                   <p className="text-text-muted text-[11px] font-sans mt-0.5">
                     Kirim draf skripsi, materi slide, atau brief kodinganmu. Nggak perlu registrasi atau formulir rumit.
@@ -302,7 +302,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-mono font-bold text-xs sm:text-sm text-foreground">
-                    2. Langsung Dikerjakan Sat-Set
+                    Langsung Dikerjakan Sat-Set
                   </h3>
                   <p className="text-text-muted text-[11px] font-sans mt-0.5">
                     Dikerjakan teliti sesuai pedoman kampus. Butuh darurat? Ada opsi kilat &lt;24 jam.
@@ -317,7 +317,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-mono font-bold text-xs sm:text-sm text-foreground">
-                    3. Cek Preview &amp; Garansi Revisi
+                    Cek Preview &amp; Garansi Revisi
                   </h3>
                   <p className="text-text-muted text-[11px] font-sans mt-0.5">
                     Periksa pratinjau hasilnya. Masih kurang pas? Nikmati fasilitas garansi 2x revisi minor gratis.
