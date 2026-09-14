@@ -1,77 +1,98 @@
-# Implementation Plan & Cumulative Prompts: Dual-Theme (Light/Dark) Implementation
+# Implementation Plan & Workflow: OKLCH Dual-Theme (Light/Dark) System
 
-This document contains a phase-by-phase implementation plan and cumulative copyable prompts to revert the current flat design back to the original Cyberpunk/Cyber Samurai theme, and then add class-based Dark/Light theme switching capabilities.
-
----
-
-## Phase 1: Revert & Restore Cyberpunk/Cyber Samurai Dark Base
-**Goal**: Get back to the high-contrast, premium, dark-mode cyber aesthetic with pure black background (`#000000`), deep matte grey borders (`#0a0a0a`), stark white titles, and neon crimson red accents (`#ef4444`) that was originally preferred.
-
-### Prompt to Copy:
-```text
-Please execute Phase 1: Revert the codebase to the high-contrast Cyberpunk/Cyber Samurai dark aesthetic.
-1. Revert globals.css:
-   - Base background: Pure Black (#000000)
-   - Secondary background: Deep Matte Grey (#0a0a0a)
-   - Accent: Neon Crimson Red (#ef4444)
-   - Scrollbar: Black track, neutral-900 thumb, hover to brand-red (#ef4444)
-   - Grid: White grid lines at 0.03 opacity (.cyber-grid)
-2. Revert page.tsx, web-development/page.tsx, and academic/page.tsx:
-   - Restore all colorful purple/cyan backgrounds, text gradients, and hover transitions back to stark white headings, muted silver text, and sharp neon crimson red accents.
-   - Use clean geometric borders (border-neutral-900) instead of glowing colored cards.
-   - Ensure the "Portfolio Highlights" section remains deleted, but the "Lihat Portofolio" buttons and links are kept intact.
-3. Keep the build compiling cleanly.
-```
+This document outlines the design system specifications, color tokens, and implementation guidelines for Kelar.in's OKLCH-based light and dark theme.
 
 ---
 
-## Phase 2: Configure Class-Based Dark/Light Mode
-**Goal**: Set up CSS-first dark mode selectors in Tailwind CSS v4 and define semantic CSS variables for backgrounds, borders, grid colors, and texts in both Light and Dark modes.
+## 1. Color Palette & Token Architecture
 
-### Prompt to Copy:
-```text
-Please execute Phase 2: Configure class-based theme support in Tailwind CSS v4.
-1. Update src/app/globals.css:
-   - Define custom variant for class-based theme: `@variant dark (&:where(.dark, .dark *));`
-   - Set up CSS variables inside `:root` (Light Mode default values) and `.dark` class (Dark Mode values):
-     * --background: Light Mode: #ffffff | Dark Mode: #000000
-     * --foreground: Light Mode: #0f172a | Dark Mode: #ffffff
-     * --card-bg: Light Mode: #f8fafc | Dark Mode: #0a0a0a
-     * --border-color: Light Mode: #e2e8f0 | Dark Mode: #171717
-     * --text-muted: Light Mode: #64748b | Dark Mode: #a3a3a3
-     * --grid-color: Light Mode: rgba(0, 0, 0, 0.04) | Dark Mode: rgba(255, 255, 255, 0.03)
-2. Use these CSS variables in Tailwind's `@theme inline` block so that background, text, border, and grid styles automatically adapt when the `.dark` class is toggled.
-```
+The theme utilizes perceptual OKLCH color spaces for high visual fidelity, uniform contrast, and smooth transitions between light and dark modes.
+
+### Color Tokens
+
+#### Light Mode (`:root`)
+- `--background`: `oklch(0.9779 0.0042 56.3756)` (Warm, soft base)
+- `--foreground`: `oklch(0.2178 0 0)` (High contrast dark typography)
+- `--card`: `oklch(0.9779 0.0042 56.3756)`
+- `--card-foreground`: `oklch(0.2178 0 0)`
+- `--popover`: `oklch(0.9779 0.0042 56.3756)`
+- `--popover-foreground`: `oklch(0.2178 0 0)`
+- `--primary`: `oklch(0.4650 0.1470 24.9381)` (Signature Crimson Accent)
+- `--primary-foreground`: `oklch(1.0000 0 0)` (Pure white on primary)
+- `--secondary`: `oklch(0.9625 0.0385 89.0943)`
+- `--secondary-foreground`: `oklch(0.4847 0.1022 75.1153)`
+- `--muted`: `oklch(0.9431 0.0068 53.4442)`
+- `--muted-foreground`: `oklch(0.4444 0.0096 73.6390)`
+- `--accent`: `oklch(0.9619 0.0580 95.6174)`
+- `--accent-foreground`: `oklch(0.3958 0.1331 25.7230)`
+- `--destructive`: `oklch(0.4437 0.1613 26.8994)`
+- `--destructive-foreground`: `oklch(1.0000 0 0)`
+- `--border`: `oklch(0.9355 0.0324 80.9937)`
+- `--input`: `oklch(0.9355 0.0324 80.9937)`
+- `--ring`: `oklch(0.4650 0.1470 24.9381)`
+- `--chart-1`: `oklch(0.5054 0.1905 27.5181)`
+- `--chart-2`: `oklch(0.4650 0.1470 24.9381)`
+- `--chart-3`: `oklch(0.3958 0.1331 25.7230)`
+- `--chart-4`: `oklch(0.5553 0.1455 48.9975)`
+- `--chart-5`: `oklch(0.4732 0.1247 46.2007)`
+- `--sidebar`: `oklch(0.9431 0.0068 53.4442)`
+- `--sidebar-foreground`: `oklch(0.2178 0 0)`
+- `--sidebar-primary`: `oklch(0.4650 0.1470 24.9381)`
+- `--sidebar-primary-foreground`: `oklch(1.0000 0 0)`
+- `--sidebar-accent`: `oklch(0.9619 0.0580 95.6174)`
+- `--sidebar-accent-foreground`: `oklch(0.3958 0.1331 25.7230)`
+- `--sidebar-border`: `oklch(0.9355 0.0324 80.9937)`
+- `--sidebar-ring`: `oklch(0.4650 0.1470 24.9381)`
+
+#### Dark Mode (`.dark`)
+- `--background`: `oklch(0.2161 0.0061 56.0434)` (Deep rich dark background)
+- `--foreground`: `oklch(0.9699 0.0013 106.4238)` (Stark bright foreground)
+- `--card`: `oklch(0.2685 0.0063 34.2976)` (Elevated surface)
+- `--card-foreground`: `oklch(0.9699 0.0013 106.4238)`
+- `--popover`: `oklch(0.2685 0.0063 34.2976)`
+- `--popover-foreground`: `oklch(0.9699 0.0013 106.4238)`
+- `--primary`: `oklch(0.5054 0.1905 27.5181)` (Vibrant Neon Crimson)
+- `--primary-foreground`: `oklch(0.9779 0.0042 56.3756)`
+- `--secondary`: `oklch(0.4732 0.1247 46.2007)`
+- `--secondary-foreground`: `oklch(0.9619 0.0580 95.6174)`
+- `--muted`: `oklch(0.2291 0.0060 56.0708)`
+- `--muted-foreground`: `oklch(0.8687 0.0043 56.3660)`
+- `--accent`: `oklch(0.5553 0.1455 48.9975)`
+- `--accent-foreground`: `oklch(0.9619 0.0580 95.6174)`
+- `--destructive`: `oklch(0.6368 0.2078 25.3313)`
+- `--destructive-foreground`: `oklch(1.0000 0 0)`
+- `--border`: `oklch(0.3741 0.0087 67.5582)`
+- `--input`: `oklch(0.3741 0.0087 67.5582)`
+- `--ring`: `oklch(0.5054 0.1905 27.5181)`
+- `--chart-1`: `oklch(0.7106 0.1661 22.2162)`
+- `--chart-2`: `oklch(0.6368 0.2078 25.3313)`
+- `--chart-3`: `oklch(0.5771 0.2152 27.3250)`
+- `--chart-4`: `oklch(0.8369 0.1644 84.4286)`
+- `--chart-5`: `oklch(0.7686 0.1647 70.0804)`
+- `--sidebar`: `oklch(0.2161 0.0061 56.0434)`
+- `--sidebar-foreground`: `oklch(0.9699 0.0013 106.4238)`
+- `--sidebar-primary`: `oklch(0.5054 0.1905 27.5181)`
+- `--sidebar-primary-foreground`: `oklch(0.9779 0.0042 56.3756)`
+- `--sidebar-accent`: `oklch(0.5553 0.1455 48.9975)`
+- `--sidebar-accent-foreground`: `oklch(0.9619 0.0580 95.6174)`
+- `--sidebar-border`: `oklch(0.3741 0.0087 67.5582)`
+- `--sidebar-ring`: `oklch(0.5054 0.1905 27.5181)`
 
 ---
 
-## Phase 3: Implement Theme Switcher & Toggle Switch
-**Goal**: Build a React theme provider/state toggler that respects system preference, saves choice to localStorage, and add a toggle button/switch in Navbar.tsx (both desktop and mobile layouts).
+## 2. Backward-Compatible Variable Mappings
 
-### Prompt to Copy:
-```text
-Please execute Phase 3: Create and integrate Theme Switcher logic.
-1. Create a theme utility or hook (e.g. src/hooks/useTheme.ts or inline component context) that:
-   - Reads theme from localStorage or defaults to system preference.
-   - Adds/removes the 'dark' class from `document.documentElement` accordingly.
-   - Keeps track of theme state ('light' | 'dark') reactively.
-2. In src/components/Navbar.tsx:
-   - Import useTheme.
-   - Render a minimalist, high-tech icon button (Sun/Moon) to switch themes.
-   - Add it to the desktop navigation items and the mobile drawer menu.
-```
+To maintain full compatibility with existing components using legacy utility classes:
+- `--color-brand-red` -> `var(--primary)`
+- `--card-bg` -> `var(--card)`
+- `--border-color` -> `var(--border)`
+- `--text-muted` -> `var(--muted-foreground)`
+- `--section-muted-bg` -> `var(--muted)`
+- `--grid-color` -> `oklch(0.2178 0 0 / 0.04)` (light) / `oklch(0.9699 0.0013 106.4238 / 0.05)` (dark)
 
 ---
 
-## Phase 4: Apply Light Mode Styles Across All Pages
-**Goal**: Ensure all cards, forms, buttons, tables, and accordions are styled beautifully in Light Mode, keeping the Cyber Samurai crisp layout with neon crimson red accents.
-
-### Prompt to Copy:
-```text
-Please execute Phase 4: Adapt pages and components to support Light/Dark theme styles.
-1. Update components and pages (`src/components/Accordion.tsx`, `src/app/page.tsx`, `src/app/web-development/page.tsx`, `src/app/academic/page.tsx`):
-   - Replace flat colors with semantic classes (e.g., bg-background, text-foreground, border-border-color).
-   - Style Light Mode highlights: sharp contrast white background, thin slate-200 borders, bright crimson red highlights/badges (`bg-red-500/10 border-red-500/35 text-red-600` in light mode; `bg-red-950/20 border-red-500/20 text-red-400` in dark mode).
-   - Ensure the pricing comparison matrix in `/web-development` looks clean and readable on both Light and Dark mode.
-2. Run a full project build (`bun run build`) to ensure TypeScript and linting checks are fully successful.
-```
+## 3. Typography & Sizing
+- **Fonts**: Keep standard project fonts (`var(--font-geist-sans)` and `var(--font-geist-mono)`).
+- **Radius**: `0.375rem` (with Tailwind tokens `--radius-sm`, `--radius-md`, `--radius-lg`, `--radius-xl`).
+- **Shadows**: Tailored multi-elevation shadows with `hsl(0 63% 18% / ...)` tinting.
