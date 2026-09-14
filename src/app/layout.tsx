@@ -52,11 +52,12 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/preview-kelarin.webp",
+        url: "https://kelar-in.vercel.app/preview-kelarin.png",
+        secureUrl: "https://kelar-in.vercel.app/preview-kelarin.png",
         width: 1200,
         height: 630,
         alt: "Kelar.in - Jasa Pembuatan Website & Mentoring Coding",
-        type: "image/webp",
+        type: "image/png",
       },
     ],
   },
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     title: "Kelar.in | Jasa Pembuatan Website & Mentoring Coding Akademik",
     description:
       "Layanan pengerjaan website UMKM dan mahasiswa, bimbingan coding privat tugas akhir, perbaikan bug teknis, serta perapian format laporan dan slide presentasi sidang.",
-    images: ["/preview-kelarin.webp"],
+    images: ["https://kelar-in.vercel.app/preview-kelarin.png"],
   },
   robots: {
     index: true,
@@ -96,8 +97,8 @@ const jsonLd = {
       "@id": "https://kelar-in.vercel.app/#organization",
       "name": "Kelar.in",
       "url": "https://kelar-in.vercel.app",
-      "logo": "https://kelar-in.vercel.app/preview-kelarin.webp",
-      "image": "https://kelar-in.vercel.app/preview-kelarin.webp",
+      "logo": "https://kelar-in.vercel.app/preview-kelarin.png",
+      "image": "https://kelar-in.vercel.app/preview-kelarin.png",
       "description":
         "Layanan pengerjaan website UMKM dan mahasiswa, bimbingan coding privat tugas akhir, perbaikan bug teknis, serta perapian format laporan dan slide presentasi sidang.",
       "telephone": "+6281517983828",

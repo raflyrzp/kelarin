@@ -14,10 +14,12 @@ export const metadata: Metadata = {
     url: "https://kelar-in.vercel.app/portfolio",
     images: [
       {
-        url: "/preview-kelarin.webp",
+        url: "https://kelar-in.vercel.app/preview-kelarin.png",
+        secureUrl: "https://kelar-in.vercel.app/preview-kelarin.png",
         width: 1200,
         height: 630,
         alt: "Portofolio Kelar.in",
+        type: "image/png",
       },
     ],
   },
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     title: "Portofolio Pengerjaan Sistem & Dokumen | Kelar.in",
     description:
       "Dokumentasi hasil pengerjaan website, bimbingan tugas akhir informatika, perbaikan bug teknis, dan perapian dokumen akademik.",
-    images: ["/preview-kelarin.webp"],
+    images: ["https://kelar-in.vercel.app/preview-kelarin.png"],
   },
 };
 

@@ -14,10 +14,12 @@ export const metadata: Metadata = {
     url: "https://kelar-in.vercel.app/katalog",
     images: [
       {
-        url: "/preview-kelarin.webp",
+        url: "https://kelar-in.vercel.app/preview-kelarin.png",
+        secureUrl: "https://kelar-in.vercel.app/preview-kelarin.png",
         width: 1200,
         height: 630,
         alt: "Katalog Layanan Kelar.in",
+        type: "image/png",
       },
     ],
   },
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     title: "Katalog Layanan & Harga | Kelar.in",
     description:
       "Daftar harga dan paket jasa pembuatan website, mentoring coding privat, perbaikan bug program, serta perapian berkas skripsi dan tugas akhir.",
-    images: ["/preview-kelarin.webp"],
+    images: ["https://kelar-in.vercel.app/preview-kelarin.png"],
   },
 };
 
