@@ -15,28 +15,99 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Kelar.in | Jasa Pembuatan Website & Mentoring Coding Akademik",
+  metadataBase: new URL("https://kelar-in.vercel.app"),
+  title: {
+    default: "Kelar.in | Jasa Pembuatan Website & Mentoring Coding Akademik",
+    template: "%s | Kelar.in",
+  },
   description:
-    "Kelar.in menyediakan jasa pembuatan website kustom untuk UMKM & mahasiswa, mentoring koding 1-on-1, perbaikan bug (debugging), serta kerapihan laporan & slide presentasi sidang.",
+    "Layanan pengerjaan website UMKM dan mahasiswa, bimbingan coding privat tugas akhir, perbaikan bug teknis, serta perapian format laporan dan slide presentasi sidang.",
   keywords: [
     "jasa website",
-    "bimbingan skripsi",
-    "tugas akhir",
-    "coding privat",
-    "debugging",
-    "turnitin",
-    "pembuatan web",
-    "mahasiswa",
-    "mentor coding",
+    "jasa pembuatan website",
+    "bimbingan skripsi informatika",
+    "tugas akhir informatika",
+    "mentoring coding",
+    "kursus coding privat",
+    "debugging web",
+    "perbaikan bug website",
+    "cek turnitin",
+    "perapian format skripsi",
+    "desain slide sidang",
+    "kelar.in",
   ],
-  authors: [{ name: "Kelar.in" }],
-  openGraph: {
-    title: "Kelar.in | Solusi Koding & Akademik Tepat Sasaran",
-    description:
-      "Website pengerjaan sistem, tugas besar, mentoring koding praktikum, serta jasa kerapihan laporan & desain presentasi sidang.",
-    url: "https://kelar.in",
-    type: "website",
+  authors: [{ name: "Kelar.in", url: "https://kelar-in.vercel.app" }],
+  creator: "Kelar.in",
+  publisher: "Kelar.in",
+  alternates: {
+    canonical: "/",
   },
+  openGraph: {
+    title: "Kelar.in | Jasa Pembuatan Website & Mentoring Coding Akademik",
+    description:
+      "Layanan pengerjaan website UMKM dan mahasiswa, bimbingan coding privat tugas akhir, perbaikan bug teknis, serta perapian format laporan dan slide presentasi sidang.",
+    url: "https://kelar-in.vercel.app",
+    siteName: "Kelar.in",
+    locale: "id_ID",
+    type: "website",
+    images: [
+      {
+        url: "/preview-kelarin.webp",
+        width: 1200,
+        height: 630,
+        alt: "Kelar.in - Jasa Pembuatan Website & Mentoring Coding",
+        type: "image/webp",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kelar.in | Jasa Pembuatan Website & Mentoring Coding Akademik",
+    description:
+      "Layanan pengerjaan website UMKM dan mahasiswa, bimbingan coding privat tugas akhir, perbaikan bug teknis, serta perapian format laporan dan slide presentasi sidang.",
+    images: ["/preview-kelarin.webp"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://kelar-in.vercel.app/#website",
+      "url": "https://kelar-in.vercel.app",
+      "name": "Kelar.in",
+      "description": "Jasa Pembuatan Website & Mentoring Coding Akademik",
+      "inLanguage": "id-ID",
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": "https://kelar-in.vercel.app/#organization",
+      "name": "Kelar.in",
+      "url": "https://kelar-in.vercel.app",
+      "logo": "https://kelar-in.vercel.app/preview-kelarin.webp",
+      "image": "https://kelar-in.vercel.app/preview-kelarin.webp",
+      "description":
+        "Layanan pengerjaan website UMKM dan mahasiswa, bimbingan coding privat tugas akhir, perbaikan bug teknis, serta perapian format laporan dan slide presentasi sidang.",
+      "telephone": "+6281517983828",
+      "priceRange": "Rp 25.000 - Rp 1.500.000+",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "ID",
+      },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -51,6 +122,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `
