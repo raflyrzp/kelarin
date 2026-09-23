@@ -1,0 +1,29 @@
+name: Sync to Personal Repo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync-repo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push to Personal Repository
+        env:
+          PERSONAL_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          TARGET_REPO: "raflyrzp/kelarin"
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # Tambahkan remote repo pribadi menggunakan token autentikasi
+          git remote add personal "https://${PERSONAL_TOKEN}@github.com/${TARGET_REPO}.git"
+
+          # Dorong perubahan ke branch main repo pribadi
+          git push personal main --force
