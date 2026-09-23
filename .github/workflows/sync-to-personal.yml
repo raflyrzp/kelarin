@@ -1,18 +1,21 @@
 name: Sync to Personal Repo
 
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   sync-repo:
-    if: github.repository == 'dot-in/kelarin'
+    if: github.repository == 'dot-in/kelarin' && (github.event_name == 'workflow_dispatch' || github.event.pull_request.merged == true)
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
         with:
+          ref: main
           fetch-depth: 0
           persist-credentials: false
 
