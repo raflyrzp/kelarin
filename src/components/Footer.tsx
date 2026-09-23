@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -7,7 +8,14 @@ export default function Footer() {
     <footer className="bg-background border-t border-border-color py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex flex-col items-center md:items-start gap-2">
-          <Link href="/" className="group flex items-center gap-1.5">
+          <Link href="/" className="group flex items-center gap-2">
+            <Image
+              src="/mark-kelarin.png"
+              alt="Kelar.in Mark"
+              width={24}
+              height={24}
+              className="h-6 w-6 object-contain"
+            />
             <span className="font-mono text-xl font-black tracking-tighter text-foreground">
               KELAR<span className="text-brand-red font-extrabold">.IN</span>
             </span>

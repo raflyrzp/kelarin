@@ -79,6 +79,15 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  icons: {
+    icon: [
+      { url: "/mark-kelarin.png", type: "image/png" },
+    ],
+    shortcut: "/mark-kelarin.png",
+    apple: [
+      { url: "/mark-kelarin.png", type: "image/png" },
+    ],
+  },
 };
 
 const jsonLd = {
@@ -91,13 +100,16 @@ const jsonLd = {
       "name": "Kelar.in",
       "description": "Jasa Pembuatan Website & Mentoring Coding Akademik",
       "inLanguage": "id-ID",
+      "publisher": {
+        "@id": "https://kelar-in.vercel.app/#organization",
+      },
     },
     {
       "@type": "ProfessionalService",
       "@id": "https://kelar-in.vercel.app/#organization",
       "name": "Kelar.in",
       "url": "https://kelar-in.vercel.app",
-      "logo": "https://kelar-in.vercel.app/preview-kelarin.png",
+      "logo": "https://kelar-in.vercel.app/logo-kelarin.png",
       "image": "https://kelar-in.vercel.app/preview-kelarin.png",
       "description":
         "Layanan pengerjaan website UMKM dan mahasiswa, bimbingan coding privat tugas akhir, perbaikan bug teknis, serta perapian format laporan dan slide presentasi sidang.",

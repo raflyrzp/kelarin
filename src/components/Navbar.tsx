@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -106,7 +107,15 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
           {/* Brand Logo with Live Status Radar */}
           <div className="flex items-center gap-3">
-            <Link href="/" className="group flex items-center gap-2">
+            <Link href="/" className="group flex items-center gap-2.5">
+              <Image
+                src="/mark-kelarin.png"
+                alt="Kelar.in Mark"
+                width={28}
+                height={28}
+                className="h-7 w-7 object-contain group-hover:scale-105 transition-transform"
+                priority
+              />
               <span className="font-mono text-xl font-black tracking-tighter text-foreground">
                 KELAR
                 <span className="text-brand-red font-extrabold group-hover:animate-pulse">
