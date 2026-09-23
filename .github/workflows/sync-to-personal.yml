@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Push to Personal Repository
         env:
@@ -23,7 +24,7 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
           # Tambahkan remote repo pribadi menggunakan token autentikasi
-          git remote add personal "https://${PERSONAL_TOKEN}@github.com/${TARGET_REPO}.git"
+          git remote add personal "https://x-access-token:${PERSONAL_TOKEN}@github.com/${TARGET_REPO}.git"
 
           # Dorong perubahan ke branch main repo pribadi
           git push personal main --force
