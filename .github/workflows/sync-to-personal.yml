@@ -7,6 +7,7 @@ on:
 
 jobs:
   sync-repo:
+    if: github.repository == 'dot-in/kelarin'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
