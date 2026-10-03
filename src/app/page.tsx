@@ -113,7 +113,7 @@ export default function Home() {
         <div className="p-8 md:p-12 border-2 border-primary bg-card text-card-foreground shadow-lg ring-1 ring-primary/20 rounded-xl relative">
           <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[10px] font-mono font-bold uppercase tracking-wider px-4 py-1 flex items-center gap-2 rounded-full shadow-sm">
             <Sparkles className="w-3 h-3" />
-            <span>PRICING & LAYANAN</span>
+            <span>KAPABILITAS KAMI</span>
           </div>
 
           <div className="text-center mb-10 mt-4">
@@ -142,6 +142,13 @@ export default function Home() {
               <Palette className="w-5 h-5 text-primary shrink-0" />
               <span className="text-sm text-foreground font-mono font-medium">Desain Slide Presentasi & Poster Ilmiah</span>
             </div>
+          </div>
+
+          <div className="flex justify-center mt-6">
+            <Link href="/katalog" className="group flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-mono text-sm font-bold uppercase tracking-wider rounded-lg shadow-md hover:bg-primary/90 transition-all">
+              <span>Lihat Rincian Kapabilitas Kami</span>
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

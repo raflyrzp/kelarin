@@ -1,762 +1,200 @@
 {
-  "catalogTitle": "Katalog Layanan Digital Kelar.in",
-  "catalogSubtitle": "Daftar Harga Transparan Jasa Pembuatan Website, Penataan Dokumen & Akademik, serta Desain Grafis Visual",
-  "disclaimer": "*Harga di bawah adalah tarif dasar acuan. Biaya akhir fleksibel menyesuaikan fitur, tingkat kerumitan, dan tenggat waktu pesanan Anda.",
-  "pillars": [
+  "katalog_layanan": [
     {
-      "id": "website",
-      "code": "WEB",
-      "name": "Kategori Website",
-      "tagline": "Pengembangan sistem dan antarmuka web modern, responsif, rapi, dan siap didemokan.",
-      "calculationBasis": "per halaman / per modul / kompleksitas logika database",
-      "notes": [
-        "Estimasi durasi pengerjaan normal 2 - 10 hari kerja tergantung modul.",
-        "Sudah termasuk garansi 2x revisi minor.",
-        "Tech stack default modern dan fleksibel (HTML/Tailwind/React/Laravel/MySQL)."
-      ],
-      "addOns": [
+      "id_kategori": "umum",
+      "nama_kategori": "Tugas Umum & Dokumen Akademik",
+      "deskripsi_kategori": "Nggak perlu lagi begadang cuma buat ngurusin margin yang geser atau sitasi yang error. Kami bantu beresin semua urusan format dan struktur, biar kamu bisa fokus mikirin isinya.",
+      "cakupan_bantuan": [
         {
-          "id": "addon-web-deploy",
-          "name": "Bantuan Deploy ke Vercel/Netlify",
-          "price": 25000,
-          "priceFormatted": "Rp 25.000",
-          "unit": "project",
-          "description": "Bantu online-kan web Anda sampai bisa diakses publik secara gratis."
-        },
-        {
-          "id": "addon-web-mentoring",
-          "name": "Sesi Penjelasan Alur Kode (Zoom/GMeet 30 menit)",
-          "price": 50000,
-          "priceFormatted": "Rp 50.000",
-          "unit": "sesi 30 menit",
-          "description": "Bedah logika kodingan & tanya jawab persiapan demo/sidang."
-        },
-        {
-          "id": "addon-web-stack-change",
-          "name": "Request Ganti Stack di Tengah Pengerjaan",
-          "price": 0,
-          "priceFormatted": "+50% dari harga awal",
-          "description": "Dikenakan biaya tambahan 50% dari harga awal proyek."
-        }
-      ],
-      "services": [
-        {
-          "id": "web-landing-page",
-          "sku": "WEB-01",
-          "code": "WEB-01",
-          "pillarId": "website",
-          "name": "Landing Page",
-          "shortDescription": "Web 1 halaman interaktif fokus konversi atau promo produk tugas.",
-          "deliverable": "File source code (HTML/CSS/JS/framework), aset gambar, full responsive.",
-          "deliverableItems": [
-            "File source code lengkap (HTML/Tailwind/React)",
-            "Aset gambar teroptimasi & terintegrasi",
-            "Tampilan 100% responsif (Desktop, Tablet, Mobile)",
-            "Integrasi tombol kontak WhatsApp / CTA"
+          "id_layanan": "umum-perapian-dokumen",
+          "nama_layanan": "Perapian & Formatting Dokumen Standar Kampus",
+          "apa_yang_bisa_kami_bantu": "Kami bantu menyulap naskah mentahmu jadi dokumen rapi yang sesuai dengan buku pedoman kampus. Mulai dari urusan penomoran halaman Romawi-Arab yang suka bikin emosi, bikin daftar isi dan daftar tabel otomatis, sampai sinkronisasi sitasi supaya nggak ada referensi yang ketinggalan.",
+          "contoh_kasus": [
+            "Setting daftar isi dan penomoran halaman skripsi yang beda-beda posisi letaknya",
+            "Memasukkan dan merapikan daftar pustaka menggunakan format APA/IEEE",
+            "Merapikan typo, PUEBI, dan struktur kalimat pada draf makalah"
           ],
-          "targetProblem": "Klien butuh halaman promosi produk, pameran virtual, tugas pemasaran.",
-          "calculationBasis": "per landing page",
-          "priceUnit": "projek",
-          "priceMin": 150000,
-          "priceMax": 300000,
-          "basePrice": 150000,
-          "startingPrice": 150000,
-          "priceFormatted": "Rp 150.000 - Rp 300.000",
-          "expressPriceFormatted": "+ Rp 50.000 - Rp 100.000",
-          "estimatedDuration": "2 - 4 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "HTML/Tailwind/React",
-          "badge": "Sat-Set & Efektif",
-          "popular": true
+          "value_mentoring": "Kami akan kasih unjuk cara pakai fitur 'Styles' di Word dan cara gampang masukin jurnal di Mendeley, supaya di bab berikutnya kamu tinggal klik-klik aja tanpa takut berantakan lagi.",
+          "tech_stack_atau_tools": [
+            "Microsoft Word",
+            "Google Docs",
+            "Mendeley",
+            "Zotero"
+          ]
         },
         {
-          "id": "web-company-profile",
-          "sku": "WEB-02",
-          "code": "WEB-02",
-          "pillarId": "website",
-          "name": "Company Profile (3-5 Hal)",
-          "shortDescription": "Web profil bisnis/UMKM (3–5 halaman: Home, About, Services, Contact).",
-          "deliverable": "Multi-halaman terstruktur, navigasi interaktif, formulir kontak terintegrasi.",
-          "deliverableItems": [
-            "Struktur multi-halaman rapi (3–5 halaman standar)",
-            "Navigasi interaktif & responsif",
-            "Formulir kontak & tautan media sosial terintegrasi",
-            "Optimasi dasar SEO & loading cepat"
+          "id_layanan": "umum-riset-kerangka",
+          "nama_layanan": "Pencarian Referensi & Penyusunan Kerangka",
+          "apa_yang_bisa_kami_bantu": "Mentok nggak tau harus mulai nulis dari mana? Kami bantu carikan jurnal pendukung yang kredibel (terindeks) dan menyusunkan kerangka/outline awal tugasmu biar alur pembahasannya jelas dan terarah.",
+          "contoh_kasus": [
+            "Mencarikan 10 jurnal referensi 5 tahun terakhir untuk pendahuluan proposal",
+            "Membuat outline poin-poin yang harus dibahas dalam esai argumentatif"
           ],
-          "targetProblem": "Klien butuh web resmi organisasi, bisnis lokal, atau tugas perancangan web bisnis.",
-          "calculationBasis": "3 - 5 halaman",
-          "priceUnit": "projek (3-5 hal)",
-          "priceMin": 350000,
-          "priceMax": 650000,
-          "basePrice": 350000,
-          "startingPrice": 350000,
-          "priceFormatted": "Rp 350.000 - Rp 650.000",
-          "expressPriceFormatted": "+ Rp 150.000",
-          "estimatedDuration": "4 - 7 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "Multi-page, include form",
-          "badge": "Resmi & Kredibel",
-          "popular": false
-        },
-        {
-          "id": "web-portfolio-cv",
-          "sku": "WEB-03",
-          "code": "WEB-03",
-          "pillarId": "website",
-          "name": "Portfolio / CV Online",
-          "shortDescription": "Halaman web personal pamer karya, rekam jejak, sertifikasi, personal branding.",
-          "deliverable": "Tampilan modern, interaktif, link media sosial & proyek aktif terhubung.",
-          "deliverableItems": [
-            "Tampilan modern & personal branding profesional",
-            "Galeri showcase proyek interaktif yang dapat diklik",
-            "Tautan profil LinkedIn, GitHub, & media sosial aktif",
-            "Tombol unduh CV format PDF sekali klik"
-          ],
-          "targetProblem": "Klien ingin personal branding profesional atau tugas portofolio digital.",
-          "calculationBasis": "per portfolio website",
-          "priceUnit": "projek",
-          "priceMin": 150000,
-          "priceMax": 300000,
-          "basePrice": 150000,
-          "startingPrice": 150000,
-          "priceFormatted": "Rp 150.000 - Rp 300.000",
-          "expressPriceFormatted": "+ Rp 50.000",
-          "estimatedDuration": "2 - 3 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "Desain responsif HP/Desktop",
-          "badge": "Wajib Pencaker",
-          "popular": false
-        },
-        {
-          "id": "web-crud-system",
-          "sku": "WEB-04",
-          "code": "WEB-04",
-          "pillarId": "website",
-          "name": "Sistem CRUD Sederhana",
-          "shortDescription": "Web fungsional olah data (Create, Read, Update, Delete) seperti kasir, inventaris, perpustakaan.",
-          "deliverable": "Source code lengkap, dump basis data (.sql), panduan instalasi localhost.",
-          "deliverableItems": [
-            "Source code lengkap (Frontend & Backend terstruktur)",
-            "Dump berkas basis data (.sql) siap impor",
-            "Fitur olah data lengkap (Create, Read, Update, Delete)",
-            "Dokumentasi & panduan instalasi di localhost"
-          ],
-          "targetProblem": "Mahasiswa tugas matkul pemrograman/basis data yang butuh aplikasi siap demo.",
-          "calculationBasis": "per sistem / modul database",
-          "priceUnit": "projek",
-          "priceMin": 500000,
-          "priceMax": 1200000,
-          "basePrice": 500000,
-          "startingPrice": 500000,
-          "priceFormatted": "Rp 500.000 - Rp 1.200.000",
-          "expressPriceFormatted": "+ Rp 250.000",
-          "estimatedDuration": "5 - 10 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "PHP/MySQL, Laravel, dsb.",
-          "badge": "Siap Demo Dosen",
-          "popular": true
-        },
-        {
-          "id": "web-slicing-figma",
-          "sku": "WEB-05",
-          "code": "WEB-05",
-          "pillarId": "website",
-          "name": "Slicing Figma ke Kode",
-          "shortDescription": "Konversi desain Figma/Adobe XD menjadi kode web presisi (pixel-perfect).",
-          "deliverable": "Kode bersih HTML/CSS, Tailwind CSS, atau Bootstrap ramah layar seluler.",
-          "deliverableItems": [
-            "Konversi pixel-perfect dari draf Figma / Adobe XD",
-            "Kode bersih semantik (HTML/Tailwind/Next.js)",
-            "Responsif sempurna di layar HP & Laptop",
-            "Struktur komponen modular dan rapi"
-          ],
-          "targetProblem": "Klien sudah punya desain di Figma tapi tidak bisa/tidak sempat ngoding.",
-          "calculationBasis": "per 1 halaman Figma",
-          "priceUnit": "halaman Figma",
-          "priceMin": 150000,
-          "priceMax": 350000,
-          "basePrice": 150000,
-          "startingPrice": 150000,
-          "priceFormatted": "Rp 150.000 - Rp 350.000 / hal",
-          "expressPriceFormatted": "+ Rp 75.000 / hal",
-          "estimatedDuration": "2 - 4 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "Hitungan per 1 halaman Figma",
-          "badge": "Pixel-Perfect",
-          "popular": false
+          "value_mentoring": "Kami akan kasih tips keyword rahasia cara nyari jurnal yang spesifik di Google Scholar atau portal kampus biar ke ke depannya kamu gampang nyari bahan sendiri.",
+          "tech_stack_atau_tools": [
+            "Google Scholar",
+            "ResearchGate",
+            "ScienceDirect"
+          ]
         }
       ]
     },
     {
-      "id": "document-academic",
-      "code": "DOC",
-      "name": "Kategori Dokumen & Akademik",
-      "tagline": "Penataan, standarisasi pedoman kampus, dan penyuntingan naskah ilmiah/tugas tertulis.",
-      "calculationBasis": "per halaman naskah atau per item referensi",
-      "notes": [
-        "Minimal order layanan dokumen: Rp 25.000.",
-        "Naskah di atas 80 halaman (skripsi/tesis lengkap) disarankan diarahkan ke Paket Dokumen Tuntas.",
-        "Tersedia opsi pengerjaan kilat ekspres <24 jam."
-      ],
-      "addOns": [],
-      "services": [
+      "id_kategori": "it-programming",
+      "nama_kategori": "IT & Programming",
+      "deskripsi_kategori": "Kodingan error pas besok mau demo? Santai, kami bantu ngoding, slicing, atau ngeberesin bug-nya. Hasil kodingan dijamin rapi, jalan, dan yang paling penting: kamu bakal ngerti cara kerjanya.",
+      "cakupan_bantuan": [
         {
-          "id": "doc-proofreading-typo",
-          "sku": "DOC-01",
-          "code": "DOC-01",
-          "pillarId": "document-academic",
-          "name": "Cek Typo & PUEBI",
-          "shortDescription": "Koreksi salah ketik, ejaan, tanda baca (PUEBI/KBBI) & struktur kalimat janggal (+ opsi English basic).",
-          "deliverable": "File .docx mode Track Changes & salinan dokumen bersih siap cetak.",
-          "deliverableItems": [
-            "File .docx dengan mode Track Changes transparan",
-            "File dokumen bersih siap cetak/kumpul (.docx & .pdf)",
-            "Koreksi ejaan, tanda baca, huruf kapital, & PUEBI/KBBI",
-            "Penyempurnaan alur kalimat agar enak dibaca dan ilmiah"
+          "id_layanan": "it-web-dev",
+          "nama_layanan": "Web Development (Frontend & Backend)",
+          "apa_yang_bisa_kami_bantu": "Dari bikin web profil statis sampai aplikasi CRUD dinamis, kami siap ngoding dari nol atau nerusin proyekmu. Kami pakai tech stack modern yang disukai dosen atau nyesuain dengan silabus mata kuliahmu.",
+          "contoh_kasus": [
+            "Bikin website sistem informasi perpustakaan dengan fitur login dan CRUD data",
+            "Bikin REST API sederhana untuk tugas akhir"
           ],
-          "targetProblem": "Klien cemas dokumen banyak typo, rancu, atau persiapan sebelum submit jurnal/tugas.",
-          "calculationBasis": "Per Halaman (A4, Spasi 1.5)",
-          "priceUnit": "halaman",
-          "priceMin": 3000,
-          "priceMax": 5000,
-          "basePrice": 3000,
-          "startingPrice": 3000,
-          "priceFormatted": "Rp 3.000 - Rp 5.000 / hal",
-          "expressPriceFormatted": "+ Rp 2.000 / hal (<24 Jam)",
-          "estimatedDuration": "1 - 2 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "Track Changes docx (A4, Spasi 1.5)",
-          "badge": "Bebas Typo",
-          "popular": true
+          "value_mentoring": "Source code yang kami tulis selalu dilengkapi komentar penjelasan (commenting). Kami juga bakal jelasin struktur foldernya, jadi kalau ditanya dosen 'ini fungsinya buat apa?', kamu bisa jawab dengan lancar.",
+          "tech_stack_atau_tools": [
+            "Next.js",
+            "Express.js",
+            "TypeScript",
+            "Laravel",
+            "React"
+          ]
         },
         {
-          "id": "doc-reformat-standard",
-          "sku": "DOC-02",
-          "code": "DOC-02",
-          "pillarId": "document-academic",
-          "name": "Reformat Margin & Font (s.d. 30 hal)",
-          "shortDescription": "Penyesuaian margin, font, spasi, heading multilevel (Bab/Sub-bab) sesuai pedoman kampus/instansi.",
-          "deliverable": "Dokumen rapi format .docx sesuai template/buku panduan target.",
-          "deliverableItems": [
-            "Penyesuaian margin presisi (misal: 4-4-3-3 atau sesuai pedoman)",
-            "Setting jenis font, ukuran, & spasi konsisten",
-            "Penyusunan heading bertingkat (Bab & Sub-bab)",
-            "Penyelarasan template kampus standar"
+          "id_layanan": "it-ui-slicing",
+          "nama_layanan": "UI Slicing & Styling",
+          "apa_yang_bisa_kami_bantu": "Punya desain di Figma tapi bingung ngubahnya jadi kode? Kami bantu terjemahkan desainmu jadi halaman web yang interaktif, responsif di HP maupun laptop, dan tampilannya persis (pixel-perfect) kayak desain aslinya.",
+          "contoh_kasus": [
+            "Slicing 3 halaman dari Figma ke Next.js",
+            "Merapikan tampilan tabel dan form pendaftaran agar responsive"
           ],
-          "targetProblem": "Dokumen berantakan, heading tidak beraturan, template kampus tidak sesuai.",
-          "calculationBasis": "Per Dokumen (s.d. 30 hal)",
-          "priceUnit": "dokumen (s.d. 30 hal)",
-          "priceMin": 35000,
-          "priceMax": 50000,
-          "basePrice": 35000,
-          "startingPrice": 35000,
-          "priceFormatted": "Rp 35.000 - Rp 50.000 / file",
-          "expressPriceFormatted": "+ Rp 20.000 (<24 Jam)",
-          "estimatedDuration": "1 - 2 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "Sesuai pedoman kampus",
-          "badge": "Sesuai Pedoman",
-          "popular": false
+          "value_mentoring": "Kami bakal jelasin gimana konsep grid/flexbox yang dipakai, biar kamu tau logikanya kenapa sebuah tombol bisa pindah posisi saat dibuka lewat layar HP.",
+          "tech_stack_atau_tools": [
+            "Tailwind CSS",
+            "shadcn/ui",
+            "Bootstrap",
+            "CSS Vanilla"
+          ]
         },
         {
-          "id": "doc-reformat-advanced",
-          "sku": "DOC-03",
-          "code": "DOC-03",
-          "pillarId": "document-academic",
-          "name": "Reformat Lanjutan (>30 hal)",
-          "shortDescription": "Penyesuaian halaman tambahan di atas 30 halaman (halaman ke-31 dan seterusnya).",
-          "deliverable": "Halaman tambahan tersusun rapi sesuai pedoman kampus.",
-          "deliverableItems": [
-            "Penyesuaian margin dan format untuk halaman ke-31 ke atas",
-            "Konsistensi styling heading dan paragraf naskah panjang",
-            "Pengecekan konsistensi tabel dan lampiran"
+          "id_layanan": "it-db-bugfix",
+          "nama_layanan": "Database Structuring & Bug Fixing",
+          "apa_yang_bisa_kami_bantu": "Membantu menormalkan struktur tabel database-mu biar nggak berantakan relasinya (ERD). Atau, kalau aplikasimu tiba-tiba blank merah (error) dan nggak bisa nyimpan data, serahkan ke kami buat pelacakan dan perbaikannya.",
+          "contoh_kasus": [
+            "Benerin error 'Null Pointer' atau koneksi database gagal pas aplikasi di-run",
+            "Merancang relasi tabel MySQL untuk sistem penyewaan barang"
           ],
-          "targetProblem": "Naskah panjang (proposal skripsi, bab skripsi panjang) yang melebihi 30 halaman.",
-          "calculationBasis": "Halaman tambahan (hal ke-31 dst)",
-          "priceUnit": "halaman tambahan",
-          "priceMin": 1500,
-          "priceMax": 1500,
-          "basePrice": 1500,
-          "startingPrice": 1500,
-          "priceFormatted": "Rp 1.500 / hal",
-          "expressPriceFormatted": "+ Rp 1.000 / hal (<24 Jam)",
-          "estimatedDuration": "1 - 2 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "Dokumen rapi (tambahan per halaman)",
-          "badge": "Tambahan Halaman",
-          "popular": false
-        },
-        {
-          "id": "doc-page-numbering-toc",
-          "sku": "DOC-04",
-          "code": "DOC-04",
-          "pillarId": "document-academic",
-          "name": "Buat No. Halaman & Daftar Isi",
-          "shortDescription": "Nomor majemuk (Romawi awal, Angka Arab isi bab, beda posisi awal bab) + Daftar Isi, Tabel, Gambar otomatis.",
-          "deliverable": "File dokumen dengan navigasi panel rapi, nomor tidak rusak/geser saat jadi PDF.",
-          "deliverableItems": [
-            "Penomoran majemuk (Romawi di halaman awal, Arab di isi bab)",
-            "Aturan beda posisi nomor (tengah bawah di halaman judul bab, kanan atas di isi)",
-            "Daftar Isi otomatis yang sinkron dengan panel navigasi",
-            "Daftar Tabel & Daftar Gambar otomatis sekali klik",
-            "Jaminan nomor halaman anti-geser saat dikonversi ke PDF"
-          ],
-          "targetProblem": "Pusing memisahkan halaman Romawi dan angka Arab, daftar isi masih manual titik-titik.",
-          "calculationBasis": "Per Dokumen Utuh",
-          "priceUnit": "dokumen utuh",
-          "priceMin": 25000,
-          "priceMax": 45000,
-          "basePrice": 25000,
-          "startingPrice": 25000,
-          "priceFormatted": "Rp 25.000 - Rp 45.000 / file",
-          "expressPriceFormatted": "+ Rp 15.000 (<24 Jam)",
-          "estimatedDuration": "1 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "Multi-section (Romawi + Arab)",
-          "badge": "Anti Geser",
-          "popular": true
-        },
-        {
-          "id": "doc-citation-bibliography",
-          "sku": "DOC-05",
-          "code": "DOC-05",
-          "pillarId": "document-academic",
-          "name": "Sinkronisasi Daftar Pustaka",
-          "shortDescription": "Penyusunan sitasi dan bibliografi standar (APA, Harvard, IEEE, Chicago) via Mendeley/Zotero atau manual.",
-          "deliverable": "Daftar pustaka terstandarisasi dengan tautan sitasi aktif di naskah.",
-          "deliverableItems": [
-            "Integrasi aplikasi reference manager (Mendeley / Zotero)",
-            "Standarisasi format sitasi (APA, IEEE, Harvard, Chicago, dll.)",
-            "Sinkronisasi otomatis antara sitasi dalam naskah dengan Daftar Pustaka",
-            "Pengecekan kelengkapan metadata sumber referensi (DOI, Penulis, Tahun)"
-          ],
-          "targetProblem": "Sitasi tercecer, format daftar pustaka campur aduk, diminta dosen pakai Mendeley.",
-          "calculationBasis": "Per 10 Sumber Referensi",
-          "priceUnit": "10 referensi",
-          "priceMin": 15000,
-          "priceMax": 25000,
-          "basePrice": 15000,
-          "startingPrice": 15000,
-          "priceFormatted": "Rp 15.000 - Rp 25.000 / 10 ref",
-          "expressPriceFormatted": "+ Rp 10.000 (<24 Jam)",
-          "estimatedDuration": "1 - 2 Hari",
-          "maxRevision": "2x",
-          "techStackOrNotes": "Manual / Mendeley / Zotero",
-          "badge": "Standar Ilmiah",
-          "popular": false
+          "value_mentoring": "Kami nggak cuma benerin errornya, tapi kami tunjukin di mana letak salahnya dan kenapa itu bisa error, supaya logika problem-solving kamu ikut terlatih.",
+          "tech_stack_atau_tools": [
+            "MySQL",
+            "PostgreSQL",
+            "Supabase",
+            "Prisma"
+          ]
         }
       ]
     },
     {
-      "id": "design-visual",
-      "code": "DSG",
-      "name": "Kategori Desain Grafis",
-      "tagline": "Visualisasi materi, promosi event/bisnis, dan antarmuka interaktif.",
-      "calculationBasis": "per lembar kanvas / per slide presentasi",
-      "notes": [
-        "Termasuk fasilitas file mentah / editable link.",
-        "Tersedia opsi pengerjaan kilat ekspres.",
-        "Resolusi tinggi dan ramah cetak maupun digital."
-      ],
-      "addOns": [
+      "id_kategori": "desain-grafis",
+      "nama_kategori": "Desain Grafis & Visual",
+      "deskripsi_kategori": "Bikin audiens dan dosen penguji terkesima dengan visual yang nggak ngebosenin. Kami bantu ubah tugas teks panjangmu jadi karya visual yang estetik, ringkas, dan to the point.",
+      "cakupan_bantuan": [
         {
-          "id": "addon-dsg-prototype",
-          "name": "Prototype UI/UX Mockup",
-          "price": 20000,
-          "priceFormatted": "Rp 20.000",
-          "unit": "page",
-          "description": "Menjadikan layar mockup Figma menjadi purwarupa interaktif yang dapat diklik."
+          "id_layanan": "dg-slide-ppt",
+          "nama_layanan": "Desain Slide Presentasi Estetik (PPT)",
+          "apa_yang_bisa_kami_bantu": "Bye-bye slide yang isinya paragraf semua! Kami bantu kurasi materi tugasmu, mengambil poin-poin utamanya saja, lalu meramunya jadi slide presentasi yang clean, proporsional, dan asik dilihat.",
+          "contoh_kasus": [
+            "Redesain slide sidang skripsi agar lebih profesional dan minim teks",
+            "Pembuatan slide pitch deck tugas mata kuliah kewirausahaan"
+          ],
+          "value_mentoring": "Kami akan bagiin notes di setiap slide tentang cara bacanya, plus ngasih tau kenapa tata letak tertentu dipilih buat nonjolin datamu.",
+          "tech_stack_atau_tools": [
+            "PowerPoint",
+            "Google Slides",
+            "Canva"
+          ]
+        },
+        {
+          "id_layanan": "dg-poster-infografis",
+          "nama_layanan": "Poster Akademik & Infografis Data",
+          "apa_yang_bisa_kami_bantu": "Punya tugas bikin rangkuman jurnal atau hasil riset? Kami bantu kemas data-data ribet dan angka statistikmu jadi poster ilmiah atau infografis yang alurnya gampang dipahami dalam sekali lirik.",
+          "contoh_kasus": [
+            "Membuat poster A3 ringkasan hasil penelitian untuk lomba LKTI",
+            "Merancang infografis alur kerja sistem untuk dilampirkan di Bab 4"
+          ],
+          "value_mentoring": "Kami jelaskan hirarki visualnya—dari mana dosen harus mulai membaca poster tersebut sampai ke kesimpulan, biar kamu gampang ngejelasinnya nanti.",
+          "tech_stack_atau_tools": [
+            "Illustrator",
+            "CorelDraw",
+            "Canva"
+          ]
+        },
+        {
+          "id_layanan": "dg-ui-ux",
+          "nama_layanan": "UI/UX Design & Prototyping",
+          "apa_yang_bisa_kami_bantu": "Untuk tugas matkul Interaksi Manusia dan Komputer (IMK) atau RPL, kami siap bantu buatkan desain antarmuka aplikasi dari tahap wireframe (kasar) sampai prototype yang bisa diklik jalan seolah-olah aplikasinya betulan.",
+          "contoh_kasus": [
+            "Merancang 5 layar (screens) desain aplikasi pemesanan makanan",
+            "Membuat prototype interaktif (bisa di-klik pindah halaman) buat demo ide aplikasi"
+          ],
+          "value_mentoring": "Kami bakal share dasar-dasar alasan (UX reasoning) kenapa tombol ditaruh di bawah atau kenapa warna ini dipakai, supaya kamu siap debat argumen kalau ditanya dosen.",
+          "tech_stack_atau_tools": [
+            "Figma",
+            "FigJam"
+          ]
         }
-      ],
-      "services": [
+      ]
+    },
+    {
+      "id_kategori": "mentoring",
+      "nama_kategori": "Mentoring Spesial & Bedah Tugas",
+      "deskripsi_kategori": "Buat kamu yang tugasnya udah kelar tapi masih deg-degan takut dibantai pas maju presentasi atau sidang. Kami temani gladi bersihnya!",
+      "cakupan_bantuan": [
         {
-          "id": "design-poster-ilmiah",
-          "sku": "DSG-01",
-          "code": "DSG-01",
-          "pillarId": "design-visual",
-          "name": "Poster Ilmiah / LKTI",
-          "shortDescription": "Poster Ilmiah/Penelitian (LKTI/PIMNAS/seminar) beresolusi cetak tinggi.",
-          "deliverable": "PDF siap cetak (CMYK high-res) + file master.",
-          "deliverableItems": [
-            "Berkas PDF High-Resolution Siap Cetak (CMYK 300 DPI)",
-            "Tata letak hierarki visual jelas, abstrak, metode, dan hasil riset",
-            "Aset transparan & grafik data informatif",
-            "Pilihan ukuran proporsional (A0, A1, A2, A3)"
+          "id_layanan": "mentor-arsitektur",
+          "nama_layanan": "Konsultasi Alur Logika & Arsitektur IT",
+          "apa_yang_bisa_kami_bantu": "Baru mau mulai ngerjain tugas tapi bingung nentuin ERD, alur sistem (flowchart), atau milih teknologi yang pas? Yuk ngobrol bareng (call), kita bahas bareng-bareng dari mana kamu harus mulai.",
+          "contoh_kasus": [
+            "Diskusi penentuan fitur apa saja yang masuk akal buat dibikin di waktu mepet",
+            "Pematangan ide judul skripsi biar nggak gampang ditolak dosen"
           ],
-          "targetProblem": "Klien butuh poster sidang, poster lomba ilmiah, presentasi seminar.",
-          "calculationBasis": "Per Lembar (A1/A0/A3)",
-          "priceUnit": "lembar (A1/A0/A3)",
-          "priceMin": 75000,
-          "priceMax": 150000,
-          "basePrice": 75000,
-          "startingPrice": 75000,
-          "priceFormatted": "Rp 75.000 - Rp 150.000",
-          "expressPriceFormatted": "+ Rp 35.000",
-          "rawFileAccess": "Link Canva / Figma / PSD",
-          "estimatedDuration": "1 - 3 Hari",
-          "maxRevision": "2x",
-          "badge": "Siap Cetak HD",
-          "popular": true
+          "value_mentoring": "Kamu nggak cuma dapat gambaran kasarnya aja, tapi di akhir sesi kamu bakal megang 'roadmap' langkah apa yang harus kamu kerjain hari ini dan besok.",
+          "tech_stack_atau_tools": [
+            "Zoom",
+            "Google Meet",
+            "Notion"
+          ]
         },
         {
-          "id": "design-poster-event",
-          "sku": "DSG-02",
-          "code": "DSG-02",
-          "pillarId": "design-visual",
-          "name": "Poster Event / Pamflet",
-          "shortDescription": "Poster Promosi (acara kampus/bazar/webinar/event komersil).",
-          "deliverable": "PNG + PDF Print siap tayang dan cetak.",
-          "deliverableItems": [
-            "File gambar digital tajam (PNG/JPG format RGB untuk feed/story)",
-            "File PDF siap cetak untuk sebar pamflet fisik",
-            "Komposisi warna eye-catching dan tipografi modern"
+          "id_layanan": "mentor-bedah-kode",
+          "nama_layanan": "Bedah Source Code (Code Review)",
+          "apa_yang_bisa_kami_bantu": "Tugas kodinganmu dibuatin temen atau beli jadi, tapi bingung isinya apa? Sini kami bantu bedah dan 'terjemahin' baris-baris kode alien itu jadi bahasa manusia yang simpel.",
+          "contoh_kasus": [
+            "Sesi review kodingan PHP/Laravel satu per satu sebelum sidang kompre",
+            "Penjelasan alur kerja mulai dari database narik data sampai tampil di layar"
           ],
-          "targetProblem": "Klien butuh pamflet publikasi event kampus, webinar, atau poster promosi bazar.",
-          "calculationBasis": "Per Desain",
-          "priceUnit": "desain",
-          "priceMin": 40000,
-          "priceMax": 80000,
-          "basePrice": 40000,
-          "startingPrice": 40000,
-          "priceFormatted": "Rp 40.000 - Rp 80.000",
-          "expressPriceFormatted": "+ Rp 25.000",
-          "rawFileAccess": "PNG + PDF Print",
-          "estimatedDuration": "1 - 2 Hari",
-          "maxRevision": "2x",
-          "badge": "Publikasi Event",
-          "popular": false
+          "value_mentoring": "Kami akan buatin semacam contekan (cheat-sheet) pertanyaan jebakan yang sering ditanyain dosen soal kodingan, plus cara ngejawabnya yang elegan.",
+          "tech_stack_atau_tools": [
+            "VS Code Live Share",
+            "Google Meet"
+          ]
         },
         {
-          "id": "design-slide-presentation",
-          "sku": "DSG-03",
-          "code": "DSG-03",
-          "pillarId": "design-visual",
-          "name": "Redesain Slide PPT",
-          "shortDescription": "Desain ulang tampilan slide agar visual, ringkas, elegan, dan memikat penguji/audiens.",
-          "deliverable": "File PowerPoint (.pptx) atau Google Slides editable.",
-          "deliverableItems": [
-            "File master PowerPoint (.pptx) yang dapat diedit bebas",
-            "Tautan Canva / Google Slides sesuai permintaan",
-            "Penyusunan visual ringkas & infografis poin inti",
-            "Transisi mulus & animasi elegan tanpa kesan norak"
+          "id_layanan": "mentor-simulasi-sidang",
+          "nama_layanan": "Simulasi Presentasi / Sidang",
+          "apa_yang_bisa_kami_bantu": "Kami akan berperan jadi audiens atau 'dosen killer' bohongan. Kamu latihan presentasi di depan kami, dan kami akan tes mentalmu dengan berbagai pertanyaan terkait materimu.",
+          "contoh_kasus": [
+            "Gladi bersih presentasi proposal skripsi 15 menit",
+            "Latihan public speaking dan cara ngejawab dosen biar kelihatan meyakinkan"
           ],
-          "targetProblem": "Slide presentasi terlalu banyak teks, membosankan, atau persiapan sidang skripsi.",
-          "calculationBasis": "Per Slide (Teks dari klien)",
-          "priceUnit": "slide",
-          "priceMin": 5000,
-          "priceMax": 12000,
-          "basePrice": 5000,
-          "startingPrice": 5000,
-          "priceFormatted": "Rp 5.000 - Rp 12.000 / slide",
-          "expressPriceFormatted": "+ Rp 3.000 / slide",
-          "rawFileAccess": "PPTX / Google Slides",
-          "estimatedDuration": "1 - 3 Hari",
-          "maxRevision": "2x",
-          "badge": "Pikat Penguji",
-          "popular": true
-        },
-        {
-          "id": "design-ui-ux-mockup",
-          "sku": "DSG-04",
-          "code": "DSG-04",
-          "pillarId": "design-visual",
-          "name": "UI/UX Mockup Figma",
-          "shortDescription": "Purwarupa antarmuka aplikasi web/mobile untuk tugas RPL / IMK.",
-          "deliverable": "Tautan Figma interaktif lengkap dengan komponen.",
-          "deliverableItems": [
-            "Tautan proyek Figma interaktif",
-            "Design system dasar (komponen reusable, palette warna)",
-            "Desain antarmuka High-Fidelity (Hi-Fi) modern & estetik",
-            "Alur interaksi pengguna (user flow) terstruktur"
-          ],
-          "targetProblem": "Tugas rekayasa perangkat lunak, perancangan antarmuka, belum butuh coding.",
-          "calculationBasis": "Per Layar / Page",
-          "priceUnit": "page",
-          "priceMin": 35000,
-          "priceMax": 70000,
-          "basePrice": 35000,
-          "startingPrice": 35000,
-          "priceFormatted": "Rp 35.000 - Rp 70.000 / page",
-          "expressPriceFormatted": "+ Rp 20.000 / page",
-          "rawFileAccess": "Link Figma Interaktif",
-          "estimatedDuration": "2 - 5 Hari",
-          "maxRevision": "2x",
-          "badge": "Figma Prototype",
-          "popular": false
-        },
-        {
-          "id": "design-branding-kit",
-          "sku": "DSG-05",
-          "code": "DSG-05",
-          "pillarId": "design-visual",
-          "name": "Branding Kit Simpel",
-          "shortDescription": "Identitas visual tugas wirausaha: 1 logo simpel, palette warna, dan 5 slide panduan.",
-          "deliverable": "Aset transparan PNG, Guide PPT, & template pendukung.",
-          "deliverableItems": [
-            "1 Desain logo simpel & modern (PNG transparan resolusi tinggi)",
-            "Palette warna identitas brand & panduan tipografi",
-            "5 Slide presentasi identitas brand dalam format PPT",
-            "Aset siap pakai untuk promosi produk/jasa"
-          ],
-          "targetProblem": "Mahasiswa matkul kewirausahaan yang butuh aset branding lengkap & logo.",
-          "calculationBasis": "1 Logo + Palette + 5 PPT slide",
-          "priceUnit": "paket",
-          "priceMin": 150000,
-          "priceMax": 250000,
-          "basePrice": 150000,
-          "startingPrice": 150000,
-          "priceFormatted": "Rp 150.000 - Rp 250.000",
-          "expressPriceFormatted": "+ Rp 50.000",
-          "rawFileAccess": "Aset transparan PNG, Guide PPT",
-          "estimatedDuration": "2 - 4 Hari",
-          "maxRevision": "2x",
-          "badge": "Paket Wirausaha",
-          "popular": false
-        },
-        {
-          "id": "design-infographic-data",
-          "sku": "DSG-06",
-          "code": "DSG-06",
-          "pillarId": "design-visual",
-          "name": "Infografis Data Rumit",
-          "shortDescription": "Pengubahan data tabel statistik, flowchart proses, atau konsep rumit jadi grafis informatif.",
-          "deliverable": "File visual PNG resolusi tinggi (High-Res).",
-          "deliverableItems": [
-            "Visualisasi data tabel mentah, diagram alir, atau alur metodologi",
-            "File visual beresolusi tinggi (PNG High-Res)",
-            "Gaya desain rapi, modern, dan mudah dipahami dalam sekali lirik",
-            "Sangat pas untuk lampiran Bab 4 Skripsi / presentasi laporan"
-          ],
-          "targetProblem": "Klien ingin merangkum data penelitian atau alur bisnis agar mudah dipahami dosen.",
-          "calculationBasis": "Per Desain",
-          "priceUnit": "desain",
-          "priceMin": 60000,
-          "priceMax": 120000,
-          "basePrice": 60000,
-          "startingPrice": 60000,
-          "priceFormatted": "Rp 60.000 - Rp 120.000",
-          "expressPriceFormatted": "+ Rp 30.000",
-          "rawFileAccess": "PNG High-Res",
-          "estimatedDuration": "1 - 3 Hari",
-          "maxRevision": "2x",
-          "badge": "Paham Sekali Lirik",
-          "popular": false
+          "value_mentoring": "Kami kasih feedback jujur tentang cara ngomongmu, bahasa tubuh, slide mana yang kecepatan, sampai meluruskan kalimatmu yang masih belibet.",
+          "tech_stack_atau_tools": [
+            "Zoom",
+            "Google Meet"
+          ]
         }
       ]
     }
-  ],
-  "bundles": [
-    {
-      "id": "bundle-dokumen-tuntas",
-      "sku": "BDL-01",
-      "name": "Dokumen Tuntas",
-      "badge": "Bebas Coret Dosen",
-      "highlighted": false,
-      "targetAudience": "Pusing margin acak-acakan, daftar isi geser terus, dan sitasi berantakan? Naskah kami poles sampai rapi standar pedoman kampus dan siap cetak.",
-      "triggerCondition": "Klien bertanya lebih dari 1 masalah dokumen (misal: 'bisa betulin daftar isi sama cek margin?').",
-      "packageItems": [
-        "Rapikan Total Margin, Font, Spasi & Heading Bab Sesuai Pedoman",
-        "Daftar Isi, Daftar Gambar & Tabel Otomatis (Anti-Geser)",
-        "Penomoran Halaman Majemuk (Romawi Awal & Arab Isi Naskah)",
-        "Cek Typo PUEBI & Rapikan Sitasi Mendeley/Zotero (Maks. 40 Hal)"
-      ],
-      "normalPrice": 150000,
-      "normalPriceFormatted": "~ Rp 150.000",
-      "specialPrice": 110000,
-      "specialPriceFormatted": "Rp 110.000",
-      "savings": 40000,
-      "savingsFormatted": "Hemat Rp 40.000 (Paket 4 Layanan)",
-      "basePrice": 110000,
-      "priceFormatted": "Rp 110.000",
-      "ctaType": "bundle"
-    },
-    {
-      "id": "bundle-siap-sidang",
-      "sku": "BDL-02",
-      "name": "Siap Sidang",
-      "badge": "Paling Laris Sidang",
-      "highlighted": true,
-      "targetAudience": "Paket sakti pejuang skripsi. Naskah tuntas rapi, slide presentasi estetik memikat penguji, plus poster ringkasan riset siap cetak.",
-      "triggerCondition": "Klien menyebutkan kata 'sidang', 'skripsi akhir', atau 'ujian kompre'.",
-      "packageItems": [
-        "Semua Layanan di Paket Dokumen Tuntas (Bebas Batas Halaman)",
-        "Redesain 12 Slide PPT Estetik, Ringkas & Poin-Poin Tajam",
-        "1 Desain Poster Ilmiah Ringkasan Riset Siap Cetak"
-      ],
-      "normalPrice": 340000,
-      "normalPriceFormatted": "~ Rp 340.000",
-      "specialPrice": 249000,
-      "specialPriceFormatted": "Rp 249.000",
-      "savings": 91000,
-      "savingsFormatted": "Hemat Rp 91.000 (All-in Sidang)",
-      "basePrice": 249000,
-      "priceFormatted": "Rp 249.000",
-      "ctaType": "bundle"
-    },
-    {
-      "id": "bundle-tugas-kewirausahaan",
-      "sku": "BDL-03",
-      "name": "Tugas Kewirausahaan",
-      "badge": "Tugas Bisnis Beres",
-      "highlighted": false,
-      "targetAudience": "Nggak perlu pusing mikir jualan atau bisnis digital. Kami siapkan landing page interaktif langsung online, logo brand, dan materi konten siap posting.",
-      "triggerCondition": "Klien butuh web jualan sekaligus logo dan feeds Instagram untuk tugas bisnis.",
-      "packageItems": [
-        "Website Landing Page Interaktif & Langsung Sambung ke WA",
-        "Desain Logo Bisnis Simpel & Palet Identitas Visual Brand",
-        "3 Template Feed Promosi Instagram Siap Edit di Canva"
-      ],
-      "normalPrice": 420000,
-      "normalPriceFormatted": "~ Rp 420.000",
-      "specialPrice": 319000,
-      "specialPriceFormatted": "Rp 319.000",
-      "savings": 101000,
-      "savingsFormatted": "Hemat Rp 101.000 vs Satuan",
-      "basePrice": 319000,
-      "priceFormatted": "Rp 319.000",
-      "ctaType": "bundle"
-    },
-    {
-      "id": "bundle-proyek-it-lengkap",
-      "sku": "BDL-04",
-      "name": "Proyek IT Lengkap",
-      "badge": "Full-Stack Tugas IT",
-      "highlighted": false,
-      "targetAudience": "Solusi komplit tugas besar koding atau prototipe skripsi IT. Dari desain UI/UX di Figma, kodingan fungsional bersih, sampai online siap diuji dosen.",
-      "triggerCondition": "Klien butuh dari tahap perancangan tampilan sampai web bisa diakses online via tautan.",
-      "packageItems": [
-        "Desain UI/UX Figma Komplit (6 Layar Rapi & Terstruktur)",
-        "Source Code Web CRUD Fungsional (Clean Code & Gampang Dipelajari)",
-        "Bantuan Deploy Online (Vercel/Netlify) Siap Akses Demo"
-      ],
-      "normalPrice": 1100000,
-      "normalPriceFormatted": "~ Rp 1.100.000",
-      "specialPrice": 849000,
-      "specialPriceFormatted": "Rp 849.000",
-      "savings": 251000,
-      "savingsFormatted": "Hemat Gede Rp 251.000 (End-to-End)",
-      "basePrice": 849000,
-      "priceFormatted": "Rp 849.000",
-      "ctaType": "bundle"
-    }
-  ],
-  "policies": {
-    "revision": {
-      "title": "Ketentuan Revisi",
-      "quota": "2x Revisi Minor",
-      "summary": "Termasuk 2x revisi minor (perbaikan teks, penyesuaian warna minor, pergeseran tata letak elemen).",
-      "detail": "Revisi di luar brief awal atau penambahan fitur/halaman baru di tengah jalan dikenakan biaya tambahan secara proporsional."
-    },
-    "payment": {
-      "title": "Skema Pembayaran",
-      "dpPercentage": 50,
-      "summary": "DP 50% di awal, Pelunasan 50% setelah cek preview.",
-      "detail": "Sistem bertahap: DP 50% di awal untuk mengunci jadwal dan memulai pengerjaan. Sisa pelunasan 50% dibayarkan setelah klien memeriksa preview (tampilan bertanda air / link demo publik). Berkas final (tanpa watermark / source code penuh) diserahkan segera setelah pelunasan terkonfirmasi."
-    },
-    "confidentiality": {
-      "title": "Kerahasiaan Data (NDA 100%)",
-      "summary": "Kerahasiaan data pribadi, naskah, dan materi dijamin 100%.",
-      "detail": "Data pribadi, berkas naskah, dan topik riset dijamin kerahasiaannya 100%. Tidak akan dipublikasikan sebagai portofolio publik tanpa persetujuan tertulis dari klien."
-    },
-    "academicDisclaimer": {
-      "title": "Disclaimer Akademik",
-      "summary": "Layanan bertindak sebagai mitra teknis dan tata format visual.",
-      "detail": "Penyedia jasa bertindak sebagai konsultan teknis, perancang visual, dan editor tata format. Tanggung jawab substansi keilmuan naskah dan hasil evaluasi nilai akademik sepenuhnya berada di pihak klien."
-    }
-  },
-  "briefTemplates": {
-    "website": {
-      "categoryName": "Website",
-      "title": "Template Brief Website",
-      "fields": [
-        {
-          "key": "website_type",
-          "label": "Jenis Web",
-          "placeholder": "Landing Page / Compro / Portofolio / CRUD / Slicing Figma"
-        },
-        {
-          "key": "design_reference",
-          "label": "Referensi / Contoh Desain",
-          "placeholder": "Tautan web contoh atau lampiran file referensi"
-        },
-        {
-          "key": "core_features",
-          "label": "Fitur Utama yang Diinginkan",
-          "placeholder": "Formulir kontak, galeri karya, login admin, keranjang, dll."
-        },
-        {
-          "key": "existing_assets",
-          "label": "Bahan yang Sudah Ada",
-          "placeholder": "Logo, draf teks/konten, foto produk, aset grafis"
-        },
-        {
-          "key": "deadline",
-          "label": "Deadline Pengerjaan",
-          "placeholder": "Hari, Tanggal, & Jam target selesai"
-        }
-      ]
-    },
-    "document": {
-      "categoryName": "Dokumen & Akademik",
-      "title": "Template Brief Dokumen & Akademik",
-      "fields": [
-        {
-          "key": "document_type",
-          "label": "Jenis Naskah",
-          "placeholder": "Makalah / Skripsi / Proposal / Artikel Jurnal / Laporan Magang"
-        },
-        {
-          "key": "page_count",
-          "label": "Jumlah Halaman / Kata",
-          "placeholder": "Estimasi jumlah halaman atau total kata"
-        },
-        {
-          "key": "service_needed",
-          "label": "Layanan yang Dibutuhkan",
-          "placeholder": "Reformat / Cek Typo / Daftar Pustaka / Nomor & Daftar Isi / Paket Tuntas"
-        },
-        {
-          "key": "format_guideline",
-          "label": "Pedoman Format",
-          "placeholder": "Lampirkan file PDF Pedoman Kampus atau template .docx resmi"
-        },
-        {
-          "key": "deadline",
-          "label": "Deadline Pengerjaan",
-          "placeholder": "Hari, Tanggal, & Jam target selesai"
-        }
-      ]
-    },
-    "design": {
-      "categoryName": "Desain Grafis & Visual",
-      "title": "Template Brief Desain Grafis",
-      "fields": [
-        {
-          "key": "design_type",
-          "label": "Jenis Desain",
-          "placeholder": "Poster Ilmiah / Slide PPT / UI-UX Figma / Branding Kit / Infografis"
-        },
-        {
-          "key": "content_material",
-          "label": "Konten / Isi Materi",
-          "placeholder": "Teks naskah materi, ringkasan riset, data mentah/tabel"
-        },
-        {
-          "key": "visual_preference",
-          "label": "Preferensi Visual & Warna",
-          "placeholder": "Warna khas kampus/brand, tema formal/modern/minimalis"
-        },
-        {
-          "key": "output_format",
-          "label": "Format File Output",
-          "placeholder": "PPTX / Canva Link / Figma Link / PDF Siap Cetak / PNG HD"
-        },
-        {
-          "key": "deadline",
-          "label": "Deadline Pengerjaan",
-          "placeholder": "Hari, Tanggal, & Jam target selesai"
-        }
-      ]
-    }
-  }
+  ]
 }
