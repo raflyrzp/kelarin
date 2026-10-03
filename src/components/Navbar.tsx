@@ -160,7 +160,7 @@ export default function Navbar() {
               </span>
             </Link>
 
-            {/* Core Offer Anchor: Paket Hemat with Flame */}
+            {/* Core Offer Anchor: Paket Hemat with Flame (Disabled)
             <Link
               href="/#paket-bundling"
               onClick={(e) => handleNavClick(e, "paket-bundling")}
@@ -172,6 +172,7 @@ export default function Navbar() {
                 HEMAT
               </span>
             </Link>
+            */}
 
             {/* Cara Order */}
             <Link
@@ -309,6 +310,7 @@ export default function Navbar() {
               </span>
             </Link>
 
+            {/* 
             <Link
               href="/#paket-bundling"
               onClick={(e) => handleNavClick(e, "paket-bundling")}
@@ -322,6 +324,7 @@ export default function Navbar() {
                 HEMAT
               </span>
             </Link>
+            */}
 
             {/* Service Subsections */}
             <div className="pt-2">

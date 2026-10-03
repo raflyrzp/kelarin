@@ -1,0 +1,26 @@
+[
+  {
+    "id": "konsultasi",
+    "title": "Konsultasi Gratis!",
+    "subtitle": "Langsung chat aja yaa...",
+    "message": "Halo Kelar.in, saya mau konsultasi gratis untuk tugas saya."
+  },
+  {
+    "id": "presentasi",
+    "title": "Besok Siap Presentasi!",
+    "subtitle": "Tugas dokumen dan ppt siap presentasi.",
+    "message": "Halo Kelar.in, saya butuh bantuan untuk tugas dokumen dan PPT yang siap presentasi besok."
+  },
+  {
+    "id": "coding",
+    "title": "Tugas Coding & Web",
+    "subtitle": "Keperluan terkait programming!",
+    "message": "Halo Kelar.in, saya ada keperluan terkait tugas coding & web programming."
+  },
+  {
+    "id": "visual",
+    "title": "Tugas Visual Grafis",
+    "subtitle": "Dari figma, poster, sesuai keperluan!",
+    "message": "Halo Kelar.in, saya ada keperluan tugas visual grafis (figma/poster/dll)."
+  }
+]
