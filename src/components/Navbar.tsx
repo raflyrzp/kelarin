@@ -154,13 +154,13 @@ export default function Navbar() {
                   : "border-primary/40 bg-primary/10 text-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground shadow-xs"
               }`}
             >
-              <span>Layanan &amp; Katalog</span>
+              <span>Yang Bisa Kami Bantu</span>
               <span className="px-1.5 py-0.2 bg-primary text-primary-foreground text-[9px] font-mono font-black tracking-tight uppercase group-hover:bg-primary-foreground group-hover:text-primary transition-colors">
-                LENGKAP
+                CEK SINI
               </span>
             </Link>
 
-            {/* Core Offer Anchor: Paket Hemat with Flame */}
+            {/* Core Offer Anchor: Paket Hemat with Flame (Disabled)
             <Link
               href="/#paket-bundling"
               onClick={(e) => handleNavClick(e, "paket-bundling")}
@@ -172,6 +172,7 @@ export default function Navbar() {
                 HEMAT
               </span>
             </Link>
+            */}
 
             {/* Cara Order */}
             <Link
@@ -302,13 +303,14 @@ export default function Navbar() {
               }`}
             >
               <span className="flex items-center gap-2">
-                <span>02. Layanan &amp; Katalog Lengkap</span>
+                <span>02. Yang Bisa Kami Bantu</span>
               </span>
               <span className="px-1.5 py-0.5 bg-primary text-primary-foreground text-[9px] font-mono uppercase">
-                SEMUA HARGA
+                CEK SINI
               </span>
             </Link>
 
+            {/* 
             <Link
               href="/#paket-bundling"
               onClick={(e) => handleNavClick(e, "paket-bundling")}
@@ -322,6 +324,7 @@ export default function Navbar() {
                 HEMAT
               </span>
             </Link>
+            */}
 
             {/* Service Subsections */}
             <div className="pt-2">
