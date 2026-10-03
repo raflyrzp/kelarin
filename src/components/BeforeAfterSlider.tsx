@@ -133,8 +133,8 @@ export function BeforeAfterSlider() {
                 setSliderPos(50);
               }}
               className={`px-4 py-2 font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 transition-all cursor-pointer ${isActive
-                  ? "bg-brand-red text-white shadow-[0_0_15px_rgba(239,68,68,0.3)]"
-                  : "border border-border-color bg-card-bg text-text-muted hover:text-foreground hover:border-brand-red/50"
+                  ? "bg-primary text-primary-foreground shadow-sm"
+                  : "border border-border bg-card text-muted-foreground hover:text-foreground hover:border-primary/50"
                 }`}
             >
               <Icon className="w-3.5 h-3.5" />
@@ -145,19 +145,19 @@ export function BeforeAfterSlider() {
       </div>
 
       {/* Slider Control Container */}
-      <div className="relative border border-border-color bg-card-bg shadow-sm overflow-hidden select-none">
+      <div className="relative border border-border bg-card shadow-md rounded-xl overflow-hidden select-none">
         {/* Top bar indicators (Isolated header - not pierced by slider line) */}
-        <div className="flex items-center justify-between px-4 py-2.5 bg-background/90 backdrop-blur-xs border-b border-border-color text-[11px] font-mono">
-          <span className="text-red-700 dark:text-red-400 font-bold flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-red-600 dark:bg-red-500"></span>
+        <div className="flex items-center justify-between px-4 py-2.5 bg-background/90 backdrop-blur-xs border-b border-border text-[11px] font-mono">
+          <span className="text-destructive font-bold flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-destructive"></span>
             SEBELUM (BIKIN STRES)
           </span>
-          <span className="text-text-muted hidden sm:inline-flex items-center gap-1">
-            <SlidersHorizontal className="w-3.5 h-3.5 text-brand-red" />
+          <span className="text-muted-foreground hidden sm:inline-flex items-center gap-1">
+            <SlidersHorizontal className="w-3.5 h-3.5 text-primary" />
             Geser Slider Buat Bandingkan
           </span>
-          <span className="text-emerald-700 dark:text-emerald-400 font-bold flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-emerald-600 dark:bg-emerald-500"></span>
+          <span className="text-primary font-bold flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-primary"></span>
             SESUDAH (TINGGAL TERIMA BERES)
           </span>
         </div>
@@ -165,24 +165,24 @@ export function BeforeAfterSlider() {
         {/* Inner Comparison Viewport (Slider line strictly confined inside) */}
         <div className="relative overflow-hidden min-h-[460px] md:min-h-[400px]">
           {/* AFTER CONTENT (Base Layer - 100% width) */}
-          <div className="absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-between bg-card-bg dark:bg-neutral-950 text-foreground dark:text-neutral-100">
+          <div className="absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-between bg-card text-card-foreground">
             <div className="space-y-4 max-w-xl ml-auto text-right">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-[10px] font-mono font-bold uppercase">
-                <CheckCircle2 className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-primary/10 border border-primary/30 text-primary text-[10px] font-mono font-bold uppercase">
+                <CheckCircle2 className="w-3 h-3 text-primary" />
                 <span>{current.afterTag}</span>
               </div>
 
-              <div className="border border-emerald-500/30 bg-emerald-50/50 dark:bg-neutral-900/60 p-4 sm:p-5 text-left font-sans space-y-3">
-                <div className="text-sm font-bold font-mono text-foreground dark:text-white border-b border-emerald-500/20 dark:border-neutral-800 pb-2 flex items-center justify-between">
+              <div className="border border-primary/30 bg-primary/5 p-4 sm:p-5 text-left font-sans space-y-3">
+                <div className="text-sm font-bold font-mono text-foreground border-b border-primary/20 pb-2 flex items-center justify-between">
                   <span>{current.afterTitle}</span>
-                  <span className="text-[10px] text-emerald-700 dark:text-emerald-400 font-sans font-semibold">
+                  <span className="text-[10px] text-primary font-sans font-semibold">
                     ✓ Terstandar
                   </span>
                 </div>
-                <p className="text-xs text-text-muted dark:text-neutral-300 leading-relaxed">
+                <p className="text-xs text-muted-foreground leading-relaxed">
                   {current.afterDesc}
                 </p>
-                <div className="pt-2 border-t border-emerald-500/20 dark:border-neutral-800/80 text-[11px] font-mono text-emerald-700 dark:text-emerald-400 space-y-1">
+                <div className="pt-2 border-t border-primary/20 text-[11px] font-mono text-primary space-y-1">
                   {current.afterPoints.map((pt, i) => (
                     <div key={i}>{pt}</div>
                   ))}
@@ -190,45 +190,45 @@ export function BeforeAfterSlider() {
               </div>
             </div>
 
-            <div className="flex items-center justify-end gap-2 text-[10px] font-mono text-emerald-700 dark:text-emerald-400 font-semibold">
-              <Sparkles className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
+            <div className="flex items-center justify-end gap-2 text-[10px] font-mono text-primary font-semibold">
+              <Sparkles className="w-3 h-3 text-primary" />
               <span>{current.afterNote}</span>
             </div>
           </div>
 
           {/* BEFORE CONTENT (Clipped Layer via clip-path) */}
           <div
-            className="absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-between bg-section-muted-bg dark:bg-neutral-900 text-foreground dark:text-neutral-300 z-10 pointer-events-none"
+            className="absolute inset-0 p-5 sm:p-6 md:p-8 flex flex-col justify-between bg-muted text-muted-foreground z-10 pointer-events-none"
             style={{
               clipPath: `polygon(0 0, ${sliderPos}% 0, ${sliderPos}% 100%, 0 100%)`,
             }}
           >
             <div className="space-y-4 max-w-xl">
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-red-500/10 border border-red-500/30 text-red-700 dark:text-red-400 text-[10px] font-mono font-bold uppercase">
-                <AlertTriangle className="w-3 h-3 text-red-600 dark:text-red-400" />
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 bg-destructive/10 border border-destructive/20 text-destructive text-[10px] font-mono font-bold uppercase">
+                <AlertTriangle className="w-3 h-3 text-destructive" />
                 <span>{current.beforeTag}</span>
               </div>
 
-              <div className="border border-red-500/30 bg-red-50/50 dark:bg-black/60 p-4 sm:p-5 text-left font-sans space-y-3 relative">
-                <div className="text-sm font-semibold font-mono text-red-800 dark:text-red-300 opacity-90 border-b border-red-500/20 dark:border-red-900/40 pb-2 flex items-center justify-between">
-                  <span>{current.beforeTitle}</span>
-                  <span className="text-[10px] text-red-700 dark:text-red-400 font-sans font-semibold">
+              <div className="border border-destructive/20 bg-destructive/5 p-4 sm:p-5 text-left font-sans space-y-3 relative">
+                <div className="text-sm font-bold font-mono text-destructive border-b border-destructive/20 pb-2 flex items-center justify-between">
+                  <span className="text-destructive font-bold">{current.beforeTitle}</span>
+                  <span className="text-[10px] text-destructive font-sans font-semibold">
                     ✕ Masalah
                   </span>
                 </div>
-                <p className="text-xs text-text-muted dark:text-neutral-400 leading-relaxed line-clamp-3">
+                <p className="text-xs text-muted-foreground leading-relaxed line-clamp-3">
                   {current.beforeDesc}
                 </p>
-                <div className="pt-2 border-t border-red-500/20 dark:border-red-900/40 text-[11px] font-mono text-red-700 dark:text-red-400 space-y-1">
+                <div className="pt-2 border-t border-destructive/20 text-[11px] font-mono text-destructive space-y-1">
                   {current.beforePoints.map((pt, i) => (
-                    <div key={i}>{pt}</div>
+                    <div key={i} className="text-destructive font-medium">{pt}</div>
                   ))}
                 </div>
               </div>
             </div>
 
-            <div className="flex items-center gap-2 text-[10px] font-mono text-red-700 dark:text-red-400 font-semibold">
-              <AlertTriangle className="w-3 h-3 text-red-600 dark:text-red-400" />
+            <div className="flex items-center gap-2 text-[10px] font-mono text-destructive font-semibold">
+              <AlertTriangle className="w-3 h-3 text-destructive" />
               <span>{current.beforeNote}</span>
             </div>
           </div>
@@ -249,8 +249,8 @@ export function BeforeAfterSlider() {
             className="absolute top-0 bottom-0 z-20 pointer-events-none flex items-center justify-center -ml-[1px]"
             style={{ left: `${sliderPos}%` }}
           >
-            <div className="w-0.5 h-full bg-brand-red shadow-[0_0_12px_#ef4444]"></div>
-            <div className="absolute w-8 h-8 rounded-full bg-brand-red border-2 border-white shadow-[0_0_15px_rgba(239,68,68,0.8)] flex items-center justify-center text-white text-xs font-mono font-bold">
+            <div className="w-0.5 h-full bg-accent shadow-sm"></div>
+            <div className="absolute w-8 h-8 rounded-full bg-accent border-2 border-background shadow-md flex items-center justify-center text-accent-foreground text-xs font-mono font-bold">
               ↔
             </div>
           </div>
@@ -258,14 +258,14 @@ export function BeforeAfterSlider() {
       </div>
 
       {/* Action Footer */}
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs text-text-muted">
+      <div className="flex flex-col sm:flex-row items-center justify-between gap-3 font-mono text-xs text-muted-foreground">
         <span>
           Geser garis pembanding buat lihat standar kualitas pengerjaan di
           setiap kategori.
         </span>
         {/* <Link
           href="/portfolio"
-          className="inline-flex items-center gap-1.5 text-brand-red hover:underline font-bold"
+          className="inline-flex items-center gap-1.5 text-primary hover:underline font-bold"
         >
           <span>Lihat Sampel Portofolio Lengkap</span>
           <ArrowRight className="w-3.5 h-3.5" />

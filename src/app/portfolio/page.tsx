@@ -215,36 +215,36 @@ export default function PortfolioPage() {
       <div className="absolute inset-0 cyber-grid pointer-events-none z-0"></div>
 
       {/* Ambient background glows */}
-      <div className="absolute top-[5%] left-[-10%] w-[350px] h-[350px] md:w-[600px] md:h-[600px] rounded-full bg-brand-red/5 blur-[120px] pointer-events-none z-0"></div>
-      <div className="absolute bottom-[10%] right-[-10%] w-[350px] h-[350px] md:w-[600px] md:h-[600px] rounded-full bg-brand-red/5 blur-[120px] pointer-events-none z-0"></div>
+      <div className="absolute top-[5%] left-[-10%] w-[350px] h-[350px] md:w-[600px] md:h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none z-0"></div>
+      <div className="absolute bottom-[10%] right-[-10%] w-[350px] h-[350px] md:w-[600px] md:h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none z-0"></div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
         
         {/* Back Link */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 font-mono text-xs text-text-muted hover:text-foreground mb-8 transition-colors group"
+          className="inline-flex items-center gap-2 font-mono text-xs text-muted-foreground hover:text-foreground mb-8 transition-colors group"
         >
-          <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform text-brand-red" />
+          <ArrowLeft className="w-3.5 h-3.5 group-hover:-translate-x-1 transition-transform text-primary" />
           KEMBALI KE BERANDA
         </Link>
 
         {/* HERO TITLE & HIGHLIGHT */}
         <div className="mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-brand-red/10 border border-brand-red/30 text-brand-red font-mono text-xs font-bold uppercase mb-4">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-red animate-pulse"></span>
+          <div className="inline-flex items-center gap-2 px-3 py-1 bg-primary/10 border border-primary/30 text-primary font-mono text-xs font-bold uppercase mb-4">
+            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
             SHOWCASE & STUDI KASUS PROYEK
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-black tracking-tighter text-foreground uppercase font-mono leading-tight">
             GALERI KARYA & SAMPEL PENGERJAAN
           </h1>
-          <p className="mt-4 text-text-muted max-w-3xl text-sm md:text-base font-sans leading-relaxed">
+          <p className="mt-4 text-muted-foreground max-w-3xl text-sm md:text-base font-sans leading-relaxed">
             Eksplorasi portofolio pengerjaan website modern, perapian naskah akademik pedoman kampus, dan aset visual desain grafis. Seluruh proyek dikerjakan dengan standar industri, garansi revisi, dan privasi penuh.
           </p>
         </div>
 
         {/* CONTROLS: CATEGORY TABS & SEARCH BAR */}
-        <div className="border border-border-color bg-card-bg p-4 mb-10 flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between">
+        <div className="border border-border bg-card p-4 mb-10 flex flex-col md:flex-row gap-4 items-stretch md:items-center justify-between shadow-sm">
           
           {/* Category Tabs */}
           <div className="flex flex-wrap gap-2">
@@ -259,12 +259,12 @@ export default function PortfolioPage() {
                 onClick={() => setSelectedCategory(tab.id)}
                 className={`px-3.5 py-2 font-mono text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-1.5 cursor-pointer ${
                   selectedCategory === tab.id
-                    ? "bg-brand-red text-white shadow-[0_0_12px_rgba(239,68,68,0.3)]"
-                    : "border border-border-color bg-background text-text-muted hover:text-foreground hover:border-brand-red/40"
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "border border-border bg-background text-muted-foreground hover:text-foreground hover:border-primary/40"
                 }`}
               >
                 <span>{tab.label}</span>
-                <span className={`text-[10px] px-1 py-0.2 ${selectedCategory === tab.id ? "bg-black/20 text-white" : "bg-neutral-800 text-neutral-400"}`}>
+                <span className={`text-[10px] px-1 py-0.2 ${selectedCategory === tab.id ? "bg-black/20 text-white" : "bg-muted text-muted-foreground"}`}>
                   {tab.count}
                 </span>
               </button>
@@ -273,21 +273,21 @@ export default function PortfolioPage() {
 
           {/* Search Input */}
           <div className="relative w-full md:w-72">
-            <Search className="w-4 h-4 text-text-muted absolute left-3 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-muted-foreground absolute left-3 top-1/2 -translate-y-1/2" />
             <input
               type="text"
               placeholder="Cari SKU / judul tugas..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-9 pr-3 py-2 bg-background border border-border-color text-xs font-sans text-foreground placeholder:text-text-muted focus:outline-none focus:border-brand-red font-mono"
+              className="w-full pl-9 pr-3 py-2 bg-background border border-border text-xs font-sans text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary font-mono"
             />
           </div>
         </div>
 
         {/* PROJECTS GRID */}
         {filteredProjects.length === 0 ? (
-          <div className="border border-border-color bg-card-bg p-12 text-center my-12">
-            <p className="font-mono text-text-muted text-sm">
+          <div className="border border-border bg-card p-12 text-center my-12 shadow-sm">
+            <p className="font-mono text-muted-foreground text-sm">
               Tidak ada sampel proyek yang cocok dengan filter atau kata kunci Anda.
             </p>
             <button
@@ -295,7 +295,7 @@ export default function PortfolioPage() {
                 setSelectedCategory("all");
                 setSearchQuery("");
               }}
-              className="mt-4 px-4 py-2 bg-brand-red text-white font-mono text-xs font-bold uppercase cursor-pointer"
+              className="mt-4 px-4 py-2 bg-primary text-primary-foreground font-mono text-xs font-bold uppercase cursor-pointer"
             >
               Reset Filter
             </button>
@@ -308,11 +308,11 @@ export default function PortfolioPage() {
               return (
                 <div
                   key={project.id}
-                  className="border border-border-color bg-card-bg shadow-sm flex flex-col justify-between group hover:border-brand-red/60 transition-all duration-300"
+                  className="border border-border bg-card text-card-foreground shadow-sm flex flex-col justify-between group hover:border-primary/60 transition-all duration-300"
                 >
                   <div>
                     {/* Placeholder Preview Screen (Cyber High-Tech Canvas/Terminal) */}
-                    <div className="border-b border-border-color bg-black/90 p-4 font-mono relative overflow-hidden">
+                    <div className="border-b border-border bg-black/90 p-4 font-mono relative overflow-hidden">
                       <div className="flex items-center justify-between pb-3 border-b border-neutral-800 text-[10px] text-neutral-400">
                         <div className="flex items-center gap-1.5">
                           <span className="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
@@ -338,30 +338,30 @@ export default function PortfolioPage() {
                     {/* Card Body Info */}
                     <div className="p-6">
                       <div className="flex items-center justify-between gap-2 mb-2">
-                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-brand-red bg-brand-red/10 border border-brand-red/25 px-2 py-0.5">
+                        <span className="text-[10px] font-mono font-bold uppercase tracking-wider text-primary bg-primary/10 border border-primary/25 px-2 py-0.5">
                           {project.categoryLabel}
                         </span>
-                        <span className="text-[11px] font-mono text-text-muted">
+                        <span className="text-[11px] font-mono text-muted-foreground">
                           {project.clientContext}
                         </span>
                       </div>
 
-                      <h3 className="font-mono text-lg font-bold text-foreground leading-snug group-hover:text-brand-red transition-colors mb-2">
+                      <h3 className="font-mono text-lg font-bold text-foreground leading-snug group-hover:text-primary transition-colors mb-2">
                         {project.title}
                       </h3>
 
-                      <p className="text-xs text-text-muted font-sans leading-relaxed mb-6">
+                      <p className="text-xs text-muted-foreground font-sans leading-relaxed mb-6">
                         {project.tagline}
                       </p>
 
                       {/* Deliverables Checklist */}
-                      <div className="space-y-1.5 mb-6 border-t border-border-color/60 pt-4">
-                        <div className="text-[10px] font-mono uppercase tracking-wider text-text-muted font-semibold">
+                      <div className="space-y-1.5 mb-6 border-t border-border/60 pt-4">
+                        <div className="text-[10px] font-mono uppercase tracking-wider text-muted-foreground font-semibold">
                           Fitur & Output Terlampir:
                         </div>
                         {project.deliverables.map((d, i) => (
                           <div key={i} className="flex items-center gap-2 text-xs text-foreground font-sans">
-                            <CheckCircle2 className="w-3 h-3 text-brand-red shrink-0" />
+                            <CheckCircle2 className="w-3 h-3 text-primary shrink-0" />
                             <span>{d}</span>
                           </div>
                         ))}
@@ -370,9 +370,9 @@ export default function PortfolioPage() {
                   </div>
 
                   {/* Card Footer & Action Button */}
-                  <div className="p-6 pt-0 border-t border-border-color/40 mt-auto">
+                  <div className="p-6 pt-0 border-t border-border/40 mt-auto">
                     <div className="flex items-baseline justify-between py-3">
-                      <span className="text-[11px] font-mono text-text-muted">Acuan Tarif:</span>
+                      <span className="text-[11px] font-mono text-muted-foreground">Acuan Tarif:</span>
                       <span className="text-xs font-mono font-bold text-foreground">
                         {project.priceRange}
                       </span>
@@ -382,7 +382,7 @@ export default function PortfolioPage() {
                       href={waLink}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-full py-2.5 bg-background border border-border-color hover:border-brand-red text-foreground hover:text-brand-red font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 transition-all group-hover:bg-brand-red group-hover:text-white group-hover:border-brand-red cursor-pointer"
+                      className="w-full py-2.5 bg-background border border-border hover:border-primary text-foreground hover:text-primary font-mono text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-all group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary cursor-pointer"
                     >
                       <span>Konsultasi Serupa</span>
                       <PhoneCall className="w-3.5 h-3.5" />
@@ -395,17 +395,17 @@ export default function PortfolioPage() {
         )}
 
         {/* BOTTOM CALL TO ACTION BANNER */}
-        <div className="mt-20 border border-brand-red/40 bg-card-bg p-8 md:p-12 relative overflow-hidden">
+        <div className="mt-20 border border-border bg-card p-8 md:p-12 relative overflow-hidden shadow-sm">
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left">
             <div>
-              <div className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-brand-red tracking-wider uppercase mb-2">
+              <div className="inline-flex items-center gap-1.5 font-mono text-xs font-bold text-primary tracking-wider uppercase mb-2">
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Kustom Proyek Khusus</span>
               </div>
               <h2 className="text-2xl md:text-3xl font-black font-mono text-foreground uppercase tracking-tight">
                 PUNYA KEBUTUHAN KHUSUS DI LUAR SAMPEL?
               </h2>
-              <p className="mt-2 text-sm text-text-muted max-w-2xl font-sans">
+              <p className="mt-2 text-sm text-muted-foreground max-w-2xl font-sans">
                 Diskusikan topik tugas kuliah, format naskah kampus khusus, atau aplikasi web dengan arsitektur custom langsung dengan tim teknis Kelar.in.
               </p>
             </div>
@@ -414,7 +414,7 @@ export default function PortfolioPage() {
               href={getWhatsAppLink("general", "Konsultasi Kustom Proyek Baru")}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-3.5 bg-brand-red hover:bg-red-600 text-white font-mono text-xs font-bold uppercase tracking-wider flex items-center gap-2 shadow-[0_0_20px_rgba(239,68,68,0.35)] shrink-0 transition-colors cursor-pointer"
+              className="px-8 py-3.5 bg-accent hover:opacity-90 text-accent-foreground font-mono text-xs font-semibold uppercase tracking-wider flex items-center gap-2 shadow-sm shrink-0 transition-opacity cursor-pointer"
             >
               <span>Diskusi Bareng Admin</span>
               <ArrowRight className="w-4 h-4" />
