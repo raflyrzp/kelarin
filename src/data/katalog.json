@@ -86,12 +86,7 @@
             "Merancang relasi tabel MySQL untuk sistem penyewaan barang"
           ],
           "value_mentoring": "Kami nggak cuma benerin errornya, tapi kami tunjukin di mana letak salahnya dan kenapa itu bisa error, supaya logika problem-solving kamu ikut terlatih.",
-          "tech_stack_atau_tools": [
-            "MySQL",
-            "PostgreSQL",
-            "Supabase",
-            "Prisma"
-          ]
+          "tech_stack_atau_tools": ["MySQL", "PostgreSQL", "Supabase", "Prisma"]
         }
       ]
     },
@@ -109,11 +104,7 @@
             "Pembuatan slide pitch deck tugas mata kuliah kewirausahaan"
           ],
           "value_mentoring": "Kami akan bagiin notes di setiap slide tentang cara bacanya, plus ngasih tau kenapa tata letak tertentu dipilih buat nonjolin datamu.",
-          "tech_stack_atau_tools": [
-            "PowerPoint",
-            "Google Slides",
-            "Canva"
-          ]
+          "tech_stack_atau_tools": ["PowerPoint", "Google Slides", "Canva"]
         },
         {
           "id_layanan": "dg-poster-infografis",
@@ -124,11 +115,7 @@
             "Merancang infografis alur kerja sistem untuk dilampirkan di Bab 4"
           ],
           "value_mentoring": "Kami jelaskan hirarki visualnya—dari mana dosen harus mulai membaca poster tersebut sampai ke kesimpulan, biar kamu gampang ngejelasinnya nanti.",
-          "tech_stack_atau_tools": [
-            "Illustrator",
-            "CorelDraw",
-            "Canva"
-          ]
+          "tech_stack_atau_tools": ["Illustrator", "CorelDraw", "Canva"]
         },
         {
           "id_layanan": "dg-ui-ux",
@@ -139,16 +126,13 @@
             "Membuat prototype interaktif (bisa di-klik pindah halaman) buat demo ide aplikasi"
           ],
           "value_mentoring": "Kami bakal share dasar-dasar alasan (UX reasoning) kenapa tombol ditaruh di bawah atau kenapa warna ini dipakai, supaya kamu siap debat argumen kalau ditanya dosen.",
-          "tech_stack_atau_tools": [
-            "Figma",
-            "FigJam"
-          ]
+          "tech_stack_atau_tools": ["Figma", "FigJam"]
         }
       ]
     },
     {
       "id_kategori": "mentoring",
-      "nama_kategori": "Mentoring Spesial & Bedah Tugas",
+      "nama_kategori": "Mentoring & Partner Tugas",
       "deskripsi_kategori": "Buat kamu yang tugasnya udah kelar tapi masih deg-degan takut dibantai pas maju presentasi atau sidang. Kami temani gladi bersihnya!",
       "cakupan_bantuan": [
         {
@@ -160,11 +144,7 @@
             "Pematangan ide judul skripsi biar nggak gampang ditolak dosen"
           ],
           "value_mentoring": "Kamu nggak cuma dapat gambaran kasarnya aja, tapi di akhir sesi kamu bakal megang 'roadmap' langkah apa yang harus kamu kerjain hari ini dan besok.",
-          "tech_stack_atau_tools": [
-            "Zoom",
-            "Google Meet",
-            "Notion"
-          ]
+          "tech_stack_atau_tools": ["Zoom", "Google Meet", "Notion"]
         },
         {
           "id_layanan": "mentor-bedah-kode",
@@ -175,10 +155,7 @@
             "Penjelasan alur kerja mulai dari database narik data sampai tampil di layar"
           ],
           "value_mentoring": "Kami akan buatin semacam contekan (cheat-sheet) pertanyaan jebakan yang sering ditanyain dosen soal kodingan, plus cara ngejawabnya yang elegan.",
-          "tech_stack_atau_tools": [
-            "VS Code Live Share",
-            "Google Meet"
-          ]
+          "tech_stack_atau_tools": ["VS Code Live Share", "Google Meet"]
         },
         {
           "id_layanan": "mentor-simulasi-sidang",
@@ -189,10 +166,7 @@
             "Latihan public speaking dan cara ngejawab dosen biar kelihatan meyakinkan"
           ],
           "value_mentoring": "Kami kasih feedback jujur tentang cara ngomongmu, bahasa tubuh, slide mana yang kecepatan, sampai meluruskan kalimatmu yang masih belibet.",
-          "tech_stack_atau_tools": [
-            "Zoom",
-            "Google Meet"
-          ]
+          "tech_stack_atau_tools": ["Zoom", "Google Meet"]
         }
       ]
     }

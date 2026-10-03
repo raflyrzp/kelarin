@@ -28,34 +28,34 @@ export default function Footer() {
 
         <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 font-mono text-xs">
           <Link
-            href="/#paket-hemat"
-            className="text-muted-foreground hover:text-primary transition-colors"
-          >
-            Paket Hemat
-          </Link>
-          <Link
-            href="/katalog?tab=website"
+            href="/katalog?tab=umum"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Web Dev
+            Dokumen & Akademik
           </Link>
           <Link
-            href="/katalog?tab=document-academic"
+            href="/katalog?tab=it-programming"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Akademik
+            IT & Koding
           </Link>
           <Link
-            href="/katalog?tab=design-visual"
+            href="/katalog?tab=desain-grafis"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Desain
+            Desain Visual
+          </Link>
+          <Link
+            href="/katalog?tab=mentoring"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Mentoring
           </Link>
           <a
             href="https://raflyrzp.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-muted-foreground hover:text-foreground hover:underline transition-colors"
+            className="flex items-center gap-1 text-muted-foreground hover:text-foreground hover:underline transition-colors ml-2"
           >
             Owner Portfolio <ArrowUpRight className="w-3 h-3 text-primary" />
           </a>
