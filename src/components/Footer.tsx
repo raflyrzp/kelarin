@@ -5,7 +5,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-background border-t border-border-color py-12 px-6">
+    <footer className="bg-background border-t border-border py-12 px-6">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="flex flex-col items-center md:items-start gap-2">
           <Link href="/" className="group flex items-center gap-2">
@@ -17,53 +17,47 @@ export default function Footer() {
               className="h-6 w-6 object-contain"
             />
             <span className="font-mono text-xl font-black tracking-tighter text-foreground">
-              KELAR<span className="text-brand-red font-extrabold">.IN</span>
+              KELAR<span className="text-primary font-extrabold">.IN</span>
             </span>
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-red shadow-[0_0_8px_#ef4444]"></span>
+            <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_var(--primary)]"></span>
           </Link>
-          <p className="text-xs text-text-muted font-mono">
+          <p className="text-xs text-muted-foreground font-mono">
             © {new Date().getFullYear()} Kelar.in. All rights reserved.
           </p>
         </div>
 
         <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 font-mono text-xs">
           <Link
-            href="/#paket-hemat"
-            className="text-text-muted hover:text-brand-red transition-colors"
+            href="/katalog?tab=umum"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Paket Hemat
+            Dokumen & Akademik
           </Link>
           <Link
-            href="/katalog?tab=website"
-            className="text-text-muted hover:text-foreground transition-colors"
+            href="/katalog?tab=it-programming"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Web Dev
+            IT & Koding
           </Link>
           <Link
-            href="/katalog?tab=document-academic"
-            className="text-text-muted hover:text-foreground transition-colors"
+            href="/katalog?tab=desain-grafis"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Akademik
+            Desain Visual
           </Link>
           <Link
-            href="/katalog?tab=design-visual"
-            className="text-text-muted hover:text-foreground transition-colors"
+            href="/katalog?tab=mentoring"
+            className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Desain
+            Mentoring
           </Link>
-          {/* <Link
-            href="/portfolio"
-            className="text-text-muted hover:text-brand-red transition-colors"
-          >
-            Portfolio
-          </Link> */}
           <a
             href="https://raflyrzp.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-text-muted hover:text-foreground hover:underline transition-colors"
+            className="flex items-center gap-1 text-muted-foreground hover:text-foreground hover:underline transition-colors ml-2"
           >
-            Owner Portfolio <ArrowUpRight className="w-3 h-3 text-brand-red" />
+            Owner Portfolio <ArrowUpRight className="w-3 h-3 text-primary" />
           </a>
         </div>
       </div>

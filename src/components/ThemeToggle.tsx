@@ -88,7 +88,7 @@ export default function ThemeToggle() {
     <button
       onClick={toggleTheme}
       disabled={isTransitioning}
-      className={`p-2 border border-border-color hover:border-brand-red bg-card-bg text-foreground hover:text-brand-red shadow-sm transition-colors duration-200 cursor-pointer focus:outline-none flex items-center justify-center ${isTransitioning ? "pointer-events-none opacity-80" : ""
+      className={`p-2 border border-border hover:border-primary bg-card text-foreground hover:text-primary shadow-sm transition-colors duration-200 cursor-pointer focus:outline-none flex items-center justify-center ${isTransitioning ? "pointer-events-none opacity-80" : ""
         }`}
       aria-label="Toggle Theme"
     >
