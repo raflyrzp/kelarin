@@ -135,6 +135,9 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
+        <link rel="icon" href="/mark-kelarin.png" type="image/png" sizes="any" />
+        <link rel="shortcut icon" href="/mark-kelarin.png" type="image/png" />
+        <link rel="apple-touch-icon" href="/mark-kelarin.png" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -160,7 +163,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground font-sans antialiased">
         <Navbar />
-        <main className="flex-grow flex flex-col pt-[88px] sm:pt-[92px]">{children}</main>
+        <main className="flex-grow flex flex-col pt-16">{children}</main>
         <Footer />
       </body>
     </html>

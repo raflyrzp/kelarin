@@ -14,9 +14,7 @@ import {
   Sparkles,
   Flame,
   ArrowRight,
-  ShieldCheck,
   Zap,
-  PhoneCall,
 } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
 import { getWhatsAppLink } from "@/utils/whatsapp";
@@ -68,37 +66,7 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-      {/* 1. TOP ANNOUNCEMENT / SOCIAL PROOF TICKER */}
-      <div className="w-full bg-muted text-muted-foreground border-b border-border py-1.5 px-4 text-[11px] font-mono tracking-wider overflow-hidden">
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-4 md:gap-6 truncate">
-            <span className="inline-flex items-center gap-1.5 text-primary font-semibold shrink-0">
-              <span className="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-              SLOT DIBUKA
-            </span>
-            <span className="hidden sm:inline-flex items-center gap-1 text-muted-foreground truncate">
-              <Zap className="w-3 h-3 text-primary shrink-0" />
-              Siaga Pengerjaan Kilat &lt;24 Jam
-            </span>
-            <span className="hidden md:inline-flex items-center gap-1 text-muted-foreground truncate">
-              <ShieldCheck className="w-3 h-3 text-primary shrink-0" />
-              Garansi 2x Revisi Minor & Kerahasiaan 100%
-            </span>
-          </div>
-
-          <a
-            href={whatsappDirectUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-primary hover:text-foreground transition-colors ml-auto shrink-0 font-bold"
-          >
-            <span>Konsultasi Cepat WA</span>
-            <ArrowRight className="w-3 h-3" />
-          </a>
-        </div>
-      </div>
-
-      {/* 2. MAIN NAVBAR BAR */}
+      {/* MAIN NAVBAR BAR */}
       <div
         className={`backdrop-blur-md transition-colors duration-300 border-b border-border ${
           scrolled ? "bg-background/95 shadow-sm" : "bg-background/85"
@@ -115,6 +83,7 @@ export default function Navbar() {
                 height={28}
                 className="h-7 w-7 object-contain group-hover:scale-105 transition-transform"
                 priority
+                unoptimized
               />
               <span className="font-mono text-xl font-black tracking-tighter text-foreground">
                 KELAR
@@ -205,8 +174,8 @@ export default function Navbar() {
               className="group relative inline-flex items-center justify-center px-4 py-2 font-mono text-xs font-semibold text-accent-foreground transition-all duration-300 bg-accent border border-accent hover:opacity-90 shadow-sm cursor-pointer"
             >
               <span className="flex items-center gap-1.5">
-                <PhoneCall className="w-3.5 h-3.5" />
-                <span>Konsultasi WA</span>
+                <Zap className="w-3.5 h-3.5" />
+                <span>Konsultasi Sekarang</span>
                 <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </span>
             </a>
@@ -221,9 +190,9 @@ export default function Navbar() {
               target="_blank"
               rel="noopener noreferrer"
               className="p-2 bg-accent text-accent-foreground font-mono text-xs font-semibold border border-accent hover:opacity-90"
-              aria-label="Konsultasi WA"
+              aria-label="Konsultasi Sekarang"
             >
-              <PhoneCall className="w-4 h-4" />
+              <Zap className="w-4 h-4" />
             </a>
 
             <button
@@ -392,13 +361,15 @@ export default function Navbar() {
               05. FAQ & Garansi
             </Link>
 
-            <Link
-              href="/#contact"
-              onClick={(e) => handleNavClick(e, "contact")}
-              className="px-3 py-2 border border-border text-foreground hover:border-primary/50 transition-colors"
+            <a
+              href={whatsappDirectUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsOpen(false)}
+              className="px-3 py-2 border border-border text-foreground hover:border-primary/50 transition-colors block"
             >
               06. Hubungi Kami
-            </Link>
+            </a>
           </div>
         </div>
 
@@ -410,8 +381,8 @@ export default function Navbar() {
             rel="noopener noreferrer"
             className="w-full py-3 bg-accent hover:opacity-90 text-accent-foreground font-mono text-xs font-semibold flex items-center justify-center gap-2 shadow-sm transition-opacity"
           >
-            <PhoneCall className="w-4 h-4" />
-            <span>Chat Konsultasi WhatsApp</span>
+            <Zap className="w-4 h-4" />
+            <span>Konsultasi Sekarang</span>
           </a>
         </div>
       </div>

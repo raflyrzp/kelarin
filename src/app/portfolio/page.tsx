@@ -13,7 +13,6 @@ import {
   Terminal,
   Layers,
   CheckCircle2,
-  PhoneCall,
   Search,
   Filter,
 } from "lucide-react";
@@ -384,8 +383,8 @@ export default function PortfolioPage() {
                       rel="noopener noreferrer"
                       className="w-full py-2.5 bg-background border border-border hover:border-primary text-foreground hover:text-primary font-mono text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-all group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary cursor-pointer"
                     >
-                      <span>Konsultasi Serupa</span>
-                      <PhoneCall className="w-3.5 h-3.5" />
+                      <span>Konsultasi Sekarang</span>
+                      <ArrowRight className="w-3.5 h-3.5" />
                     </a>
                   </div>
                 </div>
@@ -416,7 +415,7 @@ export default function PortfolioPage() {
               rel="noopener noreferrer"
               className="px-8 py-3.5 bg-accent hover:opacity-90 text-accent-foreground font-mono text-xs font-semibold uppercase tracking-wider flex items-center gap-2 shadow-sm shrink-0 transition-opacity cursor-pointer"
             >
-              <span>Diskusi Bareng Admin</span>
+              <span>Konsultasi Sekarang</span>
               <ArrowRight className="w-4 h-4" />
             </a>
           </div>

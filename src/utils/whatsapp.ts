@@ -1,8 +1,12 @@
 export const getWhatsAppLink = (
-  type: 'bundle' | 'tier' | 'service' | 'general',
-  name: string,
+  type?: 'bundle' | 'tier' | 'service' | 'general' | string,
+  name?: string,
   price?: number | string
 ) => {
+  if (process.env.NEXT_PUBLIC_BITLY_URL) {
+    return process.env.NEXT_PUBLIC_BITLY_URL;
+  }
+
   const phone = process.env.NEXT_PUBLIC_PHONE_NUMBER || process.env.phone_number || "";
   const formattedPrice = price
     ? typeof price === 'number'
@@ -18,7 +22,7 @@ export const getWhatsAppLink = (
   } else if (type === 'service') {
     text = `Halo Kelar.in, saya butuh penanganan untuk jasa *${name}*${formattedPrice ? ` (${formattedPrice})` : ''}. Bisa bantu diskusikan alur dan estimasinya?`;
   } else {
-    text = `Halo Kelar.in, saya mau konsultasi kebutuhan tugas / proyek saya (${name}). Bisa bantu berikan estimasi dan alur kerjanya?`;
+    text = `Halo Kelar.in, saya mau konsultasi kebutuhan tugas / proyek saya (${name || ''}). Bisa bantu berikan estimasi dan alur kerjanya?`;
   }
   return `https://wa.me/${phone}?text=${encodeURIComponent(text)}`;
 };
