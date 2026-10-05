@@ -16,6 +16,7 @@ import {
   Zap
 } from "lucide-react";
 import katalogData from "@/data/katalog.json";
+import { getWhatsAppLink } from "@/utils/whatsapp";
 
 interface LayananItem {
   id_layanan: string;
@@ -41,10 +42,7 @@ function KatalogContent() {
   const categories = katalogData.katalog_layanan as KategoriItem[];
   const activeCategory = categories.find((c) => c.id_kategori === activeTab) || categories[0];
 
-  const baseWaNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER || "6281517983828";
-  const getWhatsAppLink = (text: string) => {
-    return `https://wa.me/${baseWaNumber}?text=${encodeURIComponent(text)}`;
-  };
+
 
   const icons: Record<string, any> = {
     "umum": FileText,
@@ -164,12 +162,12 @@ function KatalogContent() {
                 )}
 
                 <a
-                  href={getWhatsAppLink(`Halo Kelar.in, saya mau konsultasi tentang layanan ${service.nama_layanan}.`)}
+                  href={getWhatsAppLink("service", service.nama_layanan)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="w-full py-3 bg-background border border-border hover:border-primary text-foreground hover:text-primary font-mono text-xs font-semibold uppercase tracking-wider flex items-center justify-center gap-2 transition-colors cursor-pointer group-hover:bg-primary group-hover:text-primary-foreground group-hover:border-primary rounded-lg"
                 >
-                  <span>Konsultasikan Tugas Ini</span>
+                  <span>Konsultasi Sekarang</span>
                   <ArrowRight className="w-3.5 h-3.5" />
                 </a>
               </div>
@@ -186,18 +184,18 @@ function KatalogContent() {
                 Siap Dibimbing Sampai Tuntas?
               </div>
               <div className="text-xs text-muted-foreground font-sans mt-0.5">
-                Jangan sungkan, ceritakan kendalamu via WhatsApp. Konsultasi awal 100% gratis.
+                Jangan sungkan, ceritakan kendalamu langsung. Konsultasi awal 100% gratis.
               </div>
             </div>
           </div>
           <a
-            href={getWhatsAppLink("Halo Kelar.in, saya mau nanya-nanya dulu soal tugas saya nih.")}
+            href={getWhatsAppLink("general", "Konsultasi Kendala Tugas")}
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-3 bg-accent hover:opacity-90 text-accent-foreground font-mono text-xs font-bold uppercase tracking-wider shrink-0 transition-opacity shadow-sm flex items-center gap-2 rounded-lg"
           >
             <Zap className="w-4 h-4" />
-            <span>Chat Admin WA</span>
+            <span>Konsultasi Sekarang</span>
           </a>
         </div>
       </div>

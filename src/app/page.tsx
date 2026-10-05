@@ -2,10 +2,10 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Laptop, FileText, Palette, Check, Sparkles, Zap, PhoneCall } from "lucide-react";
+import { ArrowRight, Laptop, FileText, Palette, Check, Sparkles, Zap } from "lucide-react";
 import { Accordion } from "@/components/Accordion";
 import faqData from "@/data/faq.json";
-import orderTemplatesData from "@/data/order-templates.json";
+import { getWhatsAppLink } from "@/utils/whatsapp";
 
 interface FaqItem {
   id: string;
@@ -13,15 +13,7 @@ interface FaqItem {
   answer: string;
 }
 
-interface OrderTemplateItem {
-  id: string;
-  title: string;
-  subtitle: string;
-  message: string;
-}
-
 export default function Home() {
-  const [selectedTemplate, setSelectedTemplate] = useState("Halo Kelar.in, saya mau konsultasi gratis untuk tugas saya.");
   const [showAllFaq, setShowAllFaq] = useState(false);
 
   const faqs = faqData as FaqItem[];
@@ -32,14 +24,7 @@ export default function Home() {
     content: faq.answer,
   }));
 
-  const baseWaNumber = process.env.NEXT_PUBLIC_PHONE_NUMBER || "6281517983828";
-  const getWhatsAppLink = (text: string) => {
-    return `https://wa.me/${baseWaNumber}?text=${encodeURIComponent(text)}`;
-  };
-
-  const defaultWaLink = getWhatsAppLink("Halo Kelar.in, saya mau konsultasi tugas.");
-
-  const orderTemplates = orderTemplatesData as OrderTemplateItem[];
+  const defaultWaLink = getWhatsAppLink("general", "Konsultasi Tugas");
 
   return (
     <div className="relative min-h-screen bg-background text-foreground font-sans overflow-hidden">
@@ -73,7 +58,7 @@ export default function Home() {
             className="group px-8 py-4 bg-accent text-accent-foreground font-mono text-sm font-bold tracking-wider transition-all flex items-center justify-center gap-2 hover:brightness-95 shadow-md rounded-lg"
           >
             <Zap className="w-4 h-4 fill-current" />
-            <span>KONSULTASI TUGAS SEKARANG</span>
+            <span>KONSULTASI SEKARANG</span>
           </a>
         </div>
       </section>
@@ -168,7 +153,7 @@ export default function Home() {
               <div className="w-8 h-8 rounded-md bg-primary/10 border border-primary/30 flex items-center justify-center font-mono text-sm font-bold text-primary mb-4">01</div>
               <h3 className="text-lg font-bold font-mono text-foreground mb-2">CERITAIN KEBUTUHANMU</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                Kirim detail tugas, dokumen mentah, atau error code via WhatsApp.
+                Kirim detail tugas, dokumen mentah, atau error code saat konsultasi.
               </p>
             </div>
             <div className="border border-border bg-card p-6 rounded-xl relative shadow-md">
@@ -189,47 +174,43 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. TEMPLATE ORDER CHAT & FINAL CTA */}
-      <section className="relative z-10 py-24 px-4 flex flex-col items-center justify-center text-center max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-5xl font-black text-foreground font-mono uppercase mb-4 leading-tight">
-          Mulai Order Sekarang
-        </h2>
-        <p className="text-muted-foreground text-sm mb-10 max-w-xl">
-          Pilih template pesan di bawah ini yang paling sesuai dengan kebutuhanmu, lalu klik tombol kirim pesan.
-        </p>
-        
-        <div className="w-full flex flex-col gap-3 mb-8">
-          {orderTemplates.map((template) => (
-            <button
-              key={template.id}
-              onClick={() => setSelectedTemplate(template.message)}
-              className={`w-full p-4 rounded-xl border text-left transition-all ${
-                selectedTemplate === template.message
-                  ? "bg-[#4b8a8b] border-[#3a6b6c] text-white shadow-md ring-2 ring-[#4b8a8b]/50 scale-[1.02]"
-                  : "bg-card border-border text-foreground hover:border-[#4b8a8b]/50 hover:bg-[#4b8a8b]/10"
-              }`}
-            >
-              <div className="flex flex-col items-center justify-center w-full">
-                <span className={`text-base font-bold mb-1 ${selectedTemplate === template.message ? "text-white" : "text-foreground"}`}>
-                  {template.title}
-                </span>
-                <span className={`text-xs ${selectedTemplate === template.message ? "text-white/90" : "text-muted-foreground"}`}>
-                  {template.subtitle}
-                </span>
-              </div>
-            </button>
-          ))}
-        </div>
+      {/* 5. CALL TO ACTION */}
+      <section className="relative z-10 py-24 px-4 sm:px-6 max-w-4xl mx-auto">
+        <div className="border border-border bg-card p-8 md:p-12 text-center rounded-2xl relative overflow-hidden shadow-lg">
+          <div className="inline-flex items-center gap-2 border border-primary/30 bg-primary/10 px-3 py-1 mb-6 rounded-md">
+            <Sparkles className="w-3.5 h-3.5 text-primary" />
+            <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase">
+              KONSULTASI GRATIS AWAL 100%
+            </span>
+          </div>
 
-        <a
-          href={getWhatsAppLink(selectedTemplate)}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full sm:w-auto px-10 py-4 bg-foreground text-background font-mono text-sm font-bold tracking-wider hover:bg-foreground/90 transition-all uppercase rounded-lg shadow-md flex items-center justify-center gap-2"
-        >
-          <PhoneCall className="w-4 h-4" />
-          <span>KIRIM PESAN SEKARANG</span>
-        </a>
+          <h2 className="text-3xl md:text-5xl font-black text-foreground font-mono uppercase mb-4 leading-tight">
+            Siap Selesaikan Tugasmu?
+          </h2>
+
+          <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
+            Ceritakan kendala tugas, skripsi, atau proyek web kamu langsung ke tim mentor kami. Estimasi transparan, pengerjaan cepat, dan kerahasiaan terjamin.
+          </p>
+
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={defaultWaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-8 py-4 bg-accent hover:opacity-90 text-accent-foreground font-mono text-sm font-bold tracking-wider transition-all uppercase rounded-lg shadow-md flex items-center justify-center gap-2"
+            >
+              <Zap className="w-4 h-4" />
+              <span>KONSULTASI SEKARANG</span>
+            </a>
+            <Link
+              href="/katalog"
+              className="w-full sm:w-auto px-8 py-4 border border-border bg-background hover:border-primary text-foreground font-mono text-sm font-bold tracking-wider transition-all uppercase rounded-lg flex items-center justify-center gap-2"
+            >
+              <span>LIHAT SEMUA LAYANAN</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* 6. FAQ */}

@@ -15,6 +15,7 @@ export default function Footer() {
               width={24}
               height={24}
               className="h-6 w-6 object-contain"
+              unoptimized
             />
             <span className="font-mono text-xl font-black tracking-tighter text-foreground">
               KELAR<span className="text-primary font-extrabold">.IN</span>
