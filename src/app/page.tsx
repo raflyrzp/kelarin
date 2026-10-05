@@ -138,8 +138,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 4. ALUR KERJA */}
-      <section className="relative z-10 py-20 px-4 sm:px-6 bg-muted border-y border-border">
+      {/* 4. CARA ORDER */}
+      <section id="cara-order" className="relative z-10 py-20 px-4 sm:px-6 bg-muted border-y border-border">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl sm:text-4xl font-black text-foreground font-mono uppercase">
@@ -226,7 +226,7 @@ export default function Home() {
 
         <div className="bg-card border border-border rounded-xl p-4 sm:p-6 shadow-sm">
           <Accordion items={formattedFaqItems} />
-          
+
           {faqs.length > 5 && (
             <button
               type="button"
