@@ -103,7 +103,7 @@ export default function Home() {
 
           <div className="text-center mb-10 mt-4">
             <h2 className="text-3xl md:text-5xl font-black text-foreground font-mono uppercase leading-tight mb-4">
-              Semua Kebutuhan Akademik,<br/> Mulai Dari <span className="text-primary">Rp50.000</span>
+              Semua Kebutuhan Akademik,<br/> Mulai Dari <span className="text-primary">Rp20.000</span>
             </h2>
             <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
               Satu harga awal untuk beragam kapabilitas. Biaya akhir disesuaikan dengan tingkat kesulitan dan deadline tugasmu.

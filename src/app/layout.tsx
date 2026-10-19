@@ -114,7 +114,7 @@ const jsonLd = {
       "description":
         "Layanan pengerjaan website UMKM dan mahasiswa, bimbingan coding privat tugas akhir, perbaikan bug teknis, serta perapian format laporan dan slide presentasi sidang.",
       "telephone": "+6281517983828",
-      "priceRange": "Rp 25.000 - Rp 1.500.000+",
+      "priceRange": "Rp 20.000 - Rp 1.500.000+",
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "ID",
