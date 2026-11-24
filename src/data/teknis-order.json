@@ -1,0 +1,126 @@
+{
+  "judul": "TEKNIS ORDER KELAR.IN",
+  "tagline": "Order 100% online, jelas, dan transparan. Dengan alur ini, pembeli tahu apa yang didapat dan penjual tahu apa yang harus dikerjakan.",
+  "alur_order": [
+    {
+      "tahap": "1. Konsultasi",
+      "nomor": "01",
+      "judul": "Konsultasi",
+      "yang_terjadi": "Pembeli menghubungi Kelar.in lewat chat (WhatsApp/DM) dan menceritakan kebutuhan. Konsultasi awal gratis.",
+      "penanggung_jawab": "Pembeli & Sales"
+    },
+    {
+      "tahap": "2. Isi Brief Order",
+      "nomor": "02",
+      "judul": "Isi Brief Order",
+      "yang_terjadi": "Pembeli mengisi form brief: jenis layanan, deskripsi tugas, deadline, pedoman/template, dan file pendukung.",
+      "penanggung_jawab": "Pembeli"
+    },
+    {
+      "tahap": "3. Penawaran",
+      "nomor": "03",
+      "judul": "Penawaran",
+      "yang_terjadi": "Sales mengirim rincian harga, lingkup pekerjaan, estimasi selesai, dan jumlah revisi. Tidak ada biaya tersembunyi.",
+      "penanggung_jawab": "Sales"
+    },
+    {
+      "tahap": "4. Persetujuan & Pembayaran",
+      "nomor": "04",
+      "judul": "Persetujuan & Pembayaran",
+      "yang_terjadi": "Pembeli menyetujui penawaran lalu membayar (lunas atau DP 50% sesuai ketentuan). Pengerjaan dimulai setelah bukti bayar diterima.",
+      "penanggung_jawab": "Pembeli"
+    },
+    {
+      "tahap": "5. Pengerjaan",
+      "nomor": "05",
+      "judul": "Pengerjaan",
+      "yang_terjadi": "Task doer mengerjakan sesuai brief. Untuk pekerjaan lebih dari 3 hari, pembeli mendapat update progres.",
+      "penanggung_jawab": "Task Doer"
+    },
+    {
+      "tahap": "6. Preview",
+      "nomor": "06",
+      "judul": "Preview",
+      "yang_terjadi": "Pembeli menerima hasil preview (file ditandai/watermark atau sebagian) untuk dicek.",
+      "penanggung_jawab": "Task Doer"
+    },
+    {
+      "tahap": "7. Revisi",
+      "nomor": "07",
+      "judul": "Revisi",
+      "yang_terjadi": "Pembeli mengirim revisi sekaligus dalam 1 pesan. Revisi dikerjakan maksimal 1–2 hari kerja.",
+      "penanggung_jawab": "Pembeli & Task Doer"
+    },
+    {
+      "tahap": "8. Pelunasan & Serah Terima",
+      "nomor": "08",
+      "judul": "Pelunasan & Serah Terima",
+      "yang_terjadi": "Sisa pembayaran dilunasi, lalu file final dikirim lewat Google Drive/WhatsApp.",
+      "penanggung_jawab": "Pembeli & Sales"
+    },
+    {
+      "tahap": "9. Selesai",
+      "nomor": "09",
+      "judul": "Selesai",
+      "yang_terjadi": "Pembeli mengonfirmasi hasil diterima. Pembeli boleh memberi testimoni.",
+      "penanggung_jawab": "Pembeli"
+    }
+  ],
+  "informasi_pembeli": [
+    "Layanan yang dipilih dan jumlahnya (halaman, slide, bug, dsb.).",
+    "Deadline yang diinginkan (tanggal dan jam).",
+    "Pedoman, template, atau contoh dari dosen/kampus/brand jika ada.",
+    "Semua file pendukung: materi, data, logo, foto, atau akses yang dibutuhkan.",
+    "Khusus website: nama bisnis, daftar halaman, contoh website referensi, serta domain/hosting jika sudah punya."
+  ],
+  "pembayaran": {
+    "skema": [
+      {
+        "nilai_pekerjaan": "Di bawah Rp500.000",
+        "skema_pembayaran": "Lunas di muka sebelum pengerjaan dimulai."
+      },
+      {
+        "nilai_pekerjaan": "Rp500.000 ke atas",
+        "skema_pembayaran": "DP 50% di awal, pelunasan 50% sebelum file final diserahkan."
+      },
+      {
+        "nilai_pekerjaan": "Website & sistem (di atas Rp2.000.000)",
+        "skema_pembayaran": "DP 50% di awal, 30% setelah desain disetujui, 20% saat serah terima."
+      }
+    ],
+    "catatan": "Pembayaran melalui transfer bank atau e-wallet (QRIS) ke rekening resmi Kelar.in. Bukti bayar dikirim lewat chat. Pembeli diminta tidak membayar ke rekening lain di luar yang dikirim tim resmi."
+  },
+  "revisi_deadline_pembatalan": [
+    "Revisi: 2x untuk layanan umum, teknis, dan desain; 3x untuk website. Revisi harus sesuai brief awal; perubahan di luar brief dihitung sebagai pekerjaan tambahan.",
+    "Deadline: dihitung sejak pembayaran dan seluruh materi dari pembeli lengkap. Keterlambatan materi dari pembeli menggeser deadline.",
+    "Express (kurang dari 24 jam): tambahan 25–50% dan hanya diterima jika jadwal tim memungkinkan.",
+    "Pembatalan sebelum pengerjaan dimulai: dana dikembalikan 100%.",
+    "Pembatalan setelah pengerjaan berjalan: DP tidak dikembalikan, atau dikembalikan sebagian sesuai progres yang sudah dikerjakan.",
+    "Jika hasil tidak sesuai brief dan tidak bisa diperbaiki lewat revisi, pembeli berhak atas refund sesuai bagian yang belum dikerjakan.",
+    "Jika pembeli tidak merespons lebih dari 7 hari, order dianggap selesai dan file final tetap dikirim setelah pelunasan."
+  ],
+  "hak_dan_kewajiban": [
+    {
+      "pembeli": "Memberikan brief dan materi yang lengkap serta jelas.",
+      "penjual": "Mengerjakan sesuai brief, lingkup, dan deadline yang disepakati."
+    },
+    {
+      "pembeli": "Membayar sesuai skema yang disepakati.",
+      "penjual": "Memberi update progres dan menjawab chat di jam kerja."
+    },
+    {
+      "pembeli": "Memberi feedback revisi dalam satu pesan yang jelas.",
+      "penjual": "Menjaga kerahasiaan data dan file pembeli."
+    },
+    {
+      "pembeli": "Bertanggung jawab atas penggunaan hasil pekerjaan.",
+      "penjual": "Memberi revisi sesuai jatah dan menyerahkan file final setelah pelunasan."
+    }
+  ],
+  "ketentuan_penting": [
+    "Jam layanan: Senin–Sabtu, 09.00–21.00 WIB. Chat di luar jam tersebut dibalas di hari kerja berikutnya.",
+    "Untuk layanan akademik, Kelar.in berfokus pada pendampingan dan bantuan teknis. Pembeli tetap bertanggung jawab atas karya akademiknya.",
+    "File final diserahkan setelah pembayaran lunas. Kelar.in boleh menampilkan hasil desain/website sebagai portofolio kecuali pembeli meminta dirahasiakan.",
+    "Seluruh komunikasi, kesepakatan, dan bukti bayar disimpan di chat sebagai rujukan jika terjadi perbedaan pemahaman."
+  ]
+}

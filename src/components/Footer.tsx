@@ -23,40 +23,58 @@ export default function Footer() {
             <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_var(--primary)]"></span>
           </Link>
           <p className="text-xs text-muted-foreground font-mono">
-            © {new Date().getFullYear()} Kelar.in. All rights reserved.
+            © {new Date().getFullYear()} Kelar.in • Senin–Sabtu 09.00–21.00 WIB
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center md:justify-end gap-6 font-mono text-xs">
+        <div className="flex flex-wrap items-center justify-center md:justify-end gap-5 font-mono text-xs">
           <Link
             href="/katalog?tab=umum"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Dokumen & Akademik
+            01. Umum
           </Link>
           <Link
-            href="/katalog?tab=it-programming"
+            href="/katalog?tab=it-coding"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            IT & Koding
+            02A. IT & Web
           </Link>
           <Link
-            href="/katalog?tab=desain-grafis"
+            href="/katalog?tab=desain-uiux"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Desain Visual
+            02B. Desain & UI/UX
+          </Link>
+          <Link
+            href="/katalog?tab=data-analisis"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            02C. Data & Analisis
           </Link>
           <Link
             href="/katalog?tab=mentoring"
             className="text-muted-foreground hover:text-foreground transition-colors"
           >
-            Mentoring
+            03. Mentoring
+          </Link>
+          <Link
+            href="/bundling"
+            className="text-primary font-bold hover:underline transition-colors"
+          >
+            Paket Bundling
+          </Link>
+          <Link
+            href="/cara-order"
+            className="text-muted-foreground hover:text-foreground transition-colors"
+          >
+            Teknis Order
           </Link>
           <a
             href="https://raflyrzp.vercel.app"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 text-muted-foreground hover:text-foreground hover:underline transition-colors ml-2"
+            className="flex items-center gap-1 text-muted-foreground hover:text-foreground hover:underline transition-colors ml-1"
           >
             Owner Portfolio <ArrowUpRight className="w-3 h-3 text-primary" />
           </a>

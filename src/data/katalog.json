@@ -1,174 +1,378 @@
 {
-  "katalog_layanan": [
+  "judul": "PRICE LIST KELAR.IN",
+  "tagline": "biar tugasmu, kami yang kelar.in.",
+  "deskripsi": "Harga di bawah adalah harga standar sesuai keterangan pada kolom di sebelahnya. Layanan umum, teknis, dan data ditujukan untuk pelajar dan mahasiswa, sedangkan layanan website ditujukan untuk UMKM, F&B, dan bisnis umum. Jika kebutuhanmu di luar keterangan, harga disesuaikan dan kami kabari sebelum pekerjaan dimulai.",
+  "tanggal_acuan": "22 November 2026",
+  "kategori": [
     {
-      "id_kategori": "umum",
-      "nama_kategori": "Tugas Umum & Dokumen Akademik",
-      "deskripsi_kategori": "Nggak perlu lagi begadang cuma buat ngurusin margin yang geser atau sitasi yang error. Kami bantu beresin semua urusan format dan struktur, biar kamu bisa fokus mikirin isinya.",
-      "cakupan_bantuan": [
+      "id": "umum",
+      "kode": "01",
+      "grup": "01. UMUM",
+      "nama": "Layanan Umum & Dokumen",
+      "deskripsi": "Ditujukan untuk pelajar dan mahasiswa. Penanganan dokumen, makalah, laporan, proposal, CV, transkripsi, hingga pendampingan skripsi.",
+      "catatan": "Harga menyesuaikan jumlah halaman, durasi audio, bahasa, kompleksitas materi, dan pedoman yang digunakan. Layanan skripsi berfokus pada pendampingan, formatting, review, dan bantuan teknis agar mahasiswa tetap memahami serta bertanggung jawab atas karya akademiknya.",
+      "items": [
         {
-          "id_layanan": "umum-perapian-dokumen",
-          "nama_layanan": "Perapian & Formatting Dokumen Standar Kampus",
-          "apa_yang_bisa_kami_bantu": "Kami bantu menyulap naskah mentahmu jadi dokumen rapi yang sesuai dengan buku pedoman kampus. Mulai dari urusan penomoran halaman Romawi-Arab yang suka bikin emosi, bikin daftar isi dan daftar tabel otomatis, sampai sinkronisasi sitasi supaya nggak ada referensi yang ketinggalan.",
-          "contoh_kasus": [
-            "Setting daftar isi dan penomoran halaman skripsi yang beda-beda posisi letaknya",
-            "Memasukkan dan merapikan daftar pustaka menggunakan format APA/IEEE",
-            "Merapikan typo, PUEBI, dan struktur kalimat pada draf makalah"
-          ],
-          "value_mentoring": "Kami akan kasih unjuk cara pakai fitur 'Styles' di Word dan cara gampang masukin jurnal di Mendeley, supaya di bab berikutnya kamu tinggal klik-klik aja tanpa takut berantakan lagi.",
-          "tech_stack_atau_tools": [
-            "Microsoft Word",
-            "Google Docs",
-            "Mendeley",
-            "Zotero"
-          ]
+          "id": "umum-formatting-word",
+          "layanan": "Formatting dokumen Word",
+          "harga": "Rp2.000 / halaman",
+          "keterangan": "Margin, font, spasi, nomor halaman, dan daftar isi otomatis. Pesan lebih dari 15 halaman: Rp1.500 / halaman. Tanpa minimum order."
         },
         {
-          "id_layanan": "umum-riset-kerangka",
-          "nama_layanan": "Pencarian Referensi & Penyusunan Kerangka",
-          "apa_yang_bisa_kami_bantu": "Mentok nggak tau harus mulai nulis dari mana? Kami bantu carikan jurnal pendukung yang kredibel (terindeks) dan menyusunkan kerangka/outline awal tugasmu biar alur pembahasannya jelas dan terarah.",
-          "contoh_kasus": [
-            "Mencarikan 10 jurnal referensi 5 tahun terakhir untuk pendahuluan proposal",
-            "Membuat outline poin-poin yang harus dibahas dalam esai argumentatif"
-          ],
-          "value_mentoring": "Kami akan kasih tips keyword rahasia cara nyari jurnal yang spesifik di Google Scholar atau portal kampus biar ke ke depannya kamu gampang nyari bahan sendiri.",
-          "tech_stack_atau_tools": [
-            "Google Scholar",
-            "ResearchGate",
-            "ScienceDirect"
-          ]
+          "id": "umum-resume-materi",
+          "layanan": "Resume materi",
+          "harga": "Rp15.000 / 10 halaman materi",
+          "keterangan": "Hasil ringkasan poin-poin utama sepanjang 1–2 halaman."
+        },
+        {
+          "id": "umum-referensi-sitasi",
+          "layanan": "Pembuatan Referensi & Sitasi",
+          "harga": "Rp15.000 / 5 sumber",
+          "keterangan": "Format APA, MLA, atau IEEE sesuai pedoman kampus/dosen."
+        },
+        {
+          "id": "umum-proofreading",
+          "layanan": "Proofreading dan koreksi typo",
+          "harga": "Rp15.000 / 1.000 kata",
+          "keterangan": "Koreksi typo, ejaan, tanda baca, dan kalimat janggal. Isi tulisan tidak diubah."
+        },
+        {
+          "id": "umum-slide-presentasi",
+          "layanan": "Pembuatan slide presentasi",
+          "harga": "Rp7.000 / slide",
+          "keterangan": "Isi materi + layout rapi memakai template sederhana. Untuk desain custom, lihat bagian Desain Grafis."
+        },
+        {
+          "id": "umum-makalah",
+          "layanan": "Pembuatan makalah",
+          "harga": "Rp60.000 / s.d. 10 halaman",
+          "keterangan": "Sudah termasuk cover, daftar isi, dan daftar pustaka. Tambahan halaman Rp5.000 / halaman."
+        },
+        {
+          "id": "umum-laporan",
+          "layanan": "Penyusunan laporan",
+          "harga": "Rp60.000 / s.d. 10 halaman",
+          "keterangan": "Laporan praktikum, tugas, atau PKL. Tambahan halaman Rp5.000 / halaman."
+        },
+        {
+          "id": "umum-proposal",
+          "layanan": "Pembuatan proposal",
+          "harga": "Rp75.000 / s.d. 10 halaman",
+          "keterangan": "Proposal tugas, kegiatan organisasi, atau lomba. Tambahan halaman Rp5.000 / halaman."
+        },
+        {
+          "id": "umum-cv-resume",
+          "layanan": "Pembuatan CV dan resume profesional",
+          "harga": "Rp30.000 / CV",
+          "keterangan": "1 halaman, format ATS-friendly, revisi 2x."
+        },
+        {
+          "id": "umum-dokumen-admin",
+          "layanan": "Pembuatan dokumen administrasi",
+          "harga": "Rp15.000 / dokumen",
+          "keterangan": "Surat, formulir, berita acara, dan dokumen sejenis."
+        },
+        {
+          "id": "umum-transkripsi",
+          "layanan": "Transkripsi audio atau video",
+          "harga": "Rp5.000 / menit audio",
+          "keterangan": "Untuk audio jernih. Audio berisik atau banyak pembicara +Rp2.000 / menit."
+        },
+        {
+          "id": "umum-skripsi",
+          "layanan": "Bantuan penyusunan skripsi",
+          "harga": "Rp100.000 / bab",
+          "keterangan": "Pendampingan, review, dan formatting per bab. Pengerjaan s.d. 7 hari."
         }
       ]
     },
     {
-      "id_kategori": "it-programming",
-      "nama_kategori": "IT & Programming",
-      "deskripsi_kategori": "Kodingan error pas besok mau demo? Santai, kami bantu ngoding, slicing, atau ngeberesin bug-nya. Hasil kodingan dijamin rapi, jalan, dan yang paling penting: kamu bakal ngerti cara kerjanya.",
-      "cakupan_bantuan": [
+      "id": "it-coding",
+      "kode": "02.A",
+      "grup": "02. TEKNIS",
+      "nama": "A. IT & Coding",
+      "deskripsi": "Tugas pemrograman, algoritma, database, dan dokumentasi untuk mahasiswa, serta pembuatan website & aplikasi web untuk UMKM, F&B, dan bisnis umum.",
+      "catatan": "Coding, database, dan dokumentasi ditujukan untuk tugas kuliah dan dihitung per task. Harga website sudah termasuk fitur yang tertera; tambahan halaman atau fitur dihitung terpisah (mulai Rp150.000 / halaman tambahan) dan disepakati lebih dulu.",
+      "items": [
         {
-          "id_layanan": "it-web-dev",
-          "nama_layanan": "Web Development (Frontend & Backend)",
-          "apa_yang_bisa_kami_bantu": "Dari bikin web profil statis sampai aplikasi CRUD dinamis, kami siap ngoding dari nol atau nerusin proyekmu. Kami pakai tech stack modern yang disukai dosen atau nyesuain dengan silabus mata kuliahmu.",
-          "contoh_kasus": [
-            "Bikin website sistem informasi perpustakaan dengan fitur login dan CRUD data",
-            "Bikin REST API sederhana untuk tugas akhir"
-          ],
-          "value_mentoring": "Source code yang kami tulis selalu dilengkapi komentar penjelasan (commenting). Kami juga bakal jelasin struktur foldernya, jadi kalau ditanya dosen 'ini fungsinya buat apa?', kamu bisa jawab dengan lancar.",
-          "tech_stack_atau_tools": [
-            "Next.js",
-            "Express.js",
-            "TypeScript",
-            "Laravel",
-            "React"
-          ]
+          "id": "it-coding-dasar",
+          "layanan": "Bantuan coding dasar",
+          "harga": "Rp30.000 / task",
+          "keterangan": "Satu soal atau tugas pemrograman tingkat dasar (Python, Java, C++, PHP, dll.).",
+          "target": "mahasiswa"
         },
         {
-          "id_layanan": "it-ui-slicing",
-          "nama_layanan": "UI Slicing & Styling",
-          "apa_yang_bisa_kami_bantu": "Punya desain di Figma tapi bingung ngubahnya jadi kode? Kami bantu terjemahkan desainmu jadi halaman web yang interaktif, responsif di HP maupun laptop, dan tampilannya persis (pixel-perfect) kayak desain aslinya.",
-          "contoh_kasus": [
-            "Slicing 3 halaman dari Figma ke Next.js",
-            "Merapikan tampilan tabel dan form pendaftaran agar responsive"
-          ],
-          "value_mentoring": "Kami bakal jelasin gimana konsep grid/flexbox yang dipakai, biar kamu tau logikanya kenapa sebuah tombol bisa pindah posisi saat dibuka lewat layar HP.",
-          "tech_stack_atau_tools": [
-            "Tailwind CSS",
-            "shadcn/ui",
-            "Bootstrap",
-            "CSS Vanilla"
-          ]
+          "id": "it-review-testing",
+          "layanan": "Review & Testing",
+          "harga": "Rp35.000 / project kecil",
+          "keterangan": "Cek logika dan uji fungsi program, disertai laporan temuan.",
+          "target": "mahasiswa"
         },
         {
-          "id_layanan": "it-db-bugfix",
-          "nama_layanan": "Database Structuring & Bug Fixing",
-          "apa_yang_bisa_kami_bantu": "Membantu menormalkan struktur tabel database-mu biar nggak berantakan relasinya (ERD). Atau, kalau aplikasimu tiba-tiba blank merah (error) dan nggak bisa nyimpan data, serahkan ke kami buat pelacakan dan perbaikannya.",
-          "contoh_kasus": [
-            "Benerin error 'Null Pointer' atau koneksi database gagal pas aplikasi di-run",
-            "Merancang relasi tabel MySQL untuk sistem penyewaan barang"
-          ],
-          "value_mentoring": "Kami nggak cuma benerin errornya, tapi kami tunjukin di mana letak salahnya dan kenapa itu bisa error, supaya logika problem-solving kamu ikut terlatih.",
-          "tech_stack_atau_tools": ["MySQL", "PostgreSQL", "Supabase", "Prisma"]
+          "id": "it-debugging",
+          "layanan": "Debugging dan error fixing",
+          "harga": "Rp35.000 / bug",
+          "keterangan": "Satu error diperbaiki beserta penjelasan penyebabnya.",
+          "target": "mahasiswa"
+        },
+        {
+          "id": "it-algoritma",
+          "layanan": "Pembuatan algoritma",
+          "harga": "Rp35.000 / soal",
+          "keterangan": "Algoritma + flowchart/pseudocode, siap dipresentasikan.",
+          "target": "mahasiswa"
+        },
+        {
+          "id": "it-database",
+          "layanan": "Database",
+          "harga": "Rp60.000 / s.d. 10 tabel",
+          "keterangan": "Perancangan ERD, struktur tabel, dan query SQL dasar.",
+          "target": "mahasiswa"
+        },
+        {
+          "id": "it-diagram",
+          "layanan": "Pembuatan Diagram",
+          "harga": "Rp30.000 / diagram",
+          "keterangan": "ERD, UML, flowchart, atau DFD.",
+          "target": "mahasiswa"
+        },
+        {
+          "id": "it-dokumentasi-teknis",
+          "layanan": "Dokumentasi teknis",
+          "harga": "Rp75.000 / s.d. 10 halaman",
+          "keterangan": "Dokumentasi sistem, API, atau panduan pengguna.",
+          "target": "mahasiswa"
+        },
+        {
+          "id": "it-landing-page",
+          "layanan": "Landing page sederhana",
+          "harga": "Rp750.000",
+          "keterangan": "Cocok untuk UMKM, F&B, dan jasa. 1 halaman (s.d. 5 section), tampil rapi di HP, tombol WhatsApp, form kontak, revisi 2x, selesai 3–5 hari kerja. Domain & hosting dibayar terpisah.",
+          "target": "bisnis"
+        },
+        {
+          "id": "it-company-profile",
+          "layanan": "Website company profile",
+          "harga": "Rp2.500.000",
+          "keterangan": "Cocok untuk UMKM, kafe/resto, klinik, dan kontraktor. S.d. 5 halaman (Beranda, Tentang, Layanan/Menu, Galeri, Kontak), responsif, SEO dasar, Google Maps, revisi 3x, selesai 7–10 hari kerja.",
+          "target": "bisnis"
+        },
+        {
+          "id": "it-website-bisnis",
+          "layanan": "Website bisnis",
+          "harga": "Rp4.500.000",
+          "keterangan": "Untuk bisnis yang butuh kelola konten sendiri. S.d. 10 halaman, panel admin (CMS), blog/artikel, katalog produk atau menu, reservasi/form pesanan, SEO dasar, gratis pelatihan admin 1x, revisi 3x, selesai 2–3 minggu.",
+          "target": "bisnis"
+        },
+        {
+          "id": "it-ecommerce",
+          "layanan": "Website e-commerce",
+          "harga": "Rp7.000.000",
+          "keterangan": "Toko online lengkap: s.d. 50 produk, keranjang, checkout, pembayaran online (Midtrans/Xendit), cek ongkir, dashboard admin, revisi 3x, selesai 3–4 minggu.",
+          "target": "bisnis"
+        },
+        {
+          "id": "it-webapp-dashboard",
+          "layanan": "Web application dan dashboard",
+          "harga": "Rp10.000.000",
+          "keterangan": "Sistem berbasis web seperti kasir, reservasi, atau inventori. Login multi-user, dashboard, s.d. 5 modul, revisi 3x, selesai 4–6 minggu.",
+          "target": "bisnis"
+        },
+        {
+          "id": "it-sistem-custom",
+          "layanan": "Sistem custom sesuai kebutuhan",
+          "harga": "Hubungi kami",
+          "keterangan": "Konsultasi gratis, penawaran harga dikirim maksimal 1x24 jam.",
+          "target": "bisnis"
         }
       ]
     },
     {
-      "id_kategori": "desain-grafis",
-      "nama_kategori": "Desain Grafis & Visual",
-      "deskripsi_kategori": "Bikin audiens dan dosen penguji terkesima dengan visual yang nggak ngebosenin. Kami bantu ubah tugas teks panjangmu jadi karya visual yang estetik, ringkas, dan to the point.",
-      "cakupan_bantuan": [
+      "id": "desain-uiux",
+      "kode": "02.B",
+      "grup": "02. TEKNIS",
+      "nama": "B. Desain Grafis & UI/UX",
+      "deskripsi": "Desain presentasi, poster, konten sosmed, logo, hingga perancangan wireframe, UI/UX, prototype Figma, dan design system.",
+      "catatan": "Harga desain menyesuaikan jumlah halaman atau aset, tingkat detail, kebutuhan revisi, dan kompleksitas desain.",
+      "items": [
         {
-          "id_layanan": "dg-slide-ppt",
-          "nama_layanan": "Desain Slide Presentasi Estetik (PPT)",
-          "apa_yang_bisa_kami_bantu": "Bye-bye slide yang isinya paragraf semua! Kami bantu kurasi materi tugasmu, mengambil poin-poin utamanya saja, lalu meramunya jadi slide presentasi yang clean, proporsional, dan asik dilihat.",
-          "contoh_kasus": [
-            "Redesain slide sidang skripsi agar lebih profesional dan minim teks",
-            "Pembuatan slide pitch deck tugas mata kuliah kewirausahaan"
-          ],
-          "value_mentoring": "Kami akan bagiin notes di setiap slide tentang cara bacanya, plus ngasih tau kenapa tata letak tertentu dipilih buat nonjolin datamu.",
-          "tech_stack_atau_tools": ["PowerPoint", "Google Slides", "Canva"]
+          "id": "dsg-slide-presentasi",
+          "layanan": "Desain slide presentasi",
+          "harga": "Rp12.000 / slide",
+          "keterangan": "Desain custom (warna, ikon, ilustrasi) sesuai tema. Isi materi dari klien."
         },
         {
-          "id_layanan": "dg-poster-infografis",
-          "nama_layanan": "Poster Akademik & Infografis Data",
-          "apa_yang_bisa_kami_bantu": "Punya tugas bikin rangkuman jurnal atau hasil riset? Kami bantu kemas data-data ribet dan angka statistikmu jadi poster ilmiah atau infografis yang alurnya gampang dipahami dalam sekali lirik.",
-          "contoh_kasus": [
-            "Membuat poster A3 ringkasan hasil penelitian untuk lomba LKTI",
-            "Merancang infografis alur kerja sistem untuk dilampirkan di Bab 4"
-          ],
-          "value_mentoring": "Kami jelaskan hirarki visualnya—dari mana dosen harus mulai membaca poster tersebut sampai ke kesimpulan, biar kamu gampang ngejelasinnya nanti.",
-          "tech_stack_atau_tools": ["Illustrator", "CorelDraw", "Canva"]
+          "id": "dsg-poster-flyer",
+          "layanan": "Desain poster atau flyer",
+          "harga": "Rp50.000 / desain",
+          "keterangan": "1 desain, file PNG/JPG + PDF siap cetak, revisi 2x."
         },
         {
-          "id_layanan": "dg-ui-ux",
-          "nama_layanan": "UI/UX Design & Prototyping",
-          "apa_yang_bisa_kami_bantu": "Untuk tugas matkul Interaksi Manusia dan Komputer (IMK) atau RPL, kami siap bantu buatkan desain antarmuka aplikasi dari tahap wireframe (kasar) sampai prototype yang bisa diklik jalan seolah-olah aplikasinya betulan.",
-          "contoh_kasus": [
-            "Merancang 5 layar (screens) desain aplikasi pemesanan makanan",
-            "Membuat prototype interaktif (bisa di-klik pindah halaman) buat demo ide aplikasi"
-          ],
-          "value_mentoring": "Kami bakal share dasar-dasar alasan (UX reasoning) kenapa tombol ditaruh di bawah atau kenapa warna ini dipakai, supaya kamu siap debat argumen kalau ditanya dosen.",
-          "tech_stack_atau_tools": ["Figma", "FigJam"]
+          "id": "dsg-konten-sosmed",
+          "layanan": "Desain konten media sosial",
+          "harga": "Rp35.000 / konten",
+          "keterangan": "1 konten feed/story. Paket 10 konten bisa lebih hemat, lihat tab Bundling."
+        },
+        {
+          "id": "dsg-banner",
+          "layanan": "Desain banner",
+          "harga": "Rp50.000 / desain",
+          "keterangan": "Banner cetak atau digital, 1 ukuran, revisi 2x."
+        },
+        {
+          "id": "dsg-infografis",
+          "layanan": "Infografis sederhana",
+          "harga": "Rp50.000 / desain",
+          "keterangan": "1 halaman infografis, data dan teks dari klien."
+        },
+        {
+          "id": "dsg-cover-dokumen",
+          "layanan": "Desain cover dokumen",
+          "harga": "Rp30.000 / cover",
+          "keterangan": "Cover makalah, laporan, atau proposal."
+        },
+        {
+          "id": "dsg-cv-kreatif",
+          "layanan": "Desain CV kreatif",
+          "harga": "Rp40.000 / CV",
+          "keterangan": "1 halaman, desain menarik, isi dari klien."
+        },
+        {
+          "id": "dsg-logo",
+          "layanan": "Desain logo",
+          "harga": "Rp150.000",
+          "keterangan": "2 konsep, revisi 2x, file PNG + vector (AI/SVG). Untuk UMKM, komunitas, dan organisasi."
+        },
+        {
+          "id": "dsg-wireframe",
+          "layanan": "Wireframe website",
+          "harga": "Rp100.000 / s.d. 5 halaman",
+          "keterangan": "Kerangka tata letak halaman sebelum didesain."
+        },
+        {
+          "id": "dsg-ui-design",
+          "layanan": "UI design per halaman",
+          "harga": "Rp100.000 / halaman",
+          "keterangan": "Desain tampilan final 1 layar (mobile atau desktop)."
+        },
+        {
+          "id": "dsg-ux-review",
+          "layanan": "UX review sederhana",
+          "harga": "Rp150.000",
+          "keterangan": "Evaluasi alur dan kemudahan pakai, disertai rekomendasi perbaikan."
+        },
+        {
+          "id": "dsg-prototype",
+          "layanan": "Prototype aplikasi",
+          "harga": "Rp300.000 / s.d. 5 layar",
+          "keterangan": "Prototype klik-able di Figma."
+        },
+        {
+          "id": "dsg-uiux-full",
+          "layanan": "UI/UX design website atau aplikasi",
+          "harga": "Rp1.500.000 / s.d. 15 layar",
+          "keterangan": "Riset singkat, wireframe, UI final, dan prototype."
+        },
+        {
+          "id": "dsg-design-system",
+          "layanan": "Design system sederhana",
+          "harga": "Rp600.000",
+          "keterangan": "Panduan warna, tipografi, dan komponen UI dasar."
         }
       ]
     },
     {
-      "id_kategori": "mentoring",
-      "nama_kategori": "Mentoring & Partner Tugas",
-      "deskripsi_kategori": "Buat kamu yang tugasnya udah kelar tapi masih deg-degan takut dibantai pas maju presentasi atau sidang. Kami temani gladi bersihnya!",
-      "cakupan_bantuan": [
+      "id": "data-analisis",
+      "kode": "02.C",
+      "grup": "02. TEKNIS",
+      "nama": "C. Data & Analisis",
+      "deskripsi": "Rekapitulasi data, cleaning, olah statistik Excel/SPSS/Python, visualisasi, web scraping, dashboard, hingga machine learning.",
+      "catatan": "Harga menyesuaikan ukuran dataset, metode analisis, jumlah variabel, tingkat kompleksitas, dan bentuk output yang dibutuhkan.",
+      "items": [
         {
-          "id_layanan": "mentor-arsitektur",
-          "nama_layanan": "Konsultasi Alur Logika & Arsitektur IT",
-          "apa_yang_bisa_kami_bantu": "Baru mau mulai ngerjain tugas tapi bingung nentuin ERD, alur sistem (flowchart), atau milih teknologi yang pas? Yuk ngobrol bareng (call), kita bahas bareng-bareng dari mana kamu harus mulai.",
-          "contoh_kasus": [
-            "Diskusi penentuan fitur apa saja yang masuk akal buat dibikin di waktu mepet",
-            "Pematangan ide judul skripsi biar nggak gampang ditolak dosen"
-          ],
-          "value_mentoring": "Kamu nggak cuma dapat gambaran kasarnya aja, tapi di akhir sesi kamu bakal megang 'roadmap' langkah apa yang harus kamu kerjain hari ini dan besok.",
-          "tech_stack_atau_tools": ["Zoom", "Google Meet", "Notion"]
+          "id": "data-input-rekap",
+          "layanan": "Input dan rekap data",
+          "harga": "Rp20.000 / 100 baris",
+          "keterangan": "Input manual ke Excel/Google Sheets dan rekap sederhana."
         },
         {
-          "id_layanan": "mentor-bedah-kode",
-          "nama_layanan": "Bedah Source Code (Code Review)",
-          "apa_yang_bisa_kami_bantu": "Tugas kodinganmu dibuatin temen atau beli jadi, tapi bingung isinya apa? Sini kami bantu bedah dan 'terjemahin' baris-baris kode alien itu jadi bahasa manusia yang simpel.",
-          "contoh_kasus": [
-            "Sesi review kodingan PHP/Laravel satu per satu sebelum sidang kompre",
-            "Penjelasan alur kerja mulai dari database narik data sampai tampil di layar"
-          ],
-          "value_mentoring": "Kami akan buatin semacam contekan (cheat-sheet) pertanyaan jebakan yang sering ditanyain dosen soal kodingan, plus cara ngejawabnya yang elegan.",
-          "tech_stack_atau_tools": ["VS Code Live Share", "Google Meet"]
+          "id": "data-pengolahan",
+          "layanan": "Pengolahan data",
+          "harga": "Rp35.000 / dataset",
+          "keterangan": "Perhitungan dan pengolahan dasar di Excel/Sheets."
         },
         {
-          "id_layanan": "mentor-simulasi-sidang",
-          "nama_layanan": "Simulasi Presentasi / Sidang",
-          "apa_yang_bisa_kami_bantu": "Kami akan berperan jadi audiens atau 'dosen killer' bohongan. Kamu latihan presentasi di depan kami, dan kami akan tes mentalmu dengan berbagai pertanyaan terkait materimu.",
-          "contoh_kasus": [
-            "Gladi bersih presentasi proposal skripsi 15 menit",
-            "Latihan public speaking dan cara ngejawab dosen biar kelihatan meyakinkan"
-          ],
-          "value_mentoring": "Kami kasih feedback jujur tentang cara ngomongmu, bahasa tubuh, slide mana yang kecepatan, sampai meluruskan kalimatmu yang masih belibet.",
-          "tech_stack_atau_tools": ["Zoom", "Google Meet"]
+          "id": "data-cleaning",
+          "layanan": "Data cleaning",
+          "harga": "Rp50.000 / s.d. 1.000 baris",
+          "keterangan": "Hapus duplikat, perbaiki format, dan tangani data kosong."
+        },
+        {
+          "id": "data-validation",
+          "layanan": "Data validation",
+          "harga": "Rp35.000 / dataset",
+          "keterangan": "Pengecekan kesesuaian dan konsistensi data."
+        },
+        {
+          "id": "data-grafik-visualisasi",
+          "layanan": "Pembuatan grafik dan visualisasi",
+          "harga": "Rp35.000 / 3 grafik",
+          "keterangan": "Grafik rapi dan siap masuk laporan."
+        },
+        {
+          "id": "data-analisis-statistik",
+          "layanan": "Analisis data",
+          "harga": "Rp75.000 / dataset",
+          "keterangan": "Excel, SPSS, atau Python, disertai interpretasi hasil."
+        },
+        {
+          "id": "data-web-scraping",
+          "layanan": "Web scraping sederhana",
+          "harga": "Rp100.000 / 1 website",
+          "keterangan": "Pengambilan data dari 1 website, hasil dalam CSV/Excel."
+        },
+        {
+          "id": "data-dashboard",
+          "layanan": "Pembuatan dashboard data",
+          "harga": "Rp250.000 / s.d. 5 visualisasi",
+          "keterangan": "Dashboard interaktif (Looker Studio, Power BI, atau Excel)."
+        },
+        {
+          "id": "data-laporan-analisis",
+          "layanan": "Pembuatan laporan analisis data",
+          "harga": "Rp100.000 / s.d. 10 halaman",
+          "keterangan": "Laporan lengkap: metode, hasil, dan kesimpulan."
+        },
+        {
+          "id": "data-machine-learning",
+          "layanan": "Machine learning sederhana",
+          "harga": "Rp350.000 / model",
+          "keterangan": "Satu model (klasifikasi/regresi) beserta evaluasi dan penjelasan."
+        }
+      ]
+    },
+    {
+      "id": "mentoring",
+      "kode": "03",
+      "grup": "03. MENTORING",
+      "nama": "Layanan Mentoring",
+      "deskripsi": "Durasi standar setiap sesi adalah 60 menit. Sesi dapat dilakukan secara online dengan jadwal yang disepakati.",
+      "items": [
+        {
+          "id": "mentoring-tugas-umum",
+          "layanan": "Mentoring tugas umum",
+          "harga": "Rp50.000 / jam",
+          "keterangan": "Sesi online 60 menit. Kelebihan waktu dihitung Rp1.000 / menit."
         }
       ]
     }
+  ],
+  "ketentuan_layanan": [
+    "Harga yang tercantum berlaku untuk lingkup yang tertulis di kolom Keterangan. Pekerjaan di luar lingkup tersebut dihitung tambahan dan disepakati bersama sebelum dikerjakan.",
+    "Harga mengikuti kisaran pasar jasa freelance di Indonesia per 22 November 2026 (layanan pelajar/mahasiswa dan layanan UMKM).",
+    "Minimum order Rp15.000 per transaksi (tidak berlaku untuk layanan formatting dokumen). Pembayaran: lunas di muka untuk pekerjaan di bawah Rp500.000, DP 50% untuk pekerjaan di atas itu.",
+    "Revisi minor gratis 2x selama masih sesuai brief awal (3x untuk website); revisi di luar brief dikenakan biaya tambahan.",
+    "Deadline kurang dari 24 jam (express) dikenakan tambahan 25–50% dari harga.",
+    "Domain dan hosting website tidak termasuk dalam harga dan dibayar sesuai kebutuhan klien (kami bantu setup)."
   ]
 }

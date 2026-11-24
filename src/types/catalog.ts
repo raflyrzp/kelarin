@@ -1,104 +1,83 @@
-export interface CatalogAddon {
+export interface PriceListItem {
   id: string;
-  name: string;
-  price: number;
-  priceFormatted: string;
-  unit?: string;
-  description?: string;
+  layanan: string;
+  harga: string;
+  keterangan: string;
+  target?: "mahasiswa" | "bisnis" | "semua";
 }
 
-export interface CatalogServiceItem {
+export interface PriceListCategory {
   id: string;
-  sku: string;
-  code: string;
-  pillarId: string;
-  name: string;
-  shortDescription: string;
-  deliverable: string;
-  deliverableItems: string[];
-  targetProblem: string;
-  calculationBasis?: string;
-  priceUnit: string;
-  priceMin: number;
-  priceMax: number;
-  basePrice: number;
-  startingPrice: number;
-  priceFormatted: string;
-  expressPriceFormatted?: string;
-  estimatedDuration?: string;
-  maxRevision?: string;
-  techStackOrNotes?: string;
-  rawFileAccess?: string;
-  badge?: string;
-  popular?: boolean;
+  kode: string;
+  grup: string;
+  nama: string;
+  deskripsi?: string;
+  catatan?: string;
+  items: PriceListItem[];
 }
 
-export interface CatalogPillar {
-  id: string;
-  code: string;
-  name: string;
+export interface PriceListData {
+  judul: string;
   tagline: string;
-  calculationBasis?: string;
-  notes?: string[];
-  addOns?: CatalogAddon[];
-  services: CatalogServiceItem[];
+  deskripsi: string;
+  tanggal_acuan: string;
+  kategori: PriceListCategory[];
+  ketentuan_layanan: string[];
 }
 
-export interface CatalogBundleItem {
+export interface BundleItem {
   id: string;
-  sku: string;
-  name: string;
-  badge?: string;
+  paket: string;
+  isi_paket: string;
+  poin_isi: string[];
+  harga_normal: string;
+  harga_bundling: string;
+  hemat: string;
   highlighted?: boolean;
-  targetAudience: string;
-  triggerCondition: string;
-  packageItems: string[];
-  normalPrice: number;
-  normalPriceFormatted: string;
-  specialPrice: number;
-  specialPriceFormatted: string;
-  savings: number;
-  savingsFormatted: string;
-  basePrice: number;
-  priceFormatted: string;
-  ctaType: 'bundle';
 }
 
-export interface CatalogPolicy {
-  title: string;
-  quota?: string;
-  dpPercentage?: number;
-  summary: string;
-  detail: string;
+export interface BundleGroup {
+  id: string;
+  nama: string;
+  target: string;
+  items: BundleItem[];
 }
 
-export interface CatalogBriefField {
-  key: string;
-  label: string;
-  placeholder: string;
+export interface BundlingData {
+  judul: string;
+  tagline: string;
+  grup_paket: BundleGroup[];
+  ketentuan_bundling: string[];
 }
 
-export interface CatalogBriefTemplate {
-  categoryName: string;
-  title: string;
-  fields: CatalogBriefField[];
+export interface OrderStep {
+  tahap: string;
+  nomor: string;
+  judul: string;
+  yang_terjadi: string;
+  penanggung_jawab: string;
 }
 
-export interface CatalogData {
-  catalogTitle: string;
-  catalogSubtitle: string;
-  disclaimer: string;
-  pillars: CatalogPillar[];
-  bundles: CatalogBundleItem[];
-  policies: {
-    revision: CatalogPolicy;
-    payment: CatalogPolicy;
-    confidentiality: CatalogPolicy;
-    academicDisclaimer: CatalogPolicy;
+export interface PaymentScheme {
+  nilai_pekerjaan: string;
+  skema_pembayaran: string;
+}
+
+export interface RightsObligationsPair {
+  pembeli: string;
+  penjual: string;
+}
+
+export interface TeknisOrderData {
+  judul: string;
+  tagline: string;
+  alur_order: OrderStep[];
+  informasi_pembeli: string[];
+  pembayaran: {
+    skema: PaymentScheme[];
+    catatan: string;
   };
-  briefTemplates: {
-    website: CatalogBriefTemplate;
-    document: CatalogBriefTemplate;
-    design: CatalogBriefTemplate;
-  };
+  revisi_deadline_pembatalan: string[];
+  hak_dan_kewajiban: RightsObligationsPair[];
+  ketentuan_penting: string[];
 }

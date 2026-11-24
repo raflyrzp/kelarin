@@ -2,9 +2,29 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowRight, Laptop, FileText, Palette, Check, Sparkles, Zap } from "lucide-react";
+import {
+  ArrowRight,
+  Laptop,
+  FileText,
+  Palette,
+  Database,
+  MessageSquare,
+  Check,
+  Sparkles,
+  Zap,
+  Flame,
+  ClipboardCheck
+} from "lucide-react";
 import { Accordion } from "@/components/Accordion";
 import faqData from "@/data/faq.json";
+import rawPriceListData from "@/data/katalog.json";
+import rawBundlingData from "@/data/bundling.json";
+import rawTeknisOrderData from "@/data/teknis-order.json";
+import {
+  PriceListData,
+  BundlingData,
+  TeknisOrderData
+} from "@/types/catalog";
 import { getWhatsAppLink } from "@/utils/whatsapp";
 
 interface FaqItem {
@@ -12,6 +32,10 @@ interface FaqItem {
   question: string;
   answer: string;
 }
+
+const priceListData = rawPriceListData as PriceListData;
+const bundlingData = rawBundlingData as BundlingData;
+const teknisOrderData = rawTeknisOrderData as TeknisOrderData;
 
 export default function Home() {
   const [showAllFaq, setShowAllFaq] = useState(false);
@@ -24,21 +48,27 @@ export default function Home() {
     content: faq.answer,
   }));
 
-  const defaultWaLink = getWhatsAppLink("general", "Konsultasi Tugas");
+  const defaultWaLink = getWhatsAppLink("general", "Konsultasi Layanan Kelar.in");
+
+  const categoryIcons: Record<string, typeof FileText> = {
+    "umum": FileText,
+    "it-coding": Laptop,
+    "desain-uiux": Palette,
+    "data-analisis": Database,
+    "mentoring": MessageSquare
+  };
 
   return (
     <div className="relative min-h-screen bg-background text-foreground font-sans overflow-hidden">
-      {/* Background elements */}
       <div className="absolute inset-0 cyber-grid pointer-events-none z-0"></div>
       <div className="absolute top-[5%] left-[-15%] w-[320px] h-[320px] md:w-[600px] md:h-[600px] rounded-full bg-primary/5 blur-[120px] pointer-events-none z-0"></div>
       <div className="absolute top-[40%] right-[-15%] w-[280px] h-[280px] md:w-[500px] md:h-[500px] rounded-full bg-primary/5 blur-[120px] pointer-events-none z-0"></div>
 
-      {/* 1. HERO SECTION */}
-      <section className="relative z-10 min-h-[90vh] flex flex-col justify-center items-center text-center px-4 sm:px-6">
+      <section className="relative z-10 min-h-[85vh] flex flex-col justify-center items-center text-center px-4 sm:px-6 py-16">
         <div className="inline-flex items-center gap-2 border border-primary/30 bg-primary/10 px-3 py-1 mb-6 rounded-md">
           <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse glow-dot"></span>
           <span className="font-mono text-[11px] font-bold tracking-widest text-primary uppercase">
-            STATUS: MENERIMA TUGAS BARU
+            PELAJAR & MAHASISWA • UMKM, F&B & BISNIS
           </span>
         </div>
 
@@ -46,150 +76,287 @@ export default function Home() {
           Biar tugasmu, kami yang <span className="text-primary inline-block">kelar.in</span>.
         </h1>
 
-        <p className="mt-6 text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-          Asisten akademik dan mentor andalan mahasiswa. Kami <strong className="text-foreground">kelar.in</strong> tugasmu, lalu bimbing kamu sampai benar-benar paham.
+        <p className="mt-6 text-sm sm:text-base md:text-lg text-muted-foreground max-w-3xl leading-relaxed">
+          {priceListData.deskripsi}
         </p>
 
-        <div className="mt-10 flex flex-col sm:flex-row gap-4 w-full justify-center max-w-md">
+        <div className="mt-10 flex flex-col sm:flex-row gap-3.5 w-full justify-center max-w-2xl">
+          <Link
+            href="/katalog"
+            className="px-7 py-4 bg-primary text-primary-foreground font-mono text-xs sm:text-sm font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-2 hover:opacity-90 shadow-md rounded-lg"
+          >
+            <span>Lihat Price List Lengkap</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+          <Link
+            href="/bundling"
+            className="px-7 py-4 bg-accent text-accent-foreground font-mono text-xs sm:text-sm font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-2 hover:brightness-95 shadow-md rounded-lg"
+          >
+            <Flame className="w-4 h-4" />
+            <span>Paket Bundling Hemat</span>
+          </Link>
           <a
             href={defaultWaLink}
             target="_blank"
             rel="noopener noreferrer"
-            className="group px-8 py-4 bg-accent text-accent-foreground font-mono text-sm font-bold tracking-wider transition-all flex items-center justify-center gap-2 hover:brightness-95 shadow-md rounded-lg"
+            className="px-7 py-4 border border-border bg-card hover:border-primary text-foreground font-mono text-xs sm:text-sm font-bold tracking-wider uppercase transition-all flex items-center justify-center gap-2 rounded-lg"
           >
-            <Zap className="w-4 h-4 fill-current" />
-            <span>KONSULTASI SEKARANG</span>
+            <Zap className="w-4 h-4 text-primary" />
+            <span>Konsultasi Gratis</span>
           </a>
         </div>
       </section>
 
-      {/* 2. VALUE PROPOSITION */}
-      <section className="relative z-10 py-20 px-4 sm:px-6 max-w-6xl mx-auto border-t border-border">
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-4xl font-black text-foreground font-mono uppercase">
-            MENGAPA MEMILIH KAMI?
-          </h2>
+      <section className="relative z-10 py-20 px-4 sm:px-6 max-w-7xl mx-auto border-t border-border">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-primary font-mono text-xs font-bold uppercase tracking-wider mb-2">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>{priceListData.judul}</span>
+            </div>
+            <h2 className="text-2xl sm:text-4xl font-black text-foreground font-mono uppercase">
+              KATEGORI LAYANAN & HARGA STANDAR
+            </h2>
+          </div>
+          <Link
+            href="/katalog"
+            className="inline-flex items-center gap-2 font-mono text-xs font-bold text-primary hover:underline uppercase"
+          >
+            <span>Buka Tabel Price List Lengkap</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="p-6 border border-border bg-card text-card-foreground shadow-md hover:border-primary/50 transition-colors relative group rounded-xl">
-            <h3 className="text-xl font-bold font-mono text-foreground mb-3">TUGAS KELAR, OTAK TETAP JALAN</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Dapatkan hasil yang rapi sekaligus pemahaman komprehensif dari mentor kami. Bukan sekadar terima beres.
-            </p>
-          </div>
-          <div className="p-6 border border-border bg-card text-card-foreground shadow-md hover:border-primary/50 transition-colors relative group rounded-xl">
-            <h3 className="text-xl font-bold font-mono text-foreground mb-3">SPESIALIS IT & UMUM</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Dari perapian format skripsi, desain slide presentasi yang memikat, sampai debugging code aplikasi.
-            </p>
-          </div>
-          <div className="p-6 border border-border bg-card text-card-foreground shadow-md hover:border-primary/50 transition-colors relative group rounded-xl">
-            <h3 className="text-xl font-bold font-mono text-foreground mb-3">SIAP HADAPI DOSEN</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              Setiap tugas yang kami <strong className="text-foreground">kelar.in</strong> dilengkapi tips presentasi atau bedah logika coding agar kamu tidak panik saat ditanya dosen.
-            </p>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {priceListData.kategori.map((cat) => {
+            const Icon = categoryIcons[cat.id] || FileText;
+            const previewItems = cat.items.slice(0, 4);
+            return (
+              <div
+                key={cat.id}
+                className="border border-border bg-card text-card-foreground p-6 rounded-xl shadow-sm hover:border-primary/50 transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-3">
+                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-primary/10 border border-primary/30 text-primary font-mono text-xs font-bold uppercase rounded">
+                      <Icon className="w-3.5 h-3.5" />
+                      <span>{cat.grup}</span>
+                    </span>
+                    <span className="font-mono text-xs text-muted-foreground">
+                      {cat.items.length} Layanan
+                    </span>
+                  </div>
+
+                  <h3 className="text-xl font-black font-mono text-foreground uppercase mb-2">
+                    {cat.nama}
+                  </h3>
+
+                  {cat.deskripsi && (
+                    <p className="text-xs text-muted-foreground leading-relaxed mb-4">
+                      {cat.deskripsi}
+                    </p>
+                  )}
+
+                  <div className="space-y-2.5 pt-3 border-t border-border">
+                    {previewItems.map((item) => (
+                      <div
+                        key={item.id}
+                        className="flex items-start justify-between gap-3 text-xs"
+                      >
+                        <span className="text-foreground font-medium">
+                          {item.layanan}
+                        </span>
+                        <span className="font-mono font-bold text-primary shrink-0">
+                          {item.harga}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="mt-6 pt-4 border-t border-border">
+                  <Link
+                    href={`/katalog?tab=${cat.id}`}
+                    className="w-full py-2.5 bg-background border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground text-foreground font-mono text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 rounded-lg transition-colors"
+                  >
+                    <span>Lihat Semua ({cat.items.length})</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 
-      {/* 3. UNIFIED PRICING & KAPABILITAS */}
-      <section className="relative z-10 py-24 px-4 sm:px-6 max-w-4xl mx-auto">
-        <div className="p-8 md:p-12 border-2 border-primary bg-card text-card-foreground shadow-lg ring-1 ring-primary/20 rounded-xl relative">
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-accent-foreground text-[10px] font-mono font-bold uppercase tracking-wider px-4 py-1 flex items-center gap-2 rounded-full shadow-sm">
-            <Sparkles className="w-3 h-3" />
-            <span>KAPABILITAS KAMI</span>
-          </div>
-
-          <div className="text-center mb-10 mt-4">
-            <h2 className="text-3xl md:text-5xl font-black text-foreground font-mono uppercase leading-tight mb-4">
-              Semua Kebutuhan Akademik,<br/> Mulai Dari <span className="text-primary">Rp20.000</span>
-            </h2>
-            <p className="text-sm text-muted-foreground max-w-2xl mx-auto">
-              Satu harga awal untuk beragam kapabilitas. Biaya akhir disesuaikan dengan tingkat kesulitan dan deadline tugasmu.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-            <div className="flex items-start gap-3 p-4 border border-border bg-background rounded-lg">
-              <Laptop className="w-5 h-5 text-primary shrink-0" />
-              <span className="text-sm text-foreground font-mono font-medium">Pembuatan & Mentoring Project Web/Aplikasi</span>
+      <section id="paket-bundling" className="relative z-10 py-20 px-4 sm:px-6 bg-muted/40 border-y border-border">
+        <div className="max-w-7xl mx-auto">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+            <div>
+              <div className="inline-flex items-center gap-1.5 text-primary font-mono text-xs font-bold uppercase tracking-wider mb-2">
+                <Flame className="w-3.5 h-3.5" />
+                <span>{bundlingData.judul}</span>
+              </div>
+              <h2 className="text-2xl sm:text-4xl font-black text-foreground font-mono uppercase">
+                PAKET BUNDLING LEBIH HEMAT
+              </h2>
+              <p className="mt-2 text-xs sm:text-sm text-muted-foreground max-w-2xl">
+                {bundlingData.tagline}
+              </p>
             </div>
-            <div className="flex items-start gap-3 p-4 border border-border bg-background rounded-lg">
-              <Check className="w-5 h-5 text-primary shrink-0" />
-              <span className="text-sm text-foreground font-mono font-medium">Bug Fixing & Optimasi Source Code</span>
-            </div>
-            <div className="flex items-start gap-3 p-4 border border-border bg-background rounded-lg">
-              <FileText className="w-5 h-5 text-primary shrink-0" />
-              <span className="text-sm text-foreground font-mono font-medium">Perapian Format Makalah, Jurnal & Skripsi</span>
-            </div>
-            <div className="flex items-start gap-3 p-4 border border-border bg-background rounded-lg">
-              <Palette className="w-5 h-5 text-primary shrink-0" />
-              <span className="text-sm text-foreground font-mono font-medium">Desain Slide Presentasi & Poster Ilmiah</span>
-            </div>
-          </div>
-
-          <div className="flex justify-center mt-6">
-            <Link href="/katalog" className="group flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-mono text-sm font-bold uppercase tracking-wider rounded-lg shadow-md hover:bg-primary/90 transition-all">
-              <span>Lihat Rincian Kapabilitas Kami</span>
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            <Link
+              href="/bundling"
+              className="px-5 py-2.5 bg-primary text-primary-foreground font-mono text-xs font-bold uppercase rounded-lg inline-flex items-center gap-2 shrink-0 w-fit"
+            >
+              <span>Lihat Semua 11 Paket Bundling</span>
+              <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
+
+          <div className="space-y-10">
+            {bundlingData.grup_paket.map((group) => (
+              <div key={group.id}>
+                <h3 className="font-mono text-base sm:text-lg font-bold text-foreground uppercase mb-4 flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-primary"></span>
+                  <span>{group.nama}</span>
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  {group.items.slice(0, 3).map((bundle) => (
+                    <div
+                      key={bundle.id}
+                      className={`border bg-card p-6 rounded-xl flex flex-col justify-between ${
+                        bundle.highlighted
+                          ? "border-2 border-primary shadow-md"
+                          : "border-border shadow-sm"
+                      }`}
+                    >
+                      <div>
+                        <div className="flex items-center justify-between gap-2 mb-3">
+                          <span className="px-2.5 py-0.5 bg-accent text-accent-foreground font-mono text-[11px] font-bold uppercase rounded">
+                            Hemat {bundle.hemat}
+                          </span>
+                          <span className="font-mono text-xs text-muted-foreground line-through">
+                            {bundle.harga_normal}
+                          </span>
+                        </div>
+                        <h4 className="font-mono text-lg font-black text-foreground uppercase">
+                          {bundle.paket}
+                        </h4>
+                        <div className="font-mono text-2xl font-black text-primary mt-1 mb-3">
+                          {bundle.harga_bundling}
+                        </div>
+                        <div className="space-y-1.5 mb-5 pt-3 border-t border-border">
+                          {bundle.poin_isi.map((poin, idx) => (
+                            <div
+                              key={idx}
+                              className="flex items-start gap-2 text-xs text-muted-foreground"
+                            >
+                              <Check className="w-3.5 h-3.5 text-primary shrink-0 mt-0.5" />
+                              <span>{poin}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                      <a
+                        href={getWhatsAppLink("bundle", bundle.paket, bundle.harga_bundling)}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-full py-2.5 bg-background border border-border hover:border-primary hover:bg-primary hover:text-primary-foreground text-foreground font-mono text-xs font-bold uppercase flex items-center justify-center gap-2 rounded-lg transition-colors"
+                      >
+                        <span>Order Paket</span>
+                        <ArrowRight className="w-3.5 h-3.5" />
+                      </a>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* 4. CARA ORDER */}
-      <section id="cara-order" className="relative z-10 py-20 px-4 sm:px-6 bg-muted border-y border-border">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-12">
+      <section id="cara-order" className="relative z-10 py-20 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-primary font-mono text-xs font-bold uppercase tracking-wider mb-2">
+              <ClipboardCheck className="w-3.5 h-3.5" />
+              <span>{teknisOrderData.judul}</span>
+            </div>
             <h2 className="text-2xl sm:text-4xl font-black text-foreground font-mono uppercase">
-              CARA ORDER
+              ALUR ORDER 100% ONLINE & TRANSPARAN
             </h2>
-            <p className="mt-3 text-sm text-muted-foreground">Alur sat-set tanpa form pendaftaran ribet.</p>
+            <p className="mt-2 text-xs sm:text-sm text-muted-foreground max-w-2xl">
+              {teknisOrderData.tagline}
+            </p>
           </div>
+          <Link
+            href="/cara-order"
+            className="px-5 py-2.5 border border-border bg-card hover:border-primary text-foreground font-mono text-xs font-bold uppercase rounded-lg inline-flex items-center gap-2 shrink-0 w-fit transition-colors"
+          >
+            <span>Detail Teknis Order & Ketentuan</span>
+            <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="border border-border bg-card p-6 rounded-xl relative shadow-md">
-              <div className="w-8 h-8 rounded-md bg-primary/10 border border-primary/30 flex items-center justify-center font-mono text-sm font-bold text-primary mb-4">01</div>
-              <h3 className="text-lg font-bold font-mono text-foreground mb-2">CERITAIN KEBUTUHANMU</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Kirim detail tugas, dokumen mentah, atau error code saat konsultasi.
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+          {teknisOrderData.alur_order.map((step) => (
+            <div
+              key={step.nomor}
+              className="border border-border bg-card p-5 rounded-xl relative shadow-xs"
+            >
+              <div className="flex items-center justify-between gap-2 mb-3">
+                <div className="w-7 h-7 rounded-md bg-primary/10 border border-primary/30 flex items-center justify-center font-mono text-xs font-bold text-primary">
+                  {step.nomor}
+                </div>
+                <span className="font-mono text-[10px] font-semibold px-2 py-0.5 bg-muted border border-border rounded text-muted-foreground">
+                  {step.penanggung_jawab}
+                </span>
+              </div>
+              <h3 className="text-base font-bold font-mono text-foreground mb-1.5">
+                {step.tahap}
+              </h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                {step.yang_terjadi}
               </p>
             </div>
-            <div className="border border-border bg-card p-6 rounded-xl relative shadow-md">
-              <div className="w-8 h-8 rounded-md bg-primary/10 border border-primary/30 flex items-center justify-center font-mono text-sm font-bold text-primary mb-4">02</div>
-              <h3 className="text-lg font-bold font-mono text-foreground mb-2">DUDUK TENANG</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Tim mentor kami akan mulai <strong className="text-foreground">kelar.in</strong> tugasmu sesuai deadline yang disepakati.
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {teknisOrderData.pembayaran.skema.map((item, idx) => (
+            <div
+              key={idx}
+              className="p-5 border border-primary/30 bg-primary/5 rounded-xl"
+            >
+              <div className="font-mono text-xs font-bold uppercase text-primary mb-1">
+                Skema Pembayaran 0{idx + 1}
+              </div>
+              <div className="font-mono text-sm font-black text-foreground mb-1">
+                {item.nilai_pekerjaan}
+              </div>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                {item.skema_pembayaran}
               </p>
             </div>
-            <div className="border-2 border-primary bg-card p-6 rounded-xl relative shadow-md ring-1 ring-primary/20">
-              <div className="w-8 h-8 rounded-md bg-accent border border-accent-foreground/20 flex items-center justify-center font-mono text-sm font-bold text-accent-foreground mb-4">03</div>
-              <h3 className="text-lg font-bold font-mono text-foreground mb-2">MENTORING & PENYERAHAN</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Terima hasil akhir tugasmu beserta bimbingan materi/logika langsung dari ahlinya.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 
-      {/* 5. CALL TO ACTION */}
-      <section className="relative z-10 py-24 px-4 sm:px-6 max-w-4xl mx-auto">
-        <div className="border border-border bg-card p-8 md:p-12 text-center rounded-2xl relative overflow-hidden shadow-lg">
+      <section className="relative z-10 py-16 px-4 sm:px-6 max-w-4xl mx-auto">
+        <div className="border-2 border-primary bg-card p-8 md:p-12 text-center rounded-2xl relative overflow-hidden shadow-lg">
           <div className="inline-flex items-center gap-2 border border-primary/30 bg-primary/10 px-3 py-1 mb-6 rounded-md">
             <Sparkles className="w-3.5 h-3.5 text-primary" />
             <span className="font-mono text-xs font-bold text-primary tracking-wider uppercase">
-              KONSULTASI GRATIS AWAL 100%
+              SENIN–SABTU • 09.00–21.00 WIB
             </span>
           </div>
 
           <h2 className="text-3xl md:text-5xl font-black text-foreground font-mono uppercase mb-4 leading-tight">
-            Siap Selesaikan Tugasmu?
+            Siap Selesaikan Tugas & Website Anda?
           </h2>
 
           <p className="text-muted-foreground text-sm sm:text-base max-w-xl mx-auto mb-8 leading-relaxed">
-            Ceritakan kendala tugas, skripsi, atau proyek web kamu langsung ke tim mentor kami. Estimasi transparan, pengerjaan cepat, dan kerahasiaan terjamin.
+            Konsultasi awal gratis. Ceritakan kebutuhan tugas kuliah, pengolahan data, desain, atau pembuatan website bisnis Anda kepada tim Kelar.in.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -206,18 +373,17 @@ export default function Home() {
               href="/katalog"
               className="w-full sm:w-auto px-8 py-4 border border-border bg-background hover:border-primary text-foreground font-mono text-sm font-bold tracking-wider transition-all uppercase rounded-lg flex items-center justify-center gap-2"
             >
-              <span>LIHAT SEMUA LAYANAN</span>
+              <span>CEK PRICE LIST</span>
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* 6. FAQ */}
       <section id="faq" className="relative z-10 py-16 px-4 sm:px-6 max-w-4xl mx-auto border-t border-border">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-1.5 text-primary font-mono text-[10px] font-bold uppercase tracking-wider mb-2">
-            <span>FAQ & GARANSI</span>
+            <span>FAQ & KETENTUAN</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-black tracking-tight text-foreground font-mono uppercase">
             PERTANYAAN YANG SERING DITANYAKAN

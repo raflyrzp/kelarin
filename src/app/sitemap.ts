@@ -14,7 +14,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${baseUrl}/katalog`,
       lastModified: new Date(),
       changeFrequency: "weekly",
+      priority: 0.95,
+    },
+    {
+      url: `${baseUrl}/bundling`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
       priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/cara-order`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.85,
     },
     {
       url: `${baseUrl}/portfolio`,

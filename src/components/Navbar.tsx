@@ -7,11 +7,11 @@ import { usePathname } from "next/navigation";
 import {
   Menu,
   X,
-  ExternalLink,
   Laptop,
   FileText,
   Palette,
-  Sparkles,
+  Database,
+  MessageSquare,
   Flame,
   ArrowRight,
   Zap,
@@ -66,14 +66,12 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-300">
-      {/* MAIN NAVBAR BAR */}
       <div
         className={`backdrop-blur-md transition-colors duration-300 border-b border-border ${
           scrolled ? "bg-background/95 shadow-sm" : "bg-background/85"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
-          {/* Brand Logo with Live Status Radar */}
           <div className="flex items-center gap-3">
             <Link href="/" className="group flex items-center gap-2.5">
               <Image
@@ -94,15 +92,13 @@ export default function Navbar() {
               <span className="w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_var(--primary)] animate-pulse"></span>
             </Link>
 
-            {/* Radar status tag */}
-            <div className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-0.5 border border-primary/30 bg-primary/10 text-primary text-[10px] font-mono uppercase tracking-wider">
+            <div className="hidden xl:inline-flex items-center gap-1.5 px-2.5 py-0.5 border border-primary/30 bg-primary/10 text-primary text-[10px] font-mono uppercase tracking-wider">
               <span className="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
-              <span>Express Siaga</span>
+              <span>Senin–Sabtu 09.00–21.00</span>
             </div>
           </div>
 
-          {/* Desktop Center Navigation Menu */}
-          <nav className="hidden lg:flex items-center gap-7">
+          <nav className="hidden lg:flex items-center gap-6">
             <Link
               href="/"
               className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
@@ -114,7 +110,6 @@ export default function Navbar() {
               Home
             </Link>
 
-            {/* Standout Primary Nav Link: Layanan & Katalog (Direct Link to /katalog) */}
             <Link
               href="/katalog"
               className={`group relative inline-flex items-center gap-1.5 px-3 py-1.5 border transition-all duration-200 font-mono text-xs font-bold ${
@@ -123,36 +118,38 @@ export default function Navbar() {
                   : "border-primary/40 bg-primary/10 text-foreground hover:border-primary hover:bg-primary hover:text-primary-foreground shadow-xs"
               }`}
             >
-              <span>Yang Bisa Kami Bantu</span>
+              <span>Price List</span>
               <span className="px-1.5 py-0.2 bg-primary text-primary-foreground text-[9px] font-mono font-black tracking-tight uppercase group-hover:bg-primary-foreground group-hover:text-primary transition-colors">
-                CEK SINI
+                50+ JASA
               </span>
             </Link>
 
-            {/* Core Offer Anchor: Paket Hemat with Flame (Disabled)
             <Link
-              href="/#paket-bundling"
-              onClick={(e) => handleNavClick(e, "paket-bundling")}
-              className="group relative inline-flex items-center gap-1.5 text-sm font-medium tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-200"
+              href="/bundling"
+              className={`group relative inline-flex items-center gap-1.5 text-sm font-medium tracking-wide transition-colors duration-200 ${
+                pathname === "/bundling"
+                  ? "text-primary font-semibold"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
-              <Flame className="w-4 h-4 text-accent group-hover:animate-bounce" />
-              <span>Paket Hemat</span>
-              <span className="px-1.5 py-0.2 bg-accent/20 text-accent-foreground border border-accent/40 text-[9px] font-mono font-bold tracking-tight uppercase">
+              <Flame className="w-4 h-4 text-primary" />
+              <span>Bundling</span>
+              <span className="px-1.5 py-0.2 bg-accent text-accent-foreground text-[9px] font-mono font-bold tracking-tight uppercase rounded-xs">
                 HEMAT
               </span>
             </Link>
-            */}
 
-            {/* Cara Order */}
             <Link
-              href="/#cara-order"
-              onClick={(e) => handleNavClick(e, "cara-order")}
-              className="text-sm font-medium tracking-wide text-muted-foreground hover:text-foreground transition-colors duration-200"
+              href="/cara-order"
+              className={`text-sm font-medium tracking-wide transition-colors duration-200 ${
+                pathname === "/cara-order"
+                  ? "text-primary font-semibold"
+                  : "text-muted-foreground hover:text-foreground"
+              }`}
             >
-              Cara Order
+              Teknis Order
             </Link>
 
-            {/* FAQ */}
             <Link
               href="/#faq"
               onClick={(e) => handleNavClick(e, "faq")}
@@ -162,11 +159,9 @@ export default function Navbar() {
             </Link>
           </nav>
 
-          {/* Right Section CTA & Theme Controls */}
           <div className="hidden lg:flex items-center gap-3.5">
             <ThemeToggle />
 
-            {/* High-Converting Cyber WhatsApp CTA */}
             <a
               href={whatsappDirectUrl}
               target="_blank"
@@ -181,7 +176,6 @@ export default function Navbar() {
             </a>
           </div>
 
-          {/* Mobile View Toggle & Controls */}
           <div className="flex items-center gap-2.5 lg:hidden">
             <ThemeToggle />
 
@@ -210,7 +204,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* 3. MOBILE MENU SLIDE-OVER DRAWER */}
       <div
         className={`fixed inset-0 z-40 bg-black/80 backdrop-blur-sm transition-opacity duration-300 lg:hidden ${
           isOpen
@@ -226,7 +219,6 @@ export default function Navbar() {
         }`}
       >
         <div className="flex flex-col gap-5">
-          {/* Mobile Drawer Header */}
           <div className="flex items-center justify-between border-b border-border pb-4">
             <span className="font-mono text-base font-black tracking-tighter text-foreground flex items-center gap-1.5">
               <span>KELAR<span className="text-primary">.IN</span></span>
@@ -241,14 +233,12 @@ export default function Navbar() {
             </button>
           </div>
 
-          {/* Status badge in mobile */}
           <div className="inline-flex items-center gap-2 px-3 py-1.5 border border-primary/30 bg-primary/10 text-primary font-mono text-xs font-medium">
             <span className="w-2 h-2 rounded-full bg-primary animate-ping"></span>
-            <span>Slot Siaga &lt;24 Jam Dibuka</span>
+            <span>Senin–Sabtu • 09.00–21.00 WIB</span>
           </div>
 
-          {/* Core Navigation list */}
-          <div className="flex flex-col gap-3 font-mono text-sm pt-2">
+          <div className="flex flex-col gap-2.5 font-mono text-sm pt-1">
             <Link
               href="/"
               onClick={() => setIsOpen(false)}
@@ -261,7 +251,6 @@ export default function Navbar() {
               01. Home
             </Link>
 
-            {/* Standout Mobile Link: Layanan & Katalog */}
             <Link
               href="/katalog"
               onClick={() => setIsOpen(false)}
@@ -271,109 +260,129 @@ export default function Navbar() {
                   : "border-primary/50 bg-primary/10 text-foreground hover:bg-primary hover:text-primary-foreground"
               }`}
             >
-              <span className="flex items-center gap-2">
-                <span>02. Yang Bisa Kami Bantu</span>
-              </span>
+              <span>02. Price List Layanan</span>
               <span className="px-1.5 py-0.5 bg-primary text-primary-foreground text-[9px] font-mono uppercase">
-                CEK SINI
+                CEK HARGA
               </span>
             </Link>
 
-            {/* 
             <Link
-              href="/#paket-bundling"
-              onClick={(e) => handleNavClick(e, "paket-bundling")}
-              className="flex items-center justify-between px-3 py-2 border border-border text-foreground hover:border-primary/50 transition-colors font-bold"
+              href="/bundling"
+              onClick={() => setIsOpen(false)}
+              className={`flex items-center justify-between px-3 py-2 border transition-colors font-bold text-xs ${
+                pathname === "/bundling"
+                  ? "border-primary text-primary bg-primary/5"
+                  : "border-border text-foreground hover:border-primary/50"
+              }`}
             >
               <span className="flex items-center gap-2">
-                <Flame className="w-4 h-4 text-accent" />
-                <span>03. Paket Hemat</span>
+                <Flame className="w-4 h-4 text-primary" />
+                <span>03. Paket Bundling</span>
               </span>
               <span className="px-1.5 py-0.5 bg-accent text-accent-foreground text-[9px] font-mono font-bold">
                 HEMAT
               </span>
             </Link>
-            */}
 
-            {/* Service Subsections */}
+            <Link
+              href="/cara-order"
+              onClick={() => setIsOpen(false)}
+              className={`px-3 py-2 border transition-colors text-xs font-bold ${
+                pathname === "/cara-order"
+                  ? "border-primary text-primary bg-primary/5"
+                  : "border-border text-foreground hover:border-primary/50"
+              }`}
+            >
+              04. Teknis & Alur Order
+            </Link>
+
             <div className="pt-2">
               <span className="text-[10px] uppercase font-mono tracking-wider text-muted-foreground px-1">
-                Kategori Layanan
+                Kategori Price List
               </span>
               <div className="grid grid-cols-1 gap-2 mt-2">
                 <Link
-                  href="/katalog?tab=website"
-                  onClick={() => setIsOpen(false)}
-                  className="flex items-center justify-between p-2.5 border border-border bg-background hover:border-primary/50 text-xs"
-                >
-                  <span className="flex items-center gap-2 text-foreground font-semibold">
-                    <Laptop className="w-3.5 h-3.5 text-primary" />
-                    Web Development
-                  </span>
-                  <span className="text-[10px] text-primary font-mono font-semibold">
-                    Rp 150rb+
-                  </span>
-                </Link>
-
-                <Link
-                  href="/katalog?tab=document-academic"
+                  href="/katalog?tab=umum"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-between p-2.5 border border-border bg-background hover:border-primary/50 text-xs"
                 >
                   <span className="flex items-center gap-2 text-foreground font-semibold">
                     <FileText className="w-3.5 h-3.5 text-primary" />
-                    Dokumen & Akademik
+                    01. Umum & Dokumen
                   </span>
                   <span className="text-[10px] text-primary font-mono font-semibold">
-                    Rp 3rb/hal
+                    Rp2rb/hlm+
                   </span>
                 </Link>
 
                 <Link
-                  href="/katalog?tab=design-visual"
+                  href="/katalog?tab=it-coding"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-between p-2.5 border border-border bg-background hover:border-primary/50 text-xs"
+                >
+                  <span className="flex items-center gap-2 text-foreground font-semibold">
+                    <Laptop className="w-3.5 h-3.5 text-primary" />
+                    02A. IT, Coding & Web
+                  </span>
+                  <span className="text-[10px] text-primary font-mono font-semibold">
+                    Rp30rb+
+                  </span>
+                </Link>
+
+                <Link
+                  href="/katalog?tab=desain-uiux"
                   onClick={() => setIsOpen(false)}
                   className="flex items-center justify-between p-2.5 border border-border bg-background hover:border-primary/50 text-xs"
                 >
                   <span className="flex items-center gap-2 text-foreground font-semibold">
                     <Palette className="w-3.5 h-3.5 text-primary" />
-                    Desain Grafis & PPT
+                    02B. Desain & UI/UX
                   </span>
                   <span className="text-[10px] text-primary font-mono font-semibold">
-                    Rp 40rb+
+                    Rp12rb+
+                  </span>
+                </Link>
+
+                <Link
+                  href="/katalog?tab=data-analisis"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-between p-2.5 border border-border bg-background hover:border-primary/50 text-xs"
+                >
+                  <span className="flex items-center gap-2 text-foreground font-semibold">
+                    <Database className="w-3.5 h-3.5 text-primary" />
+                    02C. Data & Analisis
+                  </span>
+                  <span className="text-[10px] text-primary font-mono font-semibold">
+                    Rp20rb+
+                  </span>
+                </Link>
+
+                <Link
+                  href="/katalog?tab=mentoring"
+                  onClick={() => setIsOpen(false)}
+                  className="flex items-center justify-between p-2.5 border border-border bg-background hover:border-primary/50 text-xs"
+                >
+                  <span className="flex items-center gap-2 text-foreground font-semibold">
+                    <MessageSquare className="w-3.5 h-3.5 text-primary" />
+                    03. Mentoring
+                  </span>
+                  <span className="text-[10px] text-primary font-mono font-semibold">
+                    Rp50rb/jam
                   </span>
                 </Link>
               </div>
             </div>
 
             <Link
-              href="/#cara-order"
-              onClick={(e) => handleNavClick(e, "cara-order")}
-              className="px-3 py-2 border border-border text-foreground hover:border-primary/50 transition-colors"
-            >
-              04. Cara Order
-            </Link>
-
-            <Link
               href="/#faq"
               onClick={(e) => handleNavClick(e, "faq")}
-              className="px-3 py-2 border border-border text-foreground hover:border-primary/50 transition-colors"
+              className="px-3 py-2 border border-border text-foreground hover:border-primary/50 transition-colors text-xs"
             >
-              05. FAQ & Garansi
+              05. FAQ & Ketentuan
             </Link>
-
-            <a
-              href={whatsappDirectUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setIsOpen(false)}
-              className="px-3 py-2 border border-border text-foreground hover:border-primary/50 transition-colors block"
-            >
-              06. Hubungi Kami
-            </a>
           </div>
         </div>
 
-        {/* Mobile Sticky CTA at Bottom */}
         <div className="pt-6 border-t border-border mt-6">
           <a
             href={whatsappDirectUrl}

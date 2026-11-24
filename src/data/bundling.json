@@ -1,0 +1,183 @@
+{
+  "judul": "BUNDLING KELAR.IN",
+  "tagline": "Lebih hemat, lebih lengkap, tinggal terima beres. Semua paket dihitung dari harga terbaru pada Price List (per 22 November 2026).",
+  "grup_paket": [
+    {
+      "id": "pelajar-mahasiswa",
+      "nama": "Paket Pelajar & Mahasiswa",
+      "target": "Solusi paket hemat tugas kuliah, sidang, skripsi, analisis data, persiapan karier, hingga debugging program.",
+      "items": [
+        {
+          "id": "bundle-mahasiswa-kelar",
+          "paket": "Mahasiswa Kelar",
+          "isi_paket": "Makalah (s.d. 10 hlm) + 10 slide presentasi + referensi & sitasi (10 sumber) + proofreading (1.000 kata)",
+          "poin_isi": [
+            "Makalah (s.d. 10 hlm)",
+            "10 slide presentasi",
+            "Referensi & sitasi (10 sumber)",
+            "Proofreading (1.000 kata)"
+          ],
+          "harga_normal": "Rp160.000",
+          "harga_bundling": "Rp135.000",
+          "hemat": "Rp25.000"
+        },
+        {
+          "id": "bundle-sidang-aman",
+          "paket": "Sidang Aman",
+          "isi_paket": "Desain 20 slide presentasi + resume materi + 1 jam mentoring persiapan",
+          "poin_isi": [
+            "Desain 20 slide presentasi",
+            "Resume materi",
+            "1 jam mentoring persiapan"
+          ],
+          "harga_normal": "Rp305.000",
+          "harga_bundling": "Rp249.000",
+          "hemat": "Rp56.000",
+          "highlighted": true
+        },
+        {
+          "id": "bundle-skripsi-pendamping",
+          "paket": "Skripsi Pendamping",
+          "isi_paket": "Pendampingan 1 bab + formatting 50 halaman + referensi & sitasi + proofreading + 2 jam mentoring",
+          "poin_isi": [
+            "Pendampingan 1 bab",
+            "Formatting 50 halaman",
+            "Referensi & sitasi",
+            "Proofreading",
+            "2 jam mentoring"
+          ],
+          "harga_normal": "Rp305.000",
+          "harga_bundling": "Rp259.000",
+          "hemat": "Rp46.000",
+          "highlighted": true
+        },
+        {
+          "id": "bundle-data-skripsi",
+          "paket": "Data Skripsi",
+          "isi_paket": "Input & rekap data + data cleaning + analisis data + grafik + laporan analisis data",
+          "poin_isi": [
+            "Input & rekap data",
+            "Data cleaning",
+            "Analisis data",
+            "Grafik",
+            "Laporan analisis data"
+          ],
+          "harga_normal": "Rp280.000",
+          "harga_bundling": "Rp235.000",
+          "hemat": "Rp45.000"
+        },
+        {
+          "id": "bundle-karier-siap",
+          "paket": "Karier Siap",
+          "isi_paket": "CV profesional + desain CV kreatif + 1 jam mentoring karier/interview",
+          "poin_isi": [
+            "CV profesional",
+            "Desain CV kreatif",
+            "1 jam mentoring karier/interview"
+          ],
+          "harga_normal": "Rp120.000",
+          "harga_bundling": "Rp99.000",
+          "hemat": "Rp21.000"
+        },
+        {
+          "id": "bundle-coding-rescue",
+          "paket": "Coding Rescue",
+          "isi_paket": "Debugging + review & testing + dokumentasi teknis + 1 jam mentoring",
+          "poin_isi": [
+            "Debugging",
+            "Review & testing",
+            "Dokumentasi teknis",
+            "1 jam mentoring"
+          ],
+          "harga_normal": "Rp195.000",
+          "harga_bundling": "Rp159.000",
+          "hemat": "Rp36.000"
+        }
+      ]
+    },
+    {
+      "id": "umkm-bisnis",
+      "nama": "Paket UMKM, F&B & Bisnis",
+      "target": "Paket lengkap branding, konten media sosial, landing page, website company profile, dan UI/UX aplikasi.",
+      "items": [
+        {
+          "id": "bundle-brand-starter",
+          "paket": "Brand Starter UMKM",
+          "isi_paket": "Logo + 10 konten media sosial + 1 poster + 1 banner",
+          "poin_isi": [
+            "Logo",
+            "10 konten media sosial",
+            "1 poster",
+            "1 banner"
+          ],
+          "harga_normal": "Rp600.000",
+          "harga_bundling": "Rp499.000",
+          "hemat": "Rp101.000"
+        },
+        {
+          "id": "bundle-resto-cafe",
+          "paket": "Resto & Cafe Digital",
+          "isi_paket": "Landing page + logo + 10 konten media sosial + 1 desain poster/menu",
+          "poin_isi": [
+            "Landing page",
+            "Logo",
+            "10 konten media sosial",
+            "1 desain poster/menu"
+          ],
+          "harga_normal": "Rp1.300.000",
+          "harga_bundling": "Rp1.099.000",
+          "hemat": "Rp201.000",
+          "highlighted": true
+        },
+        {
+          "id": "bundle-online-launch",
+          "paket": "Online Launch",
+          "isi_paket": "Landing page + logo + 5 konten media sosial",
+          "poin_isi": [
+            "Landing page",
+            "Logo",
+            "5 konten media sosial"
+          ],
+          "harga_normal": "Rp1.075.000",
+          "harga_bundling": "Rp899.000",
+          "hemat": "Rp176.000"
+        },
+        {
+          "id": "bundle-go-digital-bisnis",
+          "paket": "Go Digital Bisnis",
+          "isi_paket": "Website company profile + logo + 10 konten media sosial",
+          "poin_isi": [
+            "Website company profile",
+            "Logo",
+            "10 konten media sosial"
+          ],
+          "harga_normal": "Rp3.000.000",
+          "harga_bundling": "Rp2.599.000",
+          "hemat": "Rp401.000",
+          "highlighted": true
+        },
+        {
+          "id": "bundle-app-design-combo",
+          "paket": "App Design Combo",
+          "isi_paket": "UI/UX design website/aplikasi (15 layar) + prototype (5 layar) + design system sederhana",
+          "poin_isi": [
+            "UI/UX design website/aplikasi (15 layar)",
+            "Prototype (5 layar)",
+            "Design system sederhana"
+          ],
+          "harga_normal": "Rp2.400.000",
+          "harga_bundling": "Rp2.049.000",
+          "hemat": "Rp351.000"
+        }
+      ]
+    }
+  ],
+  "ketentuan_bundling": [
+    "Harga bundling berlaku untuk lingkup standar sesuai isi paket dan keterangan di Price List; tambahan halaman, aset, atau fitur dihitung terpisah.",
+    "Paket di bawah Rp500.000 dibayar lunas di muka; paket di atasnya cukup DP 50%.",
+    "Revisi minor 2x sudah termasuk (3x untuk website).",
+    "Domain dan hosting website tidak termasuk.",
+    "Bonus: konsultasi awal gratis 15 menit untuk semua paket.",
+    "Bundling tidak dapat digabung dengan promo lain."
+  ]
+}

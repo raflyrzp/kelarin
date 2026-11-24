@@ -1,37 +1,37 @@
 [
   {
     "id": "faq-1",
-    "question": "File skripsi, naskah, dan source code saya dijamin aman nggak?",
-    "answer": "Dijamin 100% aman dan rahasia. Naskah skripsi, jurnal, data riset, dan kodinganmu murni milikmu sendiri, tidak akan pernah dipublikasikan atau dibagikan ke orang lain, serta langsung dihapus setelah proyek tuntas."
+    "question": "Berapa minimum order dan bagaimana skema pembayarannya?",
+    "answer": "Minimum order adalah Rp15.000 per transaksi (tidak berlaku untuk layanan formatting dokumen Word Rp2.000/halaman). Untuk pekerjaan di bawah Rp500.000 dibayar lunas di muka; Rp500.000 ke atas cukup DP 50% di awal dan pelunasan 50% sebelum file final diserahkan; khusus website & sistem di atas Rp2.000.000 berlaku skema DP 50% di awal, 30% setelah desain disetujui, dan 20% saat serah terima."
   },
   {
     "id": "faq-2",
-    "question": "Kalau hasilnya masih ada yang kurang pas, ada garansi revisi?",
-    "answer": "Pasti ada. Setiap pesanan sudah termasuk fasilitas garansi 2x revisi minor gratis (benerin typo susulan, penyesuaian tata letak/margin, atau perbaikan bug kodingan) biar kamu benar-benar puas dan pede saat maju sidang."
+    "question": "Berapa kali jatah revisi yang didapat?",
+    "answer": "Revisi minor gratis 2x untuk layanan umum, teknis, data, dan desain, serta 3x untuk layanan website, selama masih sesuai brief awal. Revisi dikirim sekaligus dalam 1 pesan dan dikerjakan maksimal 1–2 hari kerja."
   },
   {
     "id": "faq-3",
-    "question": "Deadline saya mepet banget, bisa beres kilat kurang dari 24 jam?",
-    "answer": "Bisa banget! Kami punya antrean prioritas Express Kilat (<24 jam) untuk naskah skripsi darurat, slide presentasi mepet, maupun perbaikan bug website. Langsung chat WA dan infokan deadline-mu sekarang."
+    "question": "Apakah bisa pengerjaan kilat / express kurang dari 24 jam?",
+    "answer": "Bisa, untuk deadline kurang dari 24 jam (express) dikenakan tambahan biaya 25–50% dari harga standar dan diterima apabila jadwal tim sedang memungkinkan."
   },
   {
     "id": "faq-4",
-    "question": "Gimana alur pembayarannya? Aman dan transparan nggak?",
-    "answer": "Sistemnya transparan dan aman buat kantong mahasiswa: DP 50% di awal untuk mengunci slot pengerjaan, dan sisa pelunasan 50% baru dibayar setelah kamu mengecek hasil pratinjau yang kami kirim."
+    "question": "Apakah harga website sudah termasuk domain dan hosting?",
+    "answer": "Domain dan hosting website tidak termasuk dalam harga paket maupun price list dan dibayar terpisah sesuai kebutuhan klien, namun tim kami siap membantu proses setup-nya."
   },
   {
     "id": "faq-5",
-    "question": "Apakah bisa request sesi penjelasan kodingan untuk persiapan sidang?",
-    "answer": "Sangat bisa. Kami menyediakan add-on bimbingan 1-on-1 (via Zoom/GMeet) untuk membedah logika kode, struktur database, serta alur sistem agar kamu siap menjawab pertanyaan dosen penguji."
+    "question": "Bagaimana ketentuan bantuan skripsi dan layanan akademik?",
+    "answer": "Untuk layanan akademik dan skripsi, Kelar.in berfokus pada pendampingan, formatting, review, dan bantuan teknis agar mahasiswa tetap memahami serta bertanggung jawab penuh atas karya akademiknya."
   },
   {
     "id": "faq-6",
-    "question": "Format deliverable apa saja yang akan saya terima?",
-    "answer": "Lengkap sesuai kebutuhan: file naskah mentah (.docx), dokumen siap cetak (.pdf), tautan Canva/Figma dapat diedit langsung, hingga source code web (.zip atau repository GitHub private)."
+    "question": "Bagaimana kebijakan pembatalan dan refund?",
+    "answer": "Pembatalan sebelum pengerjaan dimulai mendapat pengembalian dana 100%. Setelah pengerjaan berjalan, DP tidak dikembalikan atau dikembalikan sebagian sesuai progres. Jika hasil tidak sesuai brief dan tidak bisa diperbaiki lewat revisi, pembeli berhak atas refund sesuai bagian yang belum dikerjakan."
   },
   {
     "id": "faq-7",
-    "question": "Apakah melayani pengerjaan sebagian saja (misal hanya bab 4 atau bug fixing)?",
-    "answer": "Bisa banget. Kami sangat fleksibel—kamu bisa pesan layanan satuan seperti penataan daftar pustaka saja, perapian margin dan nomor romawi, atau slicing 1 halaman web saja."
+    "question": "Kapan jam operasional layanan Kelar.in?",
+    "answer": "Jam layanan resmi kami adalah Senin–Sabtu pukul 09.00–21.00 WIB. Pesan atau chat yang masuk di luar jam operasional akan dibalas pada hari kerja berikutnya."
   }
 ]
